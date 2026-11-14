@@ -1,0 +1,340 @@
+[
+ {
+  "query_id": "t01",
+  "config": "R1",
+  "grade": 1,
+  "reason": "types#20:c000 says return in a generator raises StopIteration, but StopIteration.value is missing; auto check is false because the gold quote is in return#1:c000 (absent).",
+  "chunk_ids": [
+   "B:py3.11/return#1:c001",
+   "B:py3.13/return#1:c001",
+   "B:py3.11/types#20:c000"
+  ],
+  "auto_context_has_evidence": false
+ },
+ {
+  "query_id": "t02",
+  "config": "R1",
+  "grade": 2,
+  "reason": "nonlocal#1:c000 states a name not bound in any nonlocal scope raises SyntaxError.",
+  "chunk_ids": [
+   "B:py3.13/nonlocal#1:c000",
+   "B:py3.11/nonlocal#1:c000",
+   "B:py3.13/naming#3:c003"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t03",
+  "config": "R1",
+  "grade": 1,
+  "reason": "with#1:c001 / compound#10:c001 show the with statement reraises when __exit__ returns false and true suppresses, but not the rule that __exit__ should not reraise; auto check false (gold quote absent).",
+  "chunk_ids": [
+   "B:py3.11/with#1:c001",
+   "B:py3.13/with#1:c001",
+   "B:py3.11/compound#10:c001"
+  ],
+  "auto_context_has_evidence": false
+ },
+ {
+  "query_id": "t04",
+  "config": "R1",
+  "grade": 2,
+  "reason": "typesseq-mutable#1:c006 (3.11, matches filter) says zero and negative n clear the sequence.",
+  "chunk_ids": [
+   "B:py3.11/typesseq-mutable#1:c006",
+   "B:py3.11/typesseq#4:c006",
+   "B:py3.11/assignment#1:c005"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t05",
+  "config": "R1",
+  "grade": 0,
+  "reason": "Only module attribute-access and class-creation chunks; nothing about __type_params__.",
+  "chunk_ids": [
+   "B:py3.13/specialnames#14:c001",
+   "B:py3.13/specialnames#4:c001",
+   "B:py3.13/attribute-access#2:c001"
+  ],
+  "auto_context_has_evidence": false
+ },
+ {
+  "query_id": "t06",
+  "config": "R1",
+  "grade": 2,
+  "reason": "exceptions#1:c002 / execmodel#10:c002 say exception messages are not part of the API and may change.",
+  "chunk_ids": [
+   "B:py3.13/execmodel#10:c002",
+   "B:py3.13/exceptions#1:c002",
+   "B:py3.11/exceptions#1:c002"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t01",
+  "config": "R5",
+  "grade": 2,
+  "reason": "return#1:c000 states generator return causes StopIteration and the value becomes StopIteration.value.",
+  "chunk_ids": [
+   "B:py3.11/return#1:c001",
+   "B:py3.11/return#1:c000",
+   "B:py3.11/types#20:c000",
+   "B:py3.11/types#22:c000",
+   "B:py3.13/types#20:c000"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t02",
+  "config": "R5",
+  "grade": 2,
+  "reason": "nonlocal#1:c000 states the SyntaxError rule.",
+  "chunk_ids": [
+   "B:py3.13/nonlocal#1:c000",
+   "B:py3.13/nonlocal#1:c001",
+   "B:py3.11/nonlocal#1:c000",
+   "B:py3.13/execmodel#5:c003",
+   "B:py3.13/execmodel#5:c002",
+   "B:py3.13/execmodel#5:c004"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t03",
+  "config": "R5",
+  "grade": 2,
+  "reason": "context-managers#1:c001 says __exit__ should not reraise; it is the caller's responsibility; return true to suppress.",
+  "chunk_ids": [
+   "B:py3.11/with#1:c001",
+   "B:py3.11/with#1:c000",
+   "B:py3.11/with#1:c002",
+   "B:py3.13/context-managers#1:c001",
+   "B:py3.13/context-managers#1:c000"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t04",
+  "config": "R5",
+  "grade": 2,
+  "reason": "typesseq-mutable#1:c006 (3.11) says zero and negative n clear the sequence.",
+  "chunk_ids": [
+   "B:py3.11/typesseq-mutable#1:c006",
+   "B:py3.11/typesseq-mutable#1:c005",
+   "B:py3.11/types#9:c000",
+   "B:py3.11/types#9:c001",
+   "B:py3.11/typesseq#2:c007",
+   "B:py3.11/typesseq#2:c006"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t05",
+  "config": "R5",
+  "grade": 2,
+  "reason": "specialattrs#1:c000 (3.13) says __type_params__ is an empty tuple for non-generic classes and functions.",
+  "chunk_ids": [
+   "B:py3.13/specialattrs#1:c000",
+   "B:py3.13/class#1:c002",
+   "B:py3.13/class#1:c001",
+   "B:py3.13/class#1:c003",
+   "B:py3.13/specialnames#18:c000",
+   "B:py3.13/compound#32:c002"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t06",
+  "config": "R5",
+  "grade": 2,
+  "reason": "exceptions#1:c002 (3.11 and 3.13) contain the statement.",
+  "chunk_ids": [
+   "B:py3.13/exceptions#1:c002",
+   "B:py3.13/exceptions#1:c001",
+   "B:py3.11/exceptions#1:c002",
+   "B:py3.11/exceptions#1:c001",
+   "B:py3.11/execmodel#8:c000",
+   "B:py3.11/execmodel#8:c001",
+   "B:py3.13/types#45:c001"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t01",
+  "config": "A1",
+  "grade": 0,
+  "reason": "Only async-generator chunks (return#1:c001, types#22:c000): StopAsyncIteration, not the generator rule.",
+  "chunk_ids": [
+   "B:py3.11/return#1:c001",
+   "B:py3.13/return#1:c001",
+   "B:py3.11/types#22:c000"
+  ],
+  "auto_context_has_evidence": false
+ },
+ {
+  "query_id": "t02",
+  "config": "A1",
+  "grade": 2,
+  "reason": "nonlocal#1:c000 states the SyntaxError rule.",
+  "chunk_ids": [
+   "B:py3.13/nonlocal#1:c000",
+   "B:py3.11/nonlocal#1:c000",
+   "B:py3.11/assignment#1:c003"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t03",
+  "config": "A1",
+  "grade": 1,
+  "reason": "Same with-statement chunks as R1: mechanism (false -> reraised by with, true -> suppressed) but not the explicit rule; auto check false.",
+  "chunk_ids": [
+   "B:py3.11/with#1:c001",
+   "B:py3.13/with#1:c001",
+   "B:py3.11/compound#10:c001"
+  ],
+  "auto_context_has_evidence": false
+ },
+ {
+  "query_id": "t04",
+  "config": "A1",
+  "grade": 2,
+  "reason": "typesseq#4:c006 and typesseq-mutable#1:c006 (3.11) contain the rule.",
+  "chunk_ids": [
+   "B:py3.11/types#11:c000",
+   "B:py3.11/assignment#1:c007",
+   "B:py3.11/typesseq#4:c006",
+   "B:py3.11/typesseq-mutable#1:c006",
+   "B:py3.11/formatstrings#2:c005"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t05",
+  "config": "A1",
+  "grade": 0,
+  "reason": "compound#32:c001 mentions __type_params__ lists type parameters of generic objects but not the non-generic value; answer absent.",
+  "chunk_ids": [
+   "B:py3.13/specialnames#4:c002",
+   "B:py3.13/specialnames#4:c001",
+   "B:py3.13/attribute-access#2:c001",
+   "B:py3.13/specialnames#18:c000",
+   "B:py3.13/specialnames#14:c001",
+   "B:py3.13/compound#32:c001"
+  ],
+  "auto_context_has_evidence": false
+ },
+ {
+  "query_id": "t06",
+  "config": "A1",
+  "grade": 2,
+  "reason": "exceptions#1:c002 and execmodel#8:c002 contain the statement.",
+  "chunk_ids": [
+   "B:py3.13/execmodel#10:c002",
+   "B:py3.13/exceptions#1:c002",
+   "B:py3.11/execmodel#8:c002"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t01",
+  "config": "A4",
+  "grade": 2,
+  "reason": "return#1:c000 contains the full generator rule including StopIteration.value.",
+  "chunk_ids": [
+   "B:py3.11/return#1:c001",
+   "B:py3.11/return#1:c000",
+   "B:py3.11/types#22:c000",
+   "B:py3.11/types#20:c000",
+   "B:py3.13/types#22:c000"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t02",
+  "config": "A4",
+  "grade": 2,
+  "reason": "nonlocal#1:c000 and naming#3:c003 both state the SyntaxError rule.",
+  "chunk_ids": [
+   "B:py3.13/nonlocal#1:c000",
+   "B:py3.13/nonlocal#1:c001",
+   "B:py3.11/assignment#1:c003",
+   "B:py3.11/assignment#1:c002",
+   "B:py3.11/assignment#1:c004",
+   "B:py3.11/nonlocal#1:c000",
+   "B:py3.13/naming#3:c003",
+   "B:py3.13/naming#3:c002"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t03",
+  "config": "A4",
+  "grade": 2,
+  "reason": "specialnames#23:c001 (3.11 and 3.13) contain the 'should not reraise' note.",
+  "chunk_ids": [
+   "B:py3.11/with#1:c001",
+   "B:py3.11/with#1:c000",
+   "B:py3.11/with#1:c002",
+   "B:py3.13/specialnames#23:c001",
+   "B:py3.13/specialnames#23:c000",
+   "B:py3.11/specialnames#23:c001",
+   "B:py3.11/specialnames#23:c000"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t04",
+  "config": "A4",
+  "grade": 2,
+  "reason": "typesseq#4:c006 (3.11) contains the rule.",
+  "chunk_ids": [
+   "B:py3.11/typesseq#4:c006",
+   "B:py3.11/typesseq#4:c005",
+   "B:py3.11/assignment#1:c005",
+   "B:py3.11/assignment#1:c004",
+   "B:py3.11/assignment#1:c006",
+   "B:py3.11/typesseq#4:c000",
+   "B:py3.11/typesseq#4:c001",
+   "B:py3.11/typesseq-mutable#1:c000",
+   "B:py3.11/types#9:c001"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t05",
+  "config": "A4",
+  "grade": 2,
+  "reason": "specialattrs#1:c000 (3.13) states the empty-tuple value.",
+  "chunk_ids": [
+   "B:py3.13/compound#32:c001",
+   "B:py3.13/compound#32:c000",
+   "B:py3.13/compound#32:c002",
+   "B:py3.13/specialattrs#1:c000",
+   "B:py3.13/class#1:c002",
+   "B:py3.13/class#1:c001",
+   "B:py3.13/class#1:c003",
+   "B:py3.13/specialnames#18:c000"
+  ],
+  "auto_context_has_evidence": true
+ },
+ {
+  "query_id": "t06",
+  "config": "A4",
+  "grade": 2,
+  "reason": "exceptions#1:c002 (3.11 and 3.13) contain the statement.",
+  "chunk_ids": [
+   "B:py3.13/exceptions#1:c002",
+   "B:py3.13/exceptions#1:c001",
+   "B:py3.11/exceptions#1:c002",
+   "B:py3.11/exceptions#1:c001",
+   "B:py3.11/execmodel#8:c000",
+   "B:py3.11/execmodel#8:c001",
+   "B:py3.11/exceptions#1:c000",
+   "B:py3.13/comparisons#2:c008",
+   "B:py3.13/comparisons#2:c007"
+  ],
+  "auto_context_has_evidence": true
+ }
+]

@@ -1,0 +1,185 @@
+[
+ {
+  "query_id": "d6-q01",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained (draft text said 'suppressed' without evidence); gold chunk not retrieved."
+ },
+ {
+  "query_id": "d6-q02",
+  "answer_grade": 1,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Core claim supported; invented rationale (scope) instead of documented reference-cycle reason."
+ },
+ {
+  "query_id": "d6-q03",
+  "answer_grade": 1,
+  "citation_support": [
+   false,
+   false
+  ],
+  "abstention_correct": null,
+  "note": "Correct 'not both' but neither cited chunk states that rule."
+ },
+ {
+  "query_id": "d6-q04",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; RuntimeError rule stated in cited raise chunk."
+ },
+ {
+  "query_id": "d6-q05",
+  "answer_grade": 0,
+  "citation_support": [
+   false
+  ],
+  "abstention_correct": null,
+  "note": "Wrong: raising without 'from' still shows context; 'from None' chunk missed."
+ },
+ {
+  "query_id": "d6-q06",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence chunk not retrieved."
+ },
+ {
+  "query_id": "d6-q07",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence chunk not retrieved."
+ },
+ {
+  "query_id": "d6-q08",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence chunk not retrieved."
+ },
+ {
+  "query_id": "d6-q09",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence was in context."
+ },
+ {
+  "query_id": "d6-q10",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; LHS-before-RHS stated in cited chunk."
+ },
+ {
+  "query_id": "d6-q11",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct list of contexts; matches cited assignment-expressions chunk."
+ },
+ {
+  "query_id": "d6-q12",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence was in context."
+ },
+ {
+  "query_id": "d6-q13",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct DeprecationWarning; cited escape-sequence chunk supports all claims."
+ },
+ {
+  "query_id": "d6-q14",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; debugger#3:c017 mentions post_mortem with exception instead of traceback."
+ },
+ {
+  "query_id": "d6-q15",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct NFKC; supported by cited import chunk."
+ },
+ {
+  "query_id": "d6-q16",
+  "answer_grade": 1,
+  "citation_support": [
+   false
+  ],
+  "abstention_correct": null,
+  "note": "Correct 'yes' but cited match intro chunk does not say bindings outlive block."
+ },
+ {
+  "query_id": "d6-q17",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence was in context."
+ },
+ {
+  "query_id": "d6-q18",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence was in context."
+ },
+ {
+  "query_id": "d6-q19",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence chunk not retrieved."
+ },
+ {
+  "query_id": "d6-q20",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence was in context."
+ },
+ {
+  "query_id": "du1",
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "Correctly abstained; corpus has no answer."
+ },
+ {
+  "query_id": "du2",
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "Correctly abstained; corpus has no answer."
+ },
+ {
+  "query_id": "du3",
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "Correctly abstained; corpus has no answer."
+ }
+]

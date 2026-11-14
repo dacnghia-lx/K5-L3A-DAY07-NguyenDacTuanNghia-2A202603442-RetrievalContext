@@ -1,0 +1,25 @@
+{
+  "pages": 468,
+  "chunks": 1415,
+  "errors": [],
+  "collection": "day06_B_para1000",
+  "embedding": {
+    "model": "wordllama/l2_supercat",
+    "version": "0.4.0.post1",
+    "dimensions": 256
+  },
+  "chroma_version": "1.5.9",
+  "sync": {
+    "before": 0,
+    "embedded": 1415,
+    "deleted": 0,
+    "after": 1415
+  },
+  "sync_seconds": 1.79,
+  "reingest_check": {
+    "before": 1415,
+    "embedded": 0,
+    "deleted": 0,
+    "after": 1415
+  }
+}

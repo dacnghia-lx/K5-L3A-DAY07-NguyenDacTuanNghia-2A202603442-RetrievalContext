@@ -1,0 +1,886 @@
+{
+  "description": "Day 7 benchmark. Written BEFORE any Day 7 retrieval/agent run. Dev = all 20 Day 6 questions (Day 6 test results were already seen, so they are reused as dev only) + 3 unanswerable. Test = 6 NEW answerable questions on topics not used in Day 6 + 2 NEW unanswerable. gold is filled by scripts/verify_benchmark.py: every chunk-page that contains one of evidence_quotes (respecting filter).",
+  "filter_rule": "filter = python_version stated by the user in the question (user context). Retrieval experiments pass it as-is; the agent must infer it from the question text itself. Never derived from gold.",
+  "questions": [
+    {
+      "id": "d6-q01",
+      "split": "dev",
+      "origin": "day06 dev q01",
+      "type": "direct",
+      "question": "What happens to a pending exception if the finally clause executes a return statement?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "The saved exception is discarded.",
+      "filter": null,
+      "evidence_quotes": [
+        "If the \"finally\" clause executes a \"return\", \"break\" or \"continue\" statement, the saved exception is discarded"
+      ],
+      "gold_source_id_primary": "py3.13/try",
+      "gold": [
+        {
+          "source_id": "py3.11/compound",
+          "page": 9,
+          "evidence": "If the \"finally\" clause executes a \"return\", \"break\" or \"continue\" statement, the saved exception is discarded"
+        },
+        {
+          "source_id": "py3.11/try",
+          "page": 5,
+          "evidence": "If the \"finally\" clause executes a \"return\", \"break\" or \"continue\" statement, the saved exception is discarded"
+        },
+        {
+          "source_id": "py3.13/compound",
+          "page": 9,
+          "evidence": "If the \"finally\" clause executes a \"return\", \"break\" or \"continue\" statement, the saved exception is discarded"
+        },
+        {
+          "source_id": "py3.13/try",
+          "page": 5,
+          "evidence": "If the \"finally\" clause executes a \"return\", \"break\" or \"continue\" statement, the saved exception is discarded"
+        }
+      ]
+    },
+    {
+      "id": "d6-q02",
+      "split": "dev",
+      "origin": "day06 dev q02",
+      "type": "paraphrase",
+      "question": "Why can't I use the exception variable from 'except E as N' after the handler block ends?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "The name bound with 'as target' is cleared (deleted) at the end of the except clause.",
+      "filter": null,
+      "evidence_quotes": [
+        "When an exception has been assigned using \"as target\", it is cleared at the end of the \"except\" clause."
+      ],
+      "gold_source_id_primary": "py3.13/try",
+      "gold": [
+        {
+          "source_id": "py3.11/compound",
+          "page": 6,
+          "evidence": "When an exception has been assigned using \"as target\", it is cleared at the end of the \"except\" clause."
+        },
+        {
+          "source_id": "py3.11/try",
+          "page": 2,
+          "evidence": "When an exception has been assigned using \"as target\", it is cleared at the end of the \"except\" clause."
+        },
+        {
+          "source_id": "py3.13/compound",
+          "page": 6,
+          "evidence": "When an exception has been assigned using \"as target\", it is cleared at the end of the \"except\" clause."
+        },
+        {
+          "source_id": "py3.13/try",
+          "page": 2,
+          "evidence": "When an exception has been assigned using \"as target\", it is cleared at the end of the \"except\" clause."
+        }
+      ]
+    },
+    {
+      "id": "d6-q03",
+      "split": "dev",
+      "origin": "day06 dev q03",
+      "type": "condition",
+      "question": "Can one try statement contain both except and except* clauses?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "No; a try statement can have either except or except* clauses, but not both.",
+      "filter": null,
+      "evidence_quotes": [
+        "A \"try\" statement can have either \"except\" or \"except*\" clauses, but not both."
+      ],
+      "gold_source_id_primary": "py3.13/try",
+      "gold": [
+        {
+          "source_id": "py3.13/compound",
+          "page": 7,
+          "evidence": "A \"try\" statement can have either \"except\" or \"except*\" clauses, but not both."
+        },
+        {
+          "source_id": "py3.13/try",
+          "page": 3,
+          "evidence": "A \"try\" statement can have either \"except\" or \"except*\" clauses, but not both."
+        }
+      ]
+    },
+    {
+      "id": "d6-q04",
+      "split": "dev",
+      "origin": "day06 dev q04",
+      "type": "condition",
+      "question": "What does a bare raise statement do when no exception is currently being handled?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "It raises RuntimeError indicating that this is an error.",
+      "filter": null,
+      "evidence_quotes": [
+        "If there isn’t currently an active exception, a \"RuntimeError\" exception is raised indicating that this is an error."
+      ],
+      "gold_source_id_primary": "py3.13/raise",
+      "gold": [
+        {
+          "source_id": "py3.11/raise",
+          "page": 1,
+          "evidence": "If there isn’t currently an active exception, a \"RuntimeError\" exception is raised indicating that this is an error."
+        },
+        {
+          "source_id": "py3.13/raise",
+          "page": 1,
+          "evidence": "If there isn’t currently an active exception, a \"RuntimeError\" exception is raised indicating that this is an error."
+        }
+      ]
+    },
+    {
+      "id": "d6-q05",
+      "split": "dev",
+      "origin": "day06 dev q05",
+      "type": "paraphrase",
+      "question": "How do I stop Python from showing the original exception as the cause when I raise a new one?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "Use 'raise ... from None' to suppress exception chaining.",
+      "filter": null,
+      "evidence_quotes": [
+        "Exception chaining can be explicitly suppressed by specifying \"None\" in the \"from\" clause"
+      ],
+      "gold_source_id_primary": "py3.13/raise",
+      "gold": [
+        {
+          "source_id": "py3.11/raise",
+          "page": 1,
+          "evidence": "Exception chaining can be explicitly suppressed by specifying \"None\" in the \"from\" clause"
+        },
+        {
+          "source_id": "py3.13/raise",
+          "page": 1,
+          "evidence": "Exception chaining can be explicitly suppressed by specifying \"None\" in the \"from\" clause"
+        }
+      ]
+    },
+    {
+      "id": "d6-q06",
+      "split": "dev",
+      "origin": "day06 dev q06",
+      "type": "condition",
+      "question": "Are assert statements still executed when Python runs with optimization (-O)?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "No; the code generator emits no code for assert when optimization is requested.",
+      "filter": null,
+      "evidence_quotes": [
+        "The current code generator emits no code for an \"assert\" statement when optimization is requested at compile time."
+      ],
+      "gold_source_id_primary": "py3.13/assert",
+      "gold": [
+        {
+          "source_id": "py3.13/assert",
+          "page": 1,
+          "evidence": "The current code generator emits no code for an \"assert\" statement when optimization is requested at compile time."
+        }
+      ]
+    },
+    {
+      "id": "d6-q07",
+      "split": "dev",
+      "origin": "day06 dev q07",
+      "type": "condition",
+      "question": "If a loop is terminated with break, is its else clause executed?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "No; break terminates the loop without executing the else clause's suite.",
+      "filter": null,
+      "evidence_quotes": [
+        "A \"break\" statement executed in the first suite terminates the loop without executing the \"else\" clause’s suite."
+      ],
+      "gold_source_id_primary": "py3.13/for",
+      "gold": [
+        {
+          "source_id": "py3.11/compound",
+          "page": 3,
+          "evidence": "A \"break\" statement executed in the first suite terminates the loop without executing the \"else\" clause’s suite."
+        },
+        {
+          "source_id": "py3.11/compound",
+          "page": 4,
+          "evidence": "A \"break\" statement executed in the first suite terminates the loop without executing the \"else\" clause’s suite."
+        },
+        {
+          "source_id": "py3.11/for",
+          "page": 1,
+          "evidence": "A \"break\" statement executed in the first suite terminates the loop without executing the \"else\" clause’s suite."
+        },
+        {
+          "source_id": "py3.11/while",
+          "page": 1,
+          "evidence": "A \"break\" statement executed in the first suite terminates the loop without executing the \"else\" clause’s suite."
+        },
+        {
+          "source_id": "py3.13/compound",
+          "page": 3,
+          "evidence": "A \"break\" statement executed in the first suite terminates the loop without executing the \"else\" clause’s suite."
+        },
+        {
+          "source_id": "py3.13/compound",
+          "page": 4,
+          "evidence": "A \"break\" statement executed in the first suite terminates the loop without executing the \"else\" clause’s suite."
+        },
+        {
+          "source_id": "py3.13/for",
+          "page": 1,
+          "evidence": "A \"break\" statement executed in the first suite terminates the loop without executing the \"else\" clause’s suite."
+        },
+        {
+          "source_id": "py3.13/while",
+          "page": 1,
+          "evidence": "A \"break\" statement executed in the first suite terminates the loop without executing the \"else\" clause’s suite."
+        }
+      ]
+    },
+    {
+      "id": "d6-q08",
+      "split": "dev",
+      "origin": "day06 dev q08",
+      "type": "paraphrase",
+      "question": "Do the and/or operators always return True or False?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "No; they return the last evaluated argument, not necessarily a bool.",
+      "filter": null,
+      "evidence_quotes": [
+        "Note that neither \"and\" nor \"or\" restrict the value and type they return to \"False\" and \"True\", but rather return the last evaluated argument."
+      ],
+      "gold_source_id_primary": "py3.13/booleans",
+      "gold": [
+        {
+          "source_id": "py3.11/booleans",
+          "page": 1,
+          "evidence": "Note that neither \"and\" nor \"or\" restrict the value and type they return to \"False\" and \"True\", but rather return the last evaluated argument."
+        },
+        {
+          "source_id": "py3.13/booleans",
+          "page": 1,
+          "evidence": "Note that neither \"and\" nor \"or\" restrict the value and type they return to \"False\" and \"True\", but rather return the last evaluated argument."
+        }
+      ]
+    },
+    {
+      "id": "d6-q09",
+      "split": "dev",
+      "origin": "day06 dev q09",
+      "type": "condition",
+      "question": "What error occurs if a variable is used in a function before its global declaration?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "A SyntaxError is raised.",
+      "filter": null,
+      "evidence_quotes": [
+        "A \"SyntaxError\" is raised if a variable is used or assigned to prior to its global declaration in the scope."
+      ],
+      "gold_source_id_primary": "py3.13/global",
+      "gold": [
+        {
+          "source_id": "py3.13/global",
+          "page": 1,
+          "evidence": "A \"SyntaxError\" is raised if a variable is used or assigned to prior to its global declaration in the scope."
+        }
+      ]
+    },
+    {
+      "id": "d6-q10",
+      "split": "dev",
+      "origin": "day06 dev q10",
+      "type": "direct",
+      "question": "In an augmented assignment such as a[i] += f(x), which side is evaluated first?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "The left-hand side is evaluated before the right-hand side.",
+      "filter": null,
+      "evidence_quotes": [
+        "Unlike normal assignments, augmented assignments evaluate the left- hand side *before* evaluating the right-hand side."
+      ],
+      "gold_source_id_primary": "py3.13/augassign",
+      "gold": [
+        {
+          "source_id": "py3.11/assignment",
+          "page": 2,
+          "evidence": "Unlike normal assignments, augmented assignments evaluate the left- hand side *before* evaluating the right-hand side."
+        },
+        {
+          "source_id": "py3.11/augassign",
+          "page": 1,
+          "evidence": "Unlike normal assignments, augmented assignments evaluate the left- hand side *before* evaluating the right-hand side."
+        },
+        {
+          "source_id": "py3.13/assignment",
+          "page": 2,
+          "evidence": "Unlike normal assignments, augmented assignments evaluate the left- hand side *before* evaluating the right-hand side."
+        },
+        {
+          "source_id": "py3.13/augassign",
+          "page": 1,
+          "evidence": "Unlike normal assignments, augmented assignments evaluate the left- hand side *before* evaluating the right-hand side."
+        }
+      ]
+    },
+    {
+      "id": "d6-q11",
+      "split": "dev",
+      "origin": "day06 dev q11",
+      "type": "condition",
+      "question": "When must a walrus := expression be wrapped in parentheses?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "When used as an expression statement and as a sub-expression in slicing, conditional, lambda, keyword-argument and comprehension-if expressions (and in assert, with and assignment statements).",
+      "filter": null,
+      "evidence_quotes": [
+        "Assignment expressions must be surrounded by parentheses when used as expression statements and when used as sub-expressions in slicing, conditional, lambda, keyword-argument, and comprehension-if expressions"
+      ],
+      "gold_source_id_primary": "py3.13/assignment-expressions",
+      "gold": [
+        {
+          "source_id": "py3.13/assignment-expressions",
+          "page": 1,
+          "evidence": "Assignment expressions must be surrounded by parentheses when used as expression statements and when used as sub-expressions in slicing, conditional, lambda, keyword-argument, and comprehension-if expressions"
+        }
+      ]
+    },
+    {
+      "id": "d6-q12",
+      "split": "dev",
+      "origin": "day06 dev q12",
+      "type": "direct",
+      "question": "Can a lambda function contain statements or annotations?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "No; functions created with lambda expressions cannot contain statements or annotations.",
+      "filter": null,
+      "evidence_quotes": [
+        "Note that functions created with lambda expressions cannot contain statements or annotations."
+      ],
+      "gold_source_id_primary": "py3.13/lambda",
+      "gold": [
+        {
+          "source_id": "py3.11/lambda",
+          "page": 1,
+          "evidence": "Note that functions created with lambda expressions cannot contain statements or annotations."
+        },
+        {
+          "source_id": "py3.13/lambda",
+          "page": 1,
+          "evidence": "Note that functions created with lambda expressions cannot contain statements or annotations."
+        }
+      ]
+    },
+    {
+      "id": "d6-q13",
+      "split": "dev",
+      "origin": "day06 dev q13",
+      "type": "metadata_filter",
+      "question": "I am on Python 3.11. What warning does an unrecognized escape sequence in a string literal produce?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "A DeprecationWarning (the docs say it will become a SyntaxWarning and eventually a SyntaxError in the future).",
+      "filter": {
+        "python_version": "3.11"
+      },
+      "evidence_quotes": [
+        "Changed in version 3.6: Unrecognized escape sequences produce a \"DeprecationWarning\"."
+      ],
+      "gold_source_id_primary": "py3.11/strings",
+      "gold": [
+        {
+          "source_id": "py3.11/strings",
+          "page": 2,
+          "evidence": "Changed in version 3.6: Unrecognized escape sequences produce a \"DeprecationWarning\"."
+        }
+      ]
+    },
+    {
+      "id": "d6-q14",
+      "split": "dev",
+      "origin": "day06 dev q14",
+      "type": "metadata_filter",
+      "question": "Using Python 3.13, can pdb.post_mortem() be given an exception object rather than a traceback?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "Yes; post_mortem enters post-mortem debugging of the given exception or traceback object (exception support added in 3.13).",
+      "filter": {
+        "python_version": "3.13"
+      },
+      "evidence_quotes": [
+        "Enter post-mortem debugging of the given exception or traceback object."
+      ],
+      "gold_source_id_primary": "py3.13/debugger",
+      "gold": [
+        {
+          "source_id": "py3.13/debugger",
+          "page": 2,
+          "evidence": "Enter post-mortem debugging of the given exception or traceback object."
+        }
+      ]
+    },
+    {
+      "id": "d6-q15",
+      "split": "dev",
+      "origin": "day06 dev q15",
+      "type": "metadata_filter",
+      "question": "For Python 3.13, what normalization form must non-ASCII names listed in __all__ use?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "NFKC.",
+      "filter": {
+        "python_version": "3.13"
+      },
+      "evidence_quotes": [
+        "Names containing non-ASCII characters must be in the normalization form NFKC."
+      ],
+      "gold_source_id_primary": "py3.13/import",
+      "gold": [
+        {
+          "source_id": "py3.13/import",
+          "page": 1,
+          "evidence": "Names containing non-ASCII characters must be in the normalization form NFKC."
+        }
+      ]
+    },
+    {
+      "id": "d6-q16",
+      "split": "dev",
+      "origin": "day06 test q16",
+      "type": "paraphrase",
+      "question": "Can I still use a variable captured by a successful case pattern after the match statement finishes?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "Yes; name bindings made during a successful pattern match outlive the executed block.",
+      "filter": null,
+      "evidence_quotes": [
+        "bindings made during a successful pattern match outlive the executed block and can be used after the match statement"
+      ],
+      "gold_source_id_primary": "py3.13/match",
+      "gold": [
+        {
+          "source_id": "py3.11/compound",
+          "page": 12,
+          "evidence": "bindings made during a successful pattern match outlive the executed block and can be used after the match statement"
+        },
+        {
+          "source_id": "py3.13/compound",
+          "page": 12,
+          "evidence": "bindings made during a successful pattern match outlive the executed block and can be used after the match statement"
+        },
+        {
+          "source_id": "py3.13/match",
+          "page": 2,
+          "evidence": "bindings made during a successful pattern match outlive the executed block and can be used after the match statement"
+        }
+      ]
+    },
+    {
+      "id": "d6-q17",
+      "split": "dev",
+      "origin": "day06 test q17",
+      "type": "condition",
+      "question": "What happens if a mapping pattern contains duplicate keys?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "Duplicate literal keys raise SyntaxError; two keys that otherwise have the same value raise ValueError at runtime.",
+      "filter": null,
+      "evidence_quotes": [
+        "Duplicate literal keys will raise a \"SyntaxError\". Two keys that otherwise have the same value will raise a \"ValueError\" at runtime.",
+        "If duplicate keys are detected in the mapping pattern, the pattern is considered invalid. A \"SyntaxError\" is raised for duplicate literal values; or a \"ValueError\" for named keys of the same value."
+      ],
+      "gold_source_id_primary": "py3.13/match",
+      "gold": [
+        {
+          "source_id": "py3.11/compound",
+          "page": 24,
+          "evidence": "Duplicate literal keys will raise a \"SyntaxError\". Two keys that otherwise have the same value will raise a \"ValueError\" at runtime."
+        },
+        {
+          "source_id": "py3.11/compound",
+          "page": 24,
+          "evidence": "If duplicate keys are detected in the mapping pattern, the pattern is considered invalid. A \"SyntaxError\" is raised for duplicate literal values; or a \"ValueError\" for named keys of the same value."
+        },
+        {
+          "source_id": "py3.13/compound",
+          "page": 24,
+          "evidence": "Duplicate literal keys will raise a \"SyntaxError\". Two keys that otherwise have the same value will raise a \"ValueError\" at runtime."
+        },
+        {
+          "source_id": "py3.13/compound",
+          "page": 24,
+          "evidence": "If duplicate keys are detected in the mapping pattern, the pattern is considered invalid. A \"SyntaxError\" is raised for duplicate literal values; or a \"ValueError\" for named keys of the same value."
+        },
+        {
+          "source_id": "py3.13/match",
+          "page": 14,
+          "evidence": "Duplicate literal keys will raise a \"SyntaxError\". Two keys that otherwise have the same value will raise a \"ValueError\" at runtime."
+        },
+        {
+          "source_id": "py3.13/match",
+          "page": 14,
+          "evidence": "If duplicate keys are detected in the mapping pattern, the pattern is considered invalid. A \"SyntaxError\" is raised for duplicate literal values; or a \"ValueError\" for named keys of the same value."
+        }
+      ]
+    },
+    {
+      "id": "d6-q18",
+      "split": "dev",
+      "origin": "day06 test q18",
+      "type": "direct",
+      "question": "Does assigning a new value to an existing dictionary key change the iteration order?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "No; dictionaries preserve insertion order and updating a key does not affect the order.",
+      "filter": null,
+      "evidence_quotes": [
+        "Dictionaries preserve insertion order. Note that updating a key does not affect the order.",
+        "Replacing an existing key does not change the order"
+      ],
+      "gold_source_id_primary": "py3.13/typesmapping",
+      "gold": [
+        {
+          "source_id": "py3.11/types",
+          "page": 14,
+          "evidence": "Replacing an existing key does not change the order"
+        },
+        {
+          "source_id": "py3.11/typesmapping",
+          "page": 1,
+          "evidence": "Dictionaries preserve insertion order. Note that updating a key does not affect the order."
+        },
+        {
+          "source_id": "py3.13/types",
+          "page": 14,
+          "evidence": "Replacing an existing key does not change the order"
+        },
+        {
+          "source_id": "py3.13/typesmapping",
+          "page": 1,
+          "evidence": "Dictionaries preserve insertion order. Note that updating a key does not affect the order."
+        }
+      ]
+    },
+    {
+      "id": "d6-q19",
+      "split": "dev",
+      "origin": "day06 test q19",
+      "type": "metadata_filter",
+      "question": "On Python 3.11, how does the documented equivalent code of a with statement look up and call __enter__?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "enter = type(manager).__enter__ and then value = enter(manager) (lookup on the type, manager passed explicitly).",
+      "filter": {
+        "python_version": "3.11"
+      },
+      "evidence_quotes": [
+        "enter = type(manager).__enter__ exit = type(manager).__exit__ value = enter(manager)"
+      ],
+      "gold_source_id_primary": "py3.11/with",
+      "gold": [
+        {
+          "source_id": "py3.11/compound",
+          "page": 10,
+          "evidence": "enter = type(manager).__enter__ exit = type(manager).__exit__ value = enter(manager)"
+        },
+        {
+          "source_id": "py3.11/with",
+          "page": 1,
+          "evidence": "enter = type(manager).__enter__ exit = type(manager).__exit__ value = enter(manager)"
+        }
+      ]
+    },
+    {
+      "id": "d6-q20",
+      "split": "dev",
+      "origin": "day06 test q20",
+      "type": "metadata_filter",
+      "question": "In Python 3.13, how can the type parameters of a generic class be retrieved at runtime?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "From the class's __type_params__ attribute.",
+      "filter": {
+        "python_version": "3.13"
+      },
+      "evidence_quotes": [
+        "At runtime, the type parameters can be retrieved from the class’s \"__type_params__\" attribute.",
+        "Generic functions, classes, and type aliases have a \"__type_params__\" attribute listing their type parameters."
+      ],
+      "gold_source_id_primary": "py3.13/class",
+      "gold": [
+        {
+          "source_id": "py3.13/class",
+          "page": 1,
+          "evidence": "At runtime, the type parameters can be retrieved from the class’s \"__type_params__\" attribute."
+        },
+        {
+          "source_id": "py3.13/compound",
+          "page": 27,
+          "evidence": "At runtime, the type parameters can be retrieved from the class’s \"__type_params__\" attribute."
+        },
+        {
+          "source_id": "py3.13/compound",
+          "page": 32,
+          "evidence": "Generic functions, classes, and type aliases have a \"__type_params__\" attribute listing their type parameters."
+        }
+      ]
+    },
+    {
+      "id": "du1",
+      "split": "dev",
+      "type": "unanswerable",
+      "question": "Does Python 3.13 remove the Global Interpreter Lock (GIL) by default?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "absence_reason": "The pydoc topics corpus never mentions the GIL / global interpreter lock / free-threading; checked by case-insensitive search for 'GIL', 'global interpreter lock', 'free-thread'.",
+      "filter": null,
+      "absence_check": {
+        "terms": [
+          "GIL",
+          "global interpreter lock",
+          "free-thread",
+          "free thread"
+        ],
+        "found": []
+      }
+    },
+    {
+      "id": "du2",
+      "split": "dev",
+      "type": "unanswerable",
+      "question": "How many bytes does sys.getsizeof() report for an empty list?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "absence_reason": "No occurrence of 'getsizeof' or object byte sizes in either version; sys module functions are not part of pydoc topics.",
+      "filter": null,
+      "absence_check": {
+        "terms": [
+          "getsizeof"
+        ],
+        "found": []
+      }
+    },
+    {
+      "id": "du3",
+      "split": "dev",
+      "type": "unanswerable",
+      "question": "What are CPython's default thresholds for the three garbage collector generations?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "absence_reason": "Garbage collection is discussed (datamodel, try), but no 'threshold' or generation values appear in either version.",
+      "filter": null,
+      "absence_check": {
+        "terms": [
+          "threshold"
+        ],
+        "found": []
+      }
+    },
+    {
+      "id": "t01",
+      "split": "test",
+      "type": "direct",
+      "question": "In a generator function, what does a return statement cause?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "It signals the generator is done and causes StopIteration to be raised; the returned value becomes StopIteration.value.",
+      "filter": null,
+      "evidence_quotes": [
+        "In a generator function, the \"return\" statement indicates that the generator is done and will cause \"StopIteration\" to be raised."
+      ],
+      "gold_source_id_primary": "py3.13/return",
+      "gold": [
+        {
+          "source_id": "py3.11/return",
+          "page": 1,
+          "evidence": "In a generator function, the \"return\" statement indicates that the generator is done and will cause \"StopIteration\" to be raised."
+        },
+        {
+          "source_id": "py3.13/return",
+          "page": 1,
+          "evidence": "In a generator function, the \"return\" statement indicates that the generator is done and will cause \"StopIteration\" to be raised."
+        }
+      ]
+    },
+    {
+      "id": "t02",
+      "split": "test",
+      "type": "condition",
+      "question": "What happens if a name listed in a nonlocal statement is not bound in any enclosing function scope?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "A SyntaxError is raised.",
+      "filter": null,
+      "evidence_quotes": [
+        "If a name is not bound in any nonlocal scope, or if there is no nonlocal scope, a \"SyntaxError\" is raised."
+      ],
+      "gold_source_id_primary": "py3.13/nonlocal",
+      "gold": [
+        {
+          "source_id": "py3.13/nonlocal",
+          "page": 1,
+          "evidence": "If a name is not bound in any nonlocal scope, or if there is no nonlocal scope, a \"SyntaxError\" is raised."
+        }
+      ]
+    },
+    {
+      "id": "t03",
+      "split": "test",
+      "type": "paraphrase",
+      "question": "Is my __exit__ method supposed to re-raise the exception it receives?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "No; __exit__() should not reraise the passed-in exception, that is the caller's responsibility (return a true value to suppress it).",
+      "filter": null,
+      "evidence_quotes": [
+        "Note that \"__exit__()\" methods should not reraise the passed-in exception; this is the caller’s responsibility."
+      ],
+      "gold_source_id_primary": "py3.13/context-managers",
+      "gold": [
+        {
+          "source_id": "py3.11/context-managers",
+          "page": 1,
+          "evidence": "Note that \"__exit__()\" methods should not reraise the passed-in exception; this is the caller’s responsibility."
+        },
+        {
+          "source_id": "py3.11/specialnames",
+          "page": 23,
+          "evidence": "Note that \"__exit__()\" methods should not reraise the passed-in exception; this is the caller’s responsibility."
+        },
+        {
+          "source_id": "py3.13/context-managers",
+          "page": 1,
+          "evidence": "Note that \"__exit__()\" methods should not reraise the passed-in exception; this is the caller’s responsibility."
+        },
+        {
+          "source_id": "py3.13/specialnames",
+          "page": 23,
+          "evidence": "Note that \"__exit__()\" methods should not reraise the passed-in exception; this is the caller’s responsibility."
+        }
+      ]
+    },
+    {
+      "id": "t04",
+      "split": "test",
+      "type": "metadata_filter",
+      "question": "I'm using Python 3.11. What does s *= n do to a mutable sequence when n is zero or negative?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "It clears the sequence.",
+      "filter": {
+        "python_version": "3.11"
+      },
+      "evidence_quotes": [
+        "Zero and negative values of *n* clear the sequence."
+      ],
+      "gold_source_id_primary": "py3.11/typesseq-mutable",
+      "gold": [
+        {
+          "source_id": "py3.11/typesseq",
+          "page": 4,
+          "evidence": "Zero and negative values of *n* clear the sequence."
+        },
+        {
+          "source_id": "py3.11/typesseq-mutable",
+          "page": 1,
+          "evidence": "Zero and negative values of *n* clear the sequence."
+        }
+      ]
+    },
+    {
+      "id": "t05",
+      "split": "test",
+      "type": "metadata_filter",
+      "question": "On Python 3.13, what is the value of __type_params__ for a class or function that is not generic?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "An empty tuple.",
+      "filter": {
+        "python_version": "3.13"
+      },
+      "evidence_quotes": [
+        "For classes and functions that are not generic, this will be an empty tuple."
+      ],
+      "gold_source_id_primary": "py3.13/specialattrs",
+      "gold": [
+        {
+          "source_id": "py3.13/specialattrs",
+          "page": 1,
+          "evidence": "For classes and functions that are not generic, this will be an empty tuple."
+        }
+      ]
+    },
+    {
+      "id": "t06",
+      "split": "test",
+      "type": "direct",
+      "question": "Can my code rely on the exact text of exception messages across Python versions?",
+      "answerable": true,
+      "expected_behavior": "search_and_answer",
+      "expected_answer": "No; exception messages are not part of the Python API and may change between versions without warning.",
+      "filter": null,
+      "evidence_quotes": [
+        "Exception messages are not part of the Python API."
+      ],
+      "gold_source_id_primary": "py3.13/exceptions",
+      "gold": [
+        {
+          "source_id": "py3.11/exceptions",
+          "page": 1,
+          "evidence": "Exception messages are not part of the Python API."
+        },
+        {
+          "source_id": "py3.11/execmodel",
+          "page": 8,
+          "evidence": "Exception messages are not part of the Python API."
+        },
+        {
+          "source_id": "py3.13/exceptions",
+          "page": 1,
+          "evidence": "Exception messages are not part of the Python API."
+        },
+        {
+          "source_id": "py3.13/execmodel",
+          "page": 10,
+          "evidence": "Exception messages are not part of the Python API."
+        }
+      ]
+    },
+    {
+      "id": "tu1",
+      "split": "test",
+      "type": "unanswerable",
+      "question": "What is the default recursion limit returned by sys.getrecursionlimit()?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "absence_reason": "No occurrence of 'recursion limit' or 'getrecursionlimit' in either version.",
+      "filter": null,
+      "absence_check": {
+        "terms": [
+          "recursion limit",
+          "getrecursionlimit",
+          "setrecursionlimit"
+        ],
+        "found": []
+      }
+    },
+    {
+      "id": "tu2",
+      "split": "test",
+      "type": "unanswerable",
+      "question": "What is the default limit on the number of digits when converting a str to int (int_max_str_digits) introduced in Python 3.11?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "absence_reason": "No occurrence of 'max_str_digits', '4300' or a digit limit in either version; the 'integers' topic only covers literal syntax.",
+      "filter": null,
+      "absence_check": {
+        "terms": [
+          "max_str_digits",
+          "4300",
+          "int_max_str"
+        ],
+        "found": []
+      }
+    }
+  ]
+}

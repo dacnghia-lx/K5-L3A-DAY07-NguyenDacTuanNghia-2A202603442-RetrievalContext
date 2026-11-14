@@ -1,0 +1,13 @@
+config,method,top_k_ranking,context_k,budget_chars,filter,dedup,neighbors,hypothesis,written_before_run
+R0,dense (Chroma day06_B_para1000; WordLlama 256d),3,3,4000,no,no,no,"Day 6 B reproduced inside Day 7 (sanity check vs Day 6 numbers)",yes
+R1,dense,3,3,4000,python_version (user),no,no,"Day 6 chosen config C = baseline for Day 7",yes
+R2,BM25 (k1=1.5 b=0.75; identifier-aware tokenizer),3,3,4000,python_version (user),no,no,"Docs are full of identifiers/keywords; lexical matching should beat the weak static embedding",yes
+R3,hybrid RRF (dense+BM25 pool 30 k=60),3,3,4000,python_version (user),no,no,"Fusing ranks keeps BM25's exact-term wins and dense's paraphrase wins",yes
+R4,R3 + dedup identical bodies,3,3,4000,python_version (user),yes,no,"Dev misses q05/q08 have top-3 filled with identical 3.11/3.13 copies; collapsing duplicates frees slots -> Hit@3 up",yes (after reading R3 errors)
+R5,R4 + neighbours + context_k 5,3,5,6000,python_version (user),yes,yes,"Evidence near a hit but in the adjacent chunk (q05 raise#1 c002 vs evidence chunk) gets into context -> Context Evidence Rate up, more chars",yes (after reading R3 errors)
+R6,R2 + dedup (ablation),3,3,4000,python_version (user),yes,no,"Check whether dedup gain is specific to hybrid",yes
+A1,agent (gpt-4o-mini) + R1 dense,3,3,8000,python_version (inferred by model),no,no,"Agent baseline: real tool calling on Day 6 dense retrieval; max 3 searches",yes
+A2,agent + R5,3,5,8000,python_version (inferred by model),yes,yes,"Better retrieval (R5) -> more answerable questions answered with evidence in context",yes
+A3,agent + R5 max 1 search (ablation),3,5,8000,python_version (inferred by model),yes,yes,"Check whether multi-turn search adds anything over one search with R5",yes
+A4,A2 + 1 citation repair turn,3,5,8000,python_version (inferred by model),yes,yes,"Dev A1-A3 traces: most false refusals = invalid_or_missing_citations (IDs listed in citations but not written as [id] in the answer). Telling the model what is wrong once should turn these into valid cited answers; validation rule unchanged",yes (after reading A1-A3 dev traces)
+A5,A1 + 1 citation repair turn,3,3,8000,python_version (inferred by model),no,no,"Same fix on dense baseline to separate the retrieval effect from the repair effect",yes (after reading A1-A3 dev traces)

@@ -9,3 +9,6 @@ __pycache__/
 # Local datasets and generated output; share permitted artifacts deliberately
 starter/data/
 starter/results/
+
+# Rebuilt locally from data/raw with: python -m scripts.build_index
+chroma_db/

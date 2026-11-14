@@ -1,0 +1,36 @@
+{
+ "config": "A4",
+ "retrieval": "R5",
+ "max_searches": 3,
+ "context_k": 5,
+ "budget": 8000,
+ "citation_repairs": 1,
+ "description": "A2 + 1 lần sửa citation khi final_answer bị từ chối",
+ "model": "gpt-4o-mini",
+ "base_url": "https://api.openai.com/v1",
+ "runs": 23,
+ "errors": 0,
+ "status": {
+  "answered": 19,
+  "abstain": 4
+ },
+ "last_event": {
+  "abstain": 4,
+  "answer": 19
+ },
+ "citation_repair_requests": 6,
+ "tool_use": "23/23",
+ "searches_distribution": {
+  "1": 16,
+  "2": 1,
+  "3": 6
+ },
+ "context_evidence_rate": "17/20",
+ "answered_on_answerable": 19,
+ "abstain_on_unanswerable": 3,
+ "prompt_tokens": 143800,
+ "completion_tokens": 5572,
+ "cost_usd": 0.024912,
+ "latency_s_mean": 6.26,
+ "avg_final_context_chars": 7394
+}

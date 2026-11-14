@@ -1,0 +1,505 @@
+{
+ "summary": {
+  "config": "R1",
+  "description": "Dense Day 6 + filter phiên bản (= Day 6 C) — baseline",
+  "split": "test",
+  "N": 6,
+  "hit1": 3,
+  "hit3": 3,
+  "context_evidence": 3,
+  "mrr10": 0.582,
+  "avg_context_chars": 2665,
+  "latency_ms_mean": 6.24,
+  "cost_usd": 0.0,
+  "misses_at_3": [
+   "t01",
+   "t03",
+   "t05"
+  ],
+  "context_misses": [
+   "t01",
+   "t03",
+   "t05"
+  ]
+ },
+ "rows": [
+  {
+   "query_id": "t01",
+   "split": "test",
+   "answerable": true,
+   "question": "In a generator function, what does a return statement cause?",
+   "query_used": "In a generator function, what does a return statement cause?",
+   "filter_applied": null,
+   "latency_ms": 6.32,
+   "top3": [
+    {
+     "id": "B:py3.11/return#1:c001",
+     "rank": 1,
+     "score": 0.711676,
+     "source_id": "py3.11/return",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"return\" statement]\nIn an asynchronous generator function, an empty \"return\" statement\nindicates that the asynchronous generator is done and will cause\n\"StopAsyncIteration\" to be raised.  A non-empty \"return\" statement is\na syntax error in an asynchronous generator function."
+    },
+    {
+     "id": "B:py3.13/return#1:c001",
+     "rank": 2,
+     "score": 0.711676,
+     "source_id": "py3.13/return",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"return\" statement]\nIn an asynchronous generator function, an empty \"return\" statement\nindicates that the asynchronous generator is done and will cause\n\"StopAsyncIteration\" to be raised.  A non-empty \"return\" statement is\na syntax error in an asynchronous generator function."
+    },
+    {
+     "id": "B:py3.11/types#20:c000",
+     "rank": 3,
+     "score": 0.561675,
+     "source_id": "py3.11/types",
+     "page": 20,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Generator functions\n-------------------\n\nA function or method which uses the \"yield\" statement (see section The\nyield statement) is called a *generator function*.  Such a function,\nwhen called, always returns an *iterator* object which can be used to\nexecute the body of the function:  calling the iterator’s\n\"iterator.__next__()\" method will cause the function to execute until\nit provides a value using the \"yield\" statement.  When the function\nexecutes a \"return\" statement or falls off the end, a \"StopIteration\"\nexception is raised and the iterator will have reached the end of the\nset of values to be returned."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/return#1:c001",
+    "B:py3.13/return#1:c001",
+    "B:py3.11/types#20:c000"
+   ],
+   "context_chars": 1645,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": 6,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.11/return#1",
+    "py3.13/return#1"
+   ]
+  },
+  {
+   "query_id": "t02",
+   "split": "test",
+   "answerable": true,
+   "question": "What happens if a name listed in a nonlocal statement is not bound in any enclosing function scope?",
+   "query_used": "What happens if a name listed in a nonlocal statement is not bound in any enclosing function scope?",
+   "filter_applied": null,
+   "latency_ms": 5.31,
+   "top3": [
+    {
+     "id": "B:py3.13/nonlocal#1:c000",
+     "rank": 1,
+     "score": 0.775028,
+     "source_id": "py3.13/nonlocal",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "The \"nonlocal\" statement\n************************\n\n   nonlocal_stmt ::= \"nonlocal\" identifier (\",\" identifier)*\n\nWhen the definition of a function or class is nested (enclosed) within\nthe definitions of other functions, its nonlocal scopes are the local\nscopes of the enclosing functions. The \"nonlocal\" statement causes the\nlisted identifiers to refer to names previously bound in nonlocal\nscopes. It allows encapsulated code to rebind such nonlocal\nidentifiers.  If a name is bound in more than one nonlocal scope, the\nnearest binding is used. If a name is not bound in any nonlocal scope,\nor if there is no nonlocal scope, a \"SyntaxError\" is raised.\n\nThe \"nonlocal\" statement applies to the entire scope of a function or\nclass body. A \"SyntaxError\" is raised if a variable is used or\nassigned to prior to its nonlocal declaration in the scope.\n\nSee also:\n\n  **PEP 3104** - Access to Names in Outer Scopes\n     The specification for the \"nonlocal\" statement."
+    },
+    {
+     "id": "B:py3.11/nonlocal#1:c000",
+     "rank": 2,
+     "score": 0.738155,
+     "source_id": "py3.11/nonlocal",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "The \"nonlocal\" statement\n************************\n\n   nonlocal_stmt ::= \"nonlocal\" identifier (\",\" identifier)*\n\nThe \"nonlocal\" statement causes the listed identifiers to refer to\npreviously bound variables in the nearest enclosing scope excluding\nglobals. This is important because the default behavior for binding is\nto search the local namespace first.  The statement allows\nencapsulated code to rebind variables outside of the local scope\nbesides the global (module) scope.\n\nNames listed in a \"nonlocal\" statement, unlike those listed in a\n\"global\" statement, must refer to pre-existing bindings in an\nenclosing scope (the scope in which a new binding should be created\ncannot be determined unambiguously).\n\nNames listed in a \"nonlocal\" statement must not collide with pre-\nexisting bindings in the local scope.\n\nSee also:\n\n  **PEP 3104** - Access to Names in Outer Scopes\n     The specification for the \"nonlocal\" statement."
+    },
+    {
+     "id": "B:py3.13/naming#3:c003",
+     "rank": 3,
+     "score": 0.671842,
+     "source_id": "py3.13/naming",
+     "page": 3,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Naming and binding > Resolution of names]\nThe \"nonlocal\" statement causes corresponding names to refer to\npreviously bound variables in the nearest enclosing function scope.\n\"SyntaxError\" is raised at compile time if the given name does not\nexist in any enclosing function scope. Type parameters cannot be\nrebound with the \"nonlocal\" statement.\n\nThe namespace for a module is automatically created the first time a\nmodule is imported.  The main module for a script is always called\n\"__main__\"."
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/nonlocal#1:c000",
+    "B:py3.11/nonlocal#1:c000",
+    "B:py3.13/naming#3:c003"
+   ],
+   "context_chars": 2864,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.13/nonlocal#1"
+   ]
+  },
+  {
+   "query_id": "t03",
+   "split": "test",
+   "answerable": true,
+   "question": "Is my __exit__ method supposed to re-raise the exception it receives?",
+   "query_used": "Is my __exit__ method supposed to re-raise the exception it receives?",
+   "filter_applied": null,
+   "latency_ms": 5.04,
+   "top3": [
+    {
+     "id": "B:py3.11/with#1:c001",
+     "rank": 1,
+     "score": 0.569129,
+     "source_id": "py3.11/with",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"with\" statement]\nThe \"with\" statement guarantees that if the \"__enter__()\" method\n     returns without an error, then \"__exit__()\" will always be\n     called. Thus, if an error occurs during the assignment to the\n     target list, it will be treated the same as an error occurring\n     within the suite would be. See step 7 below.\n\n6. The suite is executed.\n\n7. The context manager’s \"__exit__()\" method is invoked.  If an\n   exception caused the suite to be exited, its type, value, and\n   traceback are passed as arguments to \"__exit__()\". Otherwise, three\n   \"None\" arguments are supplied.\n\n   If the suite was exited due to an exception, and the return value\n   from the \"__exit__()\" method was false, the exception is reraised.\n   If the return value was true, the exception is suppressed, and\n   execution continues with the statement following the \"with\"\n   statement."
+    },
+    {
+     "id": "B:py3.13/with#1:c001",
+     "rank": 2,
+     "score": 0.569129,
+     "source_id": "py3.13/with",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"with\" statement]\nThe \"with\" statement guarantees that if the \"__enter__()\" method\n     returns without an error, then \"__exit__()\" will always be\n     called. Thus, if an error occurs during the assignment to the\n     target list, it will be treated the same as an error occurring\n     within the suite would be. See step 7 below.\n\n6. The suite is executed.\n\n7. The context manager’s \"__exit__()\" method is invoked.  If an\n   exception caused the suite to be exited, its type, value, and\n   traceback are passed as arguments to \"__exit__()\". Otherwise, three\n   \"None\" arguments are supplied.\n\n   If the suite was exited due to an exception, and the return value\n   from the \"__exit__()\" method was false, the exception is reraised.\n   If the return value was true, the exception is suppressed, and\n   execution continues with the statement following the \"with\"\n   statement."
+    },
+    {
+     "id": "B:py3.11/compound#10:c001",
+     "rank": 3,
+     "score": 0.559328,
+     "source_id": "py3.11/compound",
+     "page": 10,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Compound statements > The \"with\" statement]\nThe \"with\" statement guarantees that if the \"__enter__()\" method\n     returns without an error, then \"__exit__()\" will always be\n     called. Thus, if an error occurs during the assignment to the\n     target list, it will be treated the same as an error occurring\n     within the suite would be. See step 7 below.\n\n6. The suite is executed.\n\n7. The context manager’s \"__exit__()\" method is invoked.  If an\n   exception caused the suite to be exited, its type, value, and\n   traceback are passed as arguments to \"__exit__()\". Otherwise, three\n   \"None\" arguments are supplied.\n\n   If the suite was exited due to an exception, and the return value\n   from the \"__exit__()\" method was false, the exception is reraised.\n   If the return value was true, the exception is suppressed, and\n   execution continues with the statement following the \"with\"\n   statement."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/with#1:c001",
+    "B:py3.13/with#1:c001",
+    "B:py3.11/compound#10:c001"
+   ],
+   "context_chars": 3129,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": 5,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.11/context-managers#1",
+    "py3.11/specialnames#23",
+    "py3.13/context-managers#1",
+    "py3.13/specialnames#23"
+   ]
+  },
+  {
+   "query_id": "t04",
+   "split": "test",
+   "answerable": true,
+   "question": "I'm using Python 3.11. What does s *= n do to a mutable sequence when n is zero or negative?",
+   "query_used": "I'm using Python 3.11. What does s *= n do to a mutable sequence when n is zero or negative?",
+   "filter_applied": {
+    "python_version": "3.11"
+   },
+   "latency_ms": 9.74,
+   "top3": [
+    {
+     "id": "B:py3.11/typesseq-mutable#1:c006",
+     "rank": 1,
+     "score": 0.564868,
+     "source_id": "py3.11/typesseq-mutable",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Mutable Sequence Types]\n4. The \"reverse()\" method modifies the sequence in place for economy\n   of space when reversing a large sequence.  To remind users that it\n   operates by side effect, it does not return the reversed sequence.\n\n5. \"clear()\" and \"copy()\" are included for consistency with the\n   interfaces of mutable containers that don’t support slicing\n   operations (such as \"dict\" and \"set\"). \"copy()\" is not part of the\n   \"collections.abc.MutableSequence\" ABC, but most concrete mutable\n   sequence classes provide it.\n\n   New in version 3.3: \"clear()\" and \"copy()\" methods.\n\n6. The value *n* is an integer, or an object implementing\n   \"__index__()\".  Zero and negative values of *n* clear the sequence.\n   Items in the sequence are not copied; they are referenced multiple\n   times, as explained for \"s * n\" under Common Sequence Operations."
+    },
+    {
+     "id": "B:py3.11/typesseq#4:c006",
+     "rank": 2,
+     "score": 0.55825,
+     "source_id": "py3.11/typesseq",
+     "page": 4,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Sequence Types — \"list\", \"tuple\", \"range\" > Mutable Sequence Types]\n4. The \"reverse()\" method modifies the sequence in place for economy\n   of space when reversing a large sequence.  To remind users that it\n   operates by side effect, it does not return the reversed sequence.\n\n5. \"clear()\" and \"copy()\" are included for consistency with the\n   interfaces of mutable containers that don’t support slicing\n   operations (such as \"dict\" and \"set\"). \"copy()\" is not part of the\n   \"collections.abc.MutableSequence\" ABC, but most concrete mutable\n   sequence classes provide it.\n\n   New in version 3.3: \"clear()\" and \"copy()\" methods.\n\n6. The value *n* is an integer, or an object implementing\n   \"__index__()\".  Zero and negative values of *n* clear the sequence.\n   Items in the sequence are not copied; they are referenced multiple\n   times, as explained for \"s * n\" under Common Sequence Operations."
+    },
+    {
+     "id": "B:py3.11/assignment#1:c005",
+     "rank": 3,
+     "score": 0.529935,
+     "source_id": "py3.11/assignment",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Assignment statements]\n* If the target is a subscription: The primary expression in the\n  reference is evaluated.  It should yield either a mutable sequence\n  object (such as a list) or a mapping object (such as a dictionary).\n  Next, the subscript expression is evaluated.\n\n  If the primary is a mutable sequence object (such as a list), the\n  subscript must yield an integer.  If it is negative, the sequence’s\n  length is added to it.  The resulting value must be a nonnegative\n  integer less than the sequence’s length, and the sequence is asked\n  to assign the assigned object to its item with that index.  If the\n  index is out of range, \"IndexError\" is raised (assignment to a\n  subscripted sequence cannot add new items to a list)."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/typesseq-mutable#1:c006",
+    "B:py3.11/typesseq#4:c006",
+    "B:py3.11/assignment#1:c005"
+   ],
+   "context_chars": 2999,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.11/typesseq#4",
+    "py3.11/typesseq-mutable#1"
+   ]
+  },
+  {
+   "query_id": "t05",
+   "split": "test",
+   "answerable": true,
+   "question": "On Python 3.13, what is the value of __type_params__ for a class or function that is not generic?",
+   "query_used": "On Python 3.13, what is the value of __type_params__ for a class or function that is not generic?",
+   "filter_applied": {
+    "python_version": "3.13"
+   },
+   "latency_ms": 10.34,
+   "top3": [
+    {
+     "id": "B:py3.13/specialnames#14:c001",
+     "rank": 1,
+     "score": 0.706,
+     "source_id": "py3.13/specialnames",
+     "page": 14,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Special method names > Creating the class object]\n**CPython implementation detail:** In CPython 3.6 and later, the\n\"__class__\" cell is passed to the metaclass as a \"__classcell__\" entry\nin the class namespace. If present, this must be propagated up to the\n\"type.__new__\" call in order for the class to be initialised\ncorrectly. Failing to do so will result in a \"RuntimeError\" in Python\n3.8.\n\nWhen using the default metaclass \"type\", or any metaclass that\nultimately calls \"type.__new__\", the following additional\ncustomization steps are invoked after creating the class object:\n\n1. The \"type.__new__\" method collects all of the attributes in the\n   class namespace that define a \"__set_name__()\" method;\n\n2. Those \"__set_name__\" methods are called with the class being\n   defined and the assigned name of that particular attribute;\n\n3. The \"__init_subclass__()\" hook is called on the immediate parent of\n   the new class in its method resolution order."
+    },
+    {
+     "id": "B:py3.13/specialnames#4:c001",
+     "rank": 2,
+     "score": 0.704949,
+     "source_id": "py3.13/specialnames",
+     "page": 4,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Special method names > Customizing module attribute access]\nFor a more fine grained customization of the module behavior (setting\nattributes, properties, etc.), one can set the \"__class__\" attribute\nof a module object to a subclass of \"types.ModuleType\". For example:\n\n   import sys\n   from types import ModuleType\n\n   class VerboseModule(ModuleType):\n       def __repr__(self):\n           return f'Verbose {self.__name__}'\n\n       def __setattr__(self, attr, value):\n           print(f'Setting {attr}...')\n           super().__setattr__(attr, value)\n\n   sys.modules[__name__].__class__ = VerboseModule\n\nNote:\n\n  Defining module \"__getattr__\" and setting module \"__class__\" only\n  affect lookups made using the attribute access syntax – directly\n  accessing the module globals (whether by code within the module, or\n  via a reference to the module’s globals dictionary) is unaffected.\n\nChanged in version 3.5: \"__class__\" module attribute is now writable.\n\nAdded in version 3.7: \"__getattr__\" and \"__dir__\" module attributes.\n\nSee also:"
+    },
+    {
+     "id": "B:py3.13/attribute-access#2:c001",
+     "rank": 3,
+     "score": 0.700032,
+     "source_id": "py3.13/attribute-access",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Customizing attribute access > Customizing module attribute access]\nFor a more fine grained customization of the module behavior (setting\nattributes, properties, etc.), one can set the \"__class__\" attribute\nof a module object to a subclass of \"types.ModuleType\". For example:\n\n   import sys\n   from types import ModuleType\n\n   class VerboseModule(ModuleType):\n       def __repr__(self):\n           return f'Verbose {self.__name__}'\n\n       def __setattr__(self, attr, value):\n           print(f'Setting {attr}...')\n           super().__setattr__(attr, value)\n\n   sys.modules[__name__].__class__ = VerboseModule\n\nNote:\n\n  Defining module \"__getattr__\" and setting module \"__class__\" only\n  affect lookups made using the attribute access syntax – directly\n  accessing the module globals (whether by code within the module, or\n  via a reference to the module’s globals dictionary) is unaffected.\n\nChanged in version 3.5: \"__class__\" module attribute is now writable.\n\nAdded in version 3.7: \"__getattr__\" and \"__dir__\" module attributes.\n\nSee also:"
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/specialnames#14:c001",
+    "B:py3.13/specialnames#4:c001",
+    "B:py3.13/attribute-access#2:c001"
+   ],
+   "context_chars": 3583,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": 8,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.13/specialattrs#1"
+   ]
+  },
+  {
+   "query_id": "t06",
+   "split": "test",
+   "answerable": true,
+   "question": "Can my code rely on the exact text of exception messages across Python versions?",
+   "query_used": "Can my code rely on the exact text of exception messages across Python versions?",
+   "filter_applied": null,
+   "latency_ms": 4.59,
+   "top3": [
+    {
+     "id": "B:py3.13/execmodel#10:c002",
+     "rank": 1,
+     "score": 0.565663,
+     "source_id": "py3.13/execmodel",
+     "page": 10,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Execution model > Exceptions]\nException messages are not part of the Python API.  Their contents\n  may change from one version of Python to the next without warning\n  and should not be relied on by code which will run under multiple\n  versions of the interpreter.\n\nSee also the description of the \"try\" statement in section The try\nstatement and \"raise\" statement in section The raise statement."
+    },
+    {
+     "id": "B:py3.13/exceptions#1:c002",
+     "rank": 2,
+     "score": 0.563294,
+     "source_id": "py3.13/exceptions",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Exceptions]\nException messages are not part of the Python API.  Their contents\n  may change from one version of Python to the next without warning\n  and should not be relied on by code which will run under multiple\n  versions of the interpreter.\n\nSee also the description of the \"try\" statement in section The try\nstatement and \"raise\" statement in section The raise statement."
+    },
+    {
+     "id": "B:py3.11/exceptions#1:c002",
+     "rank": 3,
+     "score": 0.549015,
+     "source_id": "py3.11/exceptions",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Exceptions]\nException messages are not part of the Python API.  Their contents\n  may change from one version of Python to the next without warning\n  and should not be relied on by code which will run under multiple\n  versions of the interpreter.\n\nSee also the description of the \"try\" statement in section The try\nstatement and \"raise\" statement in section The raise statement.\n\n-[ Footnotes ]-\n\n[1] This limitation occurs because the code that is executed by these\n    operations is not available at the time the module is compiled."
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/execmodel#10:c002",
+    "B:py3.13/exceptions#1:c002",
+    "B:py3.11/exceptions#1:c002"
+   ],
+   "context_chars": 1768,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.11/exceptions#1",
+    "py3.11/execmodel#8",
+    "py3.13/exceptions#1",
+    "py3.13/execmodel#10"
+   ]
+  },
+  {
+   "query_id": "tu1",
+   "split": "test",
+   "answerable": false,
+   "question": "What is the default recursion limit returned by sys.getrecursionlimit()?",
+   "query_used": "What is the default recursion limit returned by sys.getrecursionlimit()?",
+   "filter_applied": null,
+   "latency_ms": 4.42,
+   "top3": [
+    {
+     "id": "B:py3.11/sequence-types#1:c003",
+     "rank": 1,
+     "score": 0.293475,
+     "source_id": "py3.11/sequence-types",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Emulating container types]\nCalled to implement the built-in function \"len()\".  Should return\n   the length of the object, an integer \">=\" 0.  Also, an object that\n   doesn’t define a \"__bool__()\" method and whose \"__len__()\" method\n   returns zero is considered to be false in a Boolean context.\n\n   **CPython implementation detail:** In CPython, the length is\n   required to be at most \"sys.maxsize\". If the length is larger than\n   \"sys.maxsize\" some features (such as \"len()\") may raise\n   \"OverflowError\".  To prevent raising \"OverflowError\" by truth value\n   testing, an object must define a \"__bool__()\" method.\n\nobject.__length_hint__(self)"
+    },
+    {
+     "id": "B:py3.11/specialnames#21:c003",
+     "rank": 2,
+     "score": 0.292053,
+     "source_id": "py3.11/specialnames",
+     "page": 21,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Special method names > Emulating container types]\nCalled to implement the built-in function \"len()\".  Should return\n   the length of the object, an integer \">=\" 0.  Also, an object that\n   doesn’t define a \"__bool__()\" method and whose \"__len__()\" method\n   returns zero is considered to be false in a Boolean context.\n\n   **CPython implementation detail:** In CPython, the length is\n   required to be at most \"sys.maxsize\". If the length is larger than\n   \"sys.maxsize\" some features (such as \"len()\") may raise\n   \"OverflowError\".  To prevent raising \"OverflowError\" by truth value\n   testing, an object must define a \"__bool__()\" method.\n\nobject.__length_hint__(self)"
+    },
+    {
+     "id": "B:py3.11/debugger#1:c005",
+     "rank": 3,
+     "score": 0.290559,
+     "source_id": "py3.11/debugger",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[\"pdb\" — The Python Debugger]\nCall the *function* (a function or method object, not a string)\n   with the given arguments.  When \"runcall()\" returns, it returns\n   whatever the function call returned.  The debugger prompt appears\n   as soon as the function is entered.\n\npdb.set_trace(*, header=None)\n\n   Enter the debugger at the calling stack frame.  This is useful to\n   hard-code a breakpoint at a given point in a program, even if the\n   code is not otherwise being debugged (e.g. when an assertion\n   fails).  If given, *header* is printed to the console just before\n   debugging begins.\n\n   Changed in version 3.7: The keyword-only argument *header*.\n\npdb.post_mortem(traceback=None)\n\n   Enter post-mortem debugging of the given *traceback* object.  If no\n   *traceback* is given, it uses the one of the exception that is\n   currently being handled (an exception must be being handled if the\n   default is to be used).\n\npdb.pm()\n\n   Enter post-mortem debugging of the traceback found in\n   \"sys.last_traceback\"."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/sequence-types#1:c003",
+    "B:py3.11/specialnames#21:c003",
+    "B:py3.11/debugger#1:c005"
+   ],
+   "context_chars": 2853
+  },
+  {
+   "query_id": "tu2",
+   "split": "test",
+   "answerable": false,
+   "question": "What is the default limit on the number of digits when converting a str to int (int_max_str_digits) introduced in Python 3.11?",
+   "query_used": "What is the default limit on the number of digits when converting a str to int (int_max_str_digits) introduced in Python 3.11?",
+   "filter_applied": null,
+   "latency_ms": 4.16,
+   "top3": [
+    {
+     "id": "B:py3.13/string-methods#1:c012",
+     "rank": 1,
+     "score": 0.429151,
+     "source_id": "py3.13/string-methods",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[String Methods]\nReturn \"True\" if all characters in the string are digits and there\n   is at least one character, \"False\" otherwise.  Digits include\n   decimal characters and digits that need special handling, such as\n   the compatibility superscript digits. This covers digits which\n   cannot be used to form numbers in base 10, like the Kharosthi\n   numbers. Formally, a digit is a character that has the property\n   value Numeric_Type=Digit or Numeric_Type=Decimal.\n\n   For example:\n\n      >>> '0123456789'.isdigit()\n      True\n      >>> '٠١٢٣٤٥٦٧٨٩'.isdigit()  # Arabic-Indic digits zero to nine\n      True\n      >>> '⅕'.isdigit()  # Vulgar fraction one fifth\n      False\n      >>> '²'.isdecimal(), '²'.isdigit(),  '²'.isnumeric()\n      (False, True, True)\n\n   See also \"isdecimal()\" and \"isnumeric()\".\n\nstr.isidentifier()\n\n   Return \"True\" if the string is a valid identifier according to the\n   language definition, section Identifiers and keywords."
+    },
+    {
+     "id": "B:py3.11/types#10:c001",
+     "rank": 2,
+     "score": 0.416224,
+     "source_id": "py3.11/types",
+     "page": 10,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The standard type hierarchy > Immutable sequences]\nStrings\n   A string is a sequence of values that represent Unicode code\n   points. All the code points in the range \"U+0000 - U+10FFFF\" can be\n   represented in a string.  Python doesn’t have a char type; instead,\n   every code point in the string is represented as a string object\n   with length \"1\".  The built-in function \"ord()\" converts a code\n   point from its string form to an integer in the range \"0 - 10FFFF\";\n   \"chr()\" converts an integer in the range \"0 - 10FFFF\" to the\n   corresponding length \"1\" string object. \"str.encode()\" can be used\n   to convert a \"str\" to \"bytes\" using the given text encoding, and\n   \"bytes.decode()\" can be used to achieve the opposite."
+    },
+    {
+     "id": "B:py3.13/types#10:c001",
+     "rank": 3,
+     "score": 0.416224,
+     "source_id": "py3.13/types",
+     "page": 10,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The standard type hierarchy > Immutable sequences]\nStrings\n   A string is a sequence of values that represent Unicode code\n   points. All the code points in the range \"U+0000 - U+10FFFF\" can be\n   represented in a string.  Python doesn’t have a char type; instead,\n   every code point in the string is represented as a string object\n   with length \"1\".  The built-in function \"ord()\" converts a code\n   point from its string form to an integer in the range \"0 - 10FFFF\";\n   \"chr()\" converts an integer in the range \"0 - 10FFFF\" to the\n   corresponding length \"1\" string object. \"str.encode()\" can be used\n   to convert a \"str\" to \"bytes\" using the given text encoding, and\n   \"bytes.decode()\" can be used to achieve the opposite."
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/string-methods#1:c012",
+    "B:py3.11/types#10:c001",
+    "B:py3.13/types#10:c001"
+   ],
+   "context_chars": 2889
+  }
+ ]
+}

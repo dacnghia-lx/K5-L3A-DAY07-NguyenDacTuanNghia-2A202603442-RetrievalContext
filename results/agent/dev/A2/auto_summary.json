@@ -1,0 +1,30 @@
+{
+ "config": "A2",
+ "retrieval": "R5",
+ "max_searches": 3,
+ "context_k": 5,
+ "budget": 8000,
+ "description": "Agent + hybrid RRF + dedup + neighbours (retrieval đã chọn)",
+ "model": "gpt-4o-mini",
+ "base_url": "https://api.openai.com/v1",
+ "runs": 23,
+ "errors": 0,
+ "status": {
+  "answered": 13,
+  "abstain": 10
+ },
+ "tool_use": "23/23",
+ "searches_distribution": {
+  "1": 15,
+  "2": 1,
+  "3": 7
+ },
+ "context_evidence_rate": "17/20",
+ "answered_on_answerable": 13,
+ "abstain_on_unanswerable": 3,
+ "prompt_tokens": 133368,
+ "completion_tokens": 4779,
+ "cost_usd": 0.022873,
+ "latency_s_mean": 6.09,
+ "avg_final_context_chars": 7399
+}

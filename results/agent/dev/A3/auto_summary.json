@@ -1,0 +1,28 @@
+{
+ "config": "A3",
+ "retrieval": "R5",
+ "max_searches": 1,
+ "context_k": 5,
+ "budget": 8000,
+ "description": "Như A2 nhưng chỉ 1 lượt search (ablation multi-turn)",
+ "model": "gpt-4o-mini",
+ "base_url": "https://api.openai.com/v1",
+ "runs": 23,
+ "errors": 0,
+ "status": {
+  "answered": 13,
+  "abstain": 10
+ },
+ "tool_use": "23/23",
+ "searches_distribution": {
+  "1": 23
+ },
+ "context_evidence_rate": "17/20",
+ "answered_on_answerable": 13,
+ "abstain_on_unanswerable": 3,
+ "prompt_tokens": 100522,
+ "completion_tokens": 4677,
+ "cost_usd": 0.017885,
+ "latency_s_mean": 5.86,
+ "avg_final_context_chars": 7319
+}

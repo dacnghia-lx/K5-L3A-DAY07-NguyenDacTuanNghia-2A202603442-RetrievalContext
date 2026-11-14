@@ -1,0 +1,67 @@
+[
+ {
+  "query_id": "t01",
+  "answer_grade": 1,
+  "citation_support": [
+   false
+  ],
+  "abstention_correct": null,
+  "note": "Cites async-generator chunk; wrongly says non-empty return is a syntax error in generators. (sửa bởi sinh viên khi review)"
+ },
+ {
+  "query_id": "t02",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence was in context."
+ },
+ {
+  "query_id": "t03",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence chunk not retrieved."
+ },
+ {
+  "query_id": "t04",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct 'clears the sequence'; supported by cited mutable-sequence note."
+ },
+ {
+  "query_id": "t05",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence chunk not retrieved."
+ },
+ {
+  "query_id": "t06",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; both chunks say messages are not part of the API."
+ },
+ {
+  "query_id": "tu1",
+  "answer_grade": null,
+  "citation_support": [
+   false
+  ],
+  "abstention_correct": false,
+  "note": "Answered '1000' from unrelated chunk; should abstain (not in corpus)."
+ },
+ {
+  "query_id": "tu2",
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "Correctly abstained; corpus has no answer."
+ }
+]

@@ -1,0 +1,1427 @@
+{
+ "summary": {
+  "config": "R0",
+  "description": "Dense Day 6 (B), không filter",
+  "split": "dev",
+  "N": 20,
+  "hit1": 9,
+  "hit3": 12,
+  "context_evidence": 12,
+  "mrr10": 0.547,
+  "avg_context_chars": 2966,
+  "latency_ms_mean": 4.94,
+  "cost_usd": 0.0,
+  "misses_at_3": [
+   "d6-q01",
+   "d6-q03",
+   "d6-q05",
+   "d6-q06",
+   "d6-q07",
+   "d6-q08",
+   "d6-q14",
+   "d6-q19"
+  ],
+  "context_misses": [
+   "d6-q01",
+   "d6-q03",
+   "d6-q05",
+   "d6-q06",
+   "d6-q07",
+   "d6-q08",
+   "d6-q14",
+   "d6-q19"
+  ]
+ },
+ "rows": [
+  {
+   "query_id": "d6-q01",
+   "split": "dev",
+   "answerable": true,
+   "question": "What happens to a pending exception if the finally clause executes a return statement?",
+   "query_used": "What happens to a pending exception if the finally clause executes a return statement?",
+   "filter_applied": null,
+   "latency_ms": 7.03,
+   "top3": [
+    {
+     "id": "B:py3.13/compound#6:c001",
+     "rank": 1,
+     "score": 0.659992,
+     "source_id": "py3.13/compound",
+     "page": 6,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Compound statements > \"except\" clause]\nIf the evaluation of an expression in the header of an \"except\" clause\nraises an exception, the original search for a handler is canceled and\na search starts for the new exception in the surrounding code and on\nthe call stack (it is treated as if the entire \"try\" statement raised\nthe exception).\n\nWhen a matching \"except\" clause is found, the exception is assigned to\nthe target specified after the \"as\" keyword in that \"except\" clause,\nif present, and the \"except\" clause’s suite is executed. All \"except\"\nclauses must have an executable block. When the end of this block is\nreached, execution continues normally after the entire \"try\"\nstatement. (This means that if two nested handlers exist for the same\nexception, and the exception occurs in the \"try\" clause of the inner\nhandler, the outer handler will not handle the exception.)\n\nWhen an exception has been assigned using \"as target\", it is cleared\nat the end of the \"except\" clause.  This is as if:\n\n   except E as N:\n       foo"
+    },
+    {
+     "id": "B:py3.11/compound#6:c001",
+     "rank": 2,
+     "score": 0.659517,
+     "source_id": "py3.11/compound",
+     "page": 6,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Compound statements > \"except\" clause]\nIf the evaluation of an expression in the header of an \"except\" clause\nraises an exception, the original search for a handler is canceled and\na search starts for the new exception in the surrounding code and on\nthe call stack (it is treated as if the entire \"try\" statement raised\nthe exception).\n\nWhen a matching \"except\" clause is found, the exception is assigned to\nthe target specified after the \"as\" keyword in that \"except\" clause,\nif present, and the \"except\" clause’s suite is executed. All \"except\"\nclauses must have an executable block. When the end of this block is\nreached, execution continues normally after the entire \"try\"\nstatement. (This means that if two nested handlers exist for the same\nexception, and the exception occurs in the \"try\" clause of the inner\nhandler, the outer handler will not handle the exception.)\n\nWhen an exception has been assigned using \"as target\", it is cleared\nat the end of the \"except\" clause.  This is as if\n\n   except E as N:\n       foo"
+    },
+    {
+     "id": "B:py3.13/try#2:c001",
+     "rank": 3,
+     "score": 0.654411,
+     "source_id": "py3.13/try",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"try\" statement > \"except\" clause]\nIf the evaluation of an expression in the header of an \"except\" clause\nraises an exception, the original search for a handler is canceled and\na search starts for the new exception in the surrounding code and on\nthe call stack (it is treated as if the entire \"try\" statement raised\nthe exception).\n\nWhen a matching \"except\" clause is found, the exception is assigned to\nthe target specified after the \"as\" keyword in that \"except\" clause,\nif present, and the \"except\" clause’s suite is executed. All \"except\"\nclauses must have an executable block. When the end of this block is\nreached, execution continues normally after the entire \"try\"\nstatement. (This means that if two nested handlers exist for the same\nexception, and the exception occurs in the \"try\" clause of the inner\nhandler, the outer handler will not handle the exception.)\n\nWhen an exception has been assigned using \"as target\", it is cleared\nat the end of the \"except\" clause.  This is as if:\n\n   except E as N:\n       foo"
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/compound#6:c001",
+    "B:py3.11/compound#6:c001",
+    "B:py3.13/try#2:c001"
+   ],
+   "context_chars": 3530,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": 5,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.11/compound#9",
+    "py3.11/try#5",
+    "py3.13/compound#9",
+    "py3.13/try#5"
+   ]
+  },
+  {
+   "query_id": "d6-q02",
+   "split": "dev",
+   "answerable": true,
+   "question": "Why can't I use the exception variable from 'except E as N' after the handler block ends?",
+   "query_used": "Why can't I use the exception variable from 'except E as N' after the handler block ends?",
+   "filter_applied": null,
+   "latency_ms": 6.49,
+   "top3": [
+    {
+     "id": "B:py3.13/try#2:c001",
+     "rank": 1,
+     "score": 0.555269,
+     "source_id": "py3.13/try",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"try\" statement > \"except\" clause]\nIf the evaluation of an expression in the header of an \"except\" clause\nraises an exception, the original search for a handler is canceled and\na search starts for the new exception in the surrounding code and on\nthe call stack (it is treated as if the entire \"try\" statement raised\nthe exception).\n\nWhen a matching \"except\" clause is found, the exception is assigned to\nthe target specified after the \"as\" keyword in that \"except\" clause,\nif present, and the \"except\" clause’s suite is executed. All \"except\"\nclauses must have an executable block. When the end of this block is\nreached, execution continues normally after the entire \"try\"\nstatement. (This means that if two nested handlers exist for the same\nexception, and the exception occurs in the \"try\" clause of the inner\nhandler, the outer handler will not handle the exception.)\n\nWhen an exception has been assigned using \"as target\", it is cleared\nat the end of the \"except\" clause.  This is as if:\n\n   except E as N:\n       foo"
+    },
+    {
+     "id": "B:py3.13/compound#6:c001",
+     "rank": 2,
+     "score": 0.555209,
+     "source_id": "py3.13/compound",
+     "page": 6,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Compound statements > \"except\" clause]\nIf the evaluation of an expression in the header of an \"except\" clause\nraises an exception, the original search for a handler is canceled and\na search starts for the new exception in the surrounding code and on\nthe call stack (it is treated as if the entire \"try\" statement raised\nthe exception).\n\nWhen a matching \"except\" clause is found, the exception is assigned to\nthe target specified after the \"as\" keyword in that \"except\" clause,\nif present, and the \"except\" clause’s suite is executed. All \"except\"\nclauses must have an executable block. When the end of this block is\nreached, execution continues normally after the entire \"try\"\nstatement. (This means that if two nested handlers exist for the same\nexception, and the exception occurs in the \"try\" clause of the inner\nhandler, the outer handler will not handle the exception.)\n\nWhen an exception has been assigned using \"as target\", it is cleared\nat the end of the \"except\" clause.  This is as if:\n\n   except E as N:\n       foo"
+    },
+    {
+     "id": "B:py3.11/try#2:c001",
+     "rank": 3,
+     "score": 0.554898,
+     "source_id": "py3.11/try",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"try\" statement > \"except\" clause]\nIf the evaluation of an expression in the header of an \"except\" clause\nraises an exception, the original search for a handler is canceled and\na search starts for the new exception in the surrounding code and on\nthe call stack (it is treated as if the entire \"try\" statement raised\nthe exception).\n\nWhen a matching \"except\" clause is found, the exception is assigned to\nthe target specified after the \"as\" keyword in that \"except\" clause,\nif present, and the \"except\" clause’s suite is executed. All \"except\"\nclauses must have an executable block. When the end of this block is\nreached, execution continues normally after the entire \"try\"\nstatement. (This means that if two nested handlers exist for the same\nexception, and the exception occurs in the \"try\" clause of the inner\nhandler, the outer handler will not handle the exception.)\n\nWhen an exception has been assigned using \"as target\", it is cleared\nat the end of the \"except\" clause.  This is as if\n\n   except E as N:\n       foo"
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/try#2:c001",
+    "B:py3.13/compound#6:c001",
+    "B:py3.11/try#2:c001"
+   ],
+   "context_chars": 3520,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.11/compound#6",
+    "py3.11/try#2",
+    "py3.13/compound#6",
+    "py3.13/try#2"
+   ]
+  },
+  {
+   "query_id": "d6-q03",
+   "split": "dev",
+   "answerable": true,
+   "question": "Can one try statement contain both except and except* clauses?",
+   "query_used": "Can one try statement contain both except and except* clauses?",
+   "filter_applied": null,
+   "latency_ms": 5.0,
+   "top3": [
+    {
+     "id": "B:py3.13/try#3:c001",
+     "rank": 1,
+     "score": 0.566112,
+     "source_id": "py3.13/try",
+     "page": 3,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"try\" statement > \"except*\" clause]\nWhen an exception group is raised in the try block, each \"except*\"\nclause splits (see \"split()\") it into the subgroups of matching and\nnon-matching exceptions. If the matching subgroup is not empty, it\nbecomes the handled exception (the value returned from\n\"sys.exception()\") and assigned to the target of the \"except*\" clause\n(if there is one). Then, the body of the \"except*\" clause executes. If\nthe non-matching subgroup is not empty, it is processed by the next\n\"except*\" in the same manner. This continues until all exceptions in\nthe group have been matched, or the last \"except*\" clause has run.\n\nAfter all \"except*\" clauses execute, the group of unhandled exceptions\nis merged with any exceptions that were raised or re-raised from\nwithin \"except*\" clauses. This merged exception group propagates on:"
+    },
+    {
+     "id": "B:py3.13/compound#7:c001",
+     "rank": 2,
+     "score": 0.563178,
+     "source_id": "py3.13/compound",
+     "page": 7,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Compound statements > \"except*\" clause]\nWhen an exception group is raised in the try block, each \"except*\"\nclause splits (see \"split()\") it into the subgroups of matching and\nnon-matching exceptions. If the matching subgroup is not empty, it\nbecomes the handled exception (the value returned from\n\"sys.exception()\") and assigned to the target of the \"except*\" clause\n(if there is one). Then, the body of the \"except*\" clause executes. If\nthe non-matching subgroup is not empty, it is processed by the next\n\"except*\" in the same manner. This continues until all exceptions in\nthe group have been matched, or the last \"except*\" clause has run.\n\nAfter all \"except*\" clauses execute, the group of unhandled exceptions\nis merged with any exceptions that were raised or re-raised from\nwithin \"except*\" clauses. This merged exception group propagates on:"
+    },
+    {
+     "id": "B:py3.11/compound#8:c000",
+     "rank": 3,
+     "score": 0.562025,
+     "source_id": "py3.11/compound",
+     "page": 8,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "\"else\" clause\n-------------\n\nThe optional \"else\" clause is executed if the control flow leaves the\n\"try\" suite, no exception was raised, and no \"return\", \"continue\", or\n\"break\" statement was executed.  Exceptions in the \"else\" clause are\nnot handled by the preceding \"except\" clauses."
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/try#3:c001",
+    "B:py3.13/compound#7:c001",
+    "B:py3.11/compound#8:c000"
+   ],
+   "context_chars": 2433,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": 7,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.13/compound#7",
+    "py3.13/try#3"
+   ]
+  },
+  {
+   "query_id": "d6-q04",
+   "split": "dev",
+   "answerable": true,
+   "question": "What does a bare raise statement do when no exception is currently being handled?",
+   "query_used": "What does a bare raise statement do when no exception is currently being handled?",
+   "filter_applied": null,
+   "latency_ms": 4.97,
+   "top3": [
+    {
+     "id": "B:py3.11/raise#1:c002",
+     "rank": 1,
+     "score": 0.525975,
+     "source_id": "py3.11/raise",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"raise\" statement]\n>>> try:\n   ...     print(1 / 0)\n   ... except Exception as exc:\n   ...     raise RuntimeError(\"Something bad happened\") from exc\n   ...\n   Traceback (most recent call last):\n     File \"<stdin>\", line 2, in <module>\n       print(1 / 0)\n             ~~^~~\n   ZeroDivisionError: division by zero\n\n   The above exception was the direct cause of the following exception:\n\n   Traceback (most recent call last):\n     File \"<stdin>\", line 4, in <module>\n       raise RuntimeError(\"Something bad happened\") from exc\n   RuntimeError: Something bad happened\n\nA similar mechanism works implicitly if a new exception is raised when\nan exception is already being handled.  An exception may be handled\nwhen an \"except\" or \"finally\" clause, or a \"with\" statement, is used.\nThe previous exception is then attached as the new exception’s\n\"__context__\" attribute:"
+    },
+    {
+     "id": "B:py3.13/raise#1:c002",
+     "rank": 2,
+     "score": 0.525975,
+     "source_id": "py3.13/raise",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"raise\" statement]\n>>> try:\n   ...     print(1 / 0)\n   ... except Exception as exc:\n   ...     raise RuntimeError(\"Something bad happened\") from exc\n   ...\n   Traceback (most recent call last):\n     File \"<stdin>\", line 2, in <module>\n       print(1 / 0)\n             ~~^~~\n   ZeroDivisionError: division by zero\n\n   The above exception was the direct cause of the following exception:\n\n   Traceback (most recent call last):\n     File \"<stdin>\", line 4, in <module>\n       raise RuntimeError(\"Something bad happened\") from exc\n   RuntimeError: Something bad happened\n\nA similar mechanism works implicitly if a new exception is raised when\nan exception is already being handled.  An exception may be handled\nwhen an \"except\" or \"finally\" clause, or a \"with\" statement, is used.\nThe previous exception is then attached as the new exception’s\n\"__context__\" attribute:"
+    },
+    {
+     "id": "B:py3.11/raise#1:c000",
+     "rank": 3,
+     "score": 0.524303,
+     "source_id": "py3.11/raise",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "The \"raise\" statement\n*********************\n\n   raise_stmt ::= \"raise\" [expression [\"from\" expression]]\n\nIf no expressions are present, \"raise\" re-raises the exception that is\ncurrently being handled, which is also known as the *active\nexception*. If there isn’t currently an active exception, a\n\"RuntimeError\" exception is raised indicating that this is an error.\n\nOtherwise, \"raise\" evaluates the first expression as the exception\nobject.  It must be either a subclass or an instance of\n\"BaseException\". If it is a class, the exception instance will be\nobtained when needed by instantiating the class with no arguments.\n\nThe *type* of the exception is the exception instance’s class, the\n*value* is the instance itself."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/raise#1:c002",
+    "B:py3.13/raise#1:c002",
+    "B:py3.11/raise#1:c000"
+   ],
+   "context_chars": 2922,
+   "hit_at_1": false,
+   "hit_at_3": true,
+   "first_hit_rank": 3,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.11/raise#1",
+    "py3.13/raise#1"
+   ]
+  },
+  {
+   "query_id": "d6-q05",
+   "split": "dev",
+   "answerable": true,
+   "question": "How do I stop Python from showing the original exception as the cause when I raise a new one?",
+   "query_used": "How do I stop Python from showing the original exception as the cause when I raise a new one?",
+   "filter_applied": null,
+   "latency_ms": 5.71,
+   "top3": [
+    {
+     "id": "B:py3.11/raise#1:c002",
+     "rank": 1,
+     "score": 0.39479,
+     "source_id": "py3.11/raise",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"raise\" statement]\n>>> try:\n   ...     print(1 / 0)\n   ... except Exception as exc:\n   ...     raise RuntimeError(\"Something bad happened\") from exc\n   ...\n   Traceback (most recent call last):\n     File \"<stdin>\", line 2, in <module>\n       print(1 / 0)\n             ~~^~~\n   ZeroDivisionError: division by zero\n\n   The above exception was the direct cause of the following exception:\n\n   Traceback (most recent call last):\n     File \"<stdin>\", line 4, in <module>\n       raise RuntimeError(\"Something bad happened\") from exc\n   RuntimeError: Something bad happened\n\nA similar mechanism works implicitly if a new exception is raised when\nan exception is already being handled.  An exception may be handled\nwhen an \"except\" or \"finally\" clause, or a \"with\" statement, is used.\nThe previous exception is then attached as the new exception’s\n\"__context__\" attribute:"
+    },
+    {
+     "id": "B:py3.13/raise#1:c002",
+     "rank": 2,
+     "score": 0.39479,
+     "source_id": "py3.13/raise",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"raise\" statement]\n>>> try:\n   ...     print(1 / 0)\n   ... except Exception as exc:\n   ...     raise RuntimeError(\"Something bad happened\") from exc\n   ...\n   Traceback (most recent call last):\n     File \"<stdin>\", line 2, in <module>\n       print(1 / 0)\n             ~~^~~\n   ZeroDivisionError: division by zero\n\n   The above exception was the direct cause of the following exception:\n\n   Traceback (most recent call last):\n     File \"<stdin>\", line 4, in <module>\n       raise RuntimeError(\"Something bad happened\") from exc\n   RuntimeError: Something bad happened\n\nA similar mechanism works implicitly if a new exception is raised when\nan exception is already being handled.  An exception may be handled\nwhen an \"except\" or \"finally\" clause, or a \"with\" statement, is used.\nThe previous exception is then attached as the new exception’s\n\"__context__\" attribute:"
+    },
+    {
+     "id": "B:py3.13/exceptions#1:c002",
+     "rank": 3,
+     "score": 0.365325,
+     "source_id": "py3.13/exceptions",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Exceptions]\nException messages are not part of the Python API.  Their contents\n  may change from one version of Python to the next without warning\n  and should not be relied on by code which will run under multiple\n  versions of the interpreter.\n\nSee also the description of the \"try\" statement in section The try\nstatement and \"raise\" statement in section The raise statement."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/raise#1:c002",
+    "B:py3.13/raise#1:c002",
+    "B:py3.13/exceptions#1:c002"
+   ],
+   "context_chars": 2578,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": null,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.11/raise#1",
+    "py3.13/raise#1"
+   ]
+  },
+  {
+   "query_id": "d6-q06",
+   "split": "dev",
+   "answerable": true,
+   "question": "Are assert statements still executed when Python runs with optimization (-O)?",
+   "query_used": "Are assert statements still executed when Python runs with optimization (-O)?",
+   "filter_applied": null,
+   "latency_ms": 5.23,
+   "top3": [
+    {
+     "id": "B:py3.11/compound#3:c000",
+     "rank": 1,
+     "score": 0.551991,
+     "source_id": "py3.11/compound",
+     "page": 3,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "The \"while\" statement\n=====================\n\nThe \"while\" statement is used for repeated execution as long as an\nexpression is true:\n\n   while_stmt ::= \"while\" assignment_expression \":\" suite\n                  [\"else\" \":\" suite]\n\nThis repeatedly tests the expression and, if it is true, executes the\nfirst suite; if the expression is false (which may be the first time\nit is tested) the suite of the \"else\" clause, if present, is executed\nand the loop terminates.\n\nA \"break\" statement executed in the first suite terminates the loop\nwithout executing the \"else\" clause’s suite.  A \"continue\" statement\nexecuted in the first suite skips the rest of the suite and goes back\nto testing the expression."
+    },
+    {
+     "id": "B:py3.13/compound#3:c000",
+     "rank": 2,
+     "score": 0.551991,
+     "source_id": "py3.13/compound",
+     "page": 3,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "The \"while\" statement\n=====================\n\nThe \"while\" statement is used for repeated execution as long as an\nexpression is true:\n\n   while_stmt ::= \"while\" assignment_expression \":\" suite\n                  [\"else\" \":\" suite]\n\nThis repeatedly tests the expression and, if it is true, executes the\nfirst suite; if the expression is false (which may be the first time\nit is tested) the suite of the \"else\" clause, if present, is executed\nand the loop terminates.\n\nA \"break\" statement executed in the first suite terminates the loop\nwithout executing the \"else\" clause’s suite.  A \"continue\" statement\nexecuted in the first suite skips the rest of the suite and goes back\nto testing the expression."
+    },
+    {
+     "id": "B:py3.11/while#1:c000",
+     "rank": 3,
+     "score": 0.549762,
+     "source_id": "py3.11/while",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "The \"while\" statement\n*********************\n\nThe \"while\" statement is used for repeated execution as long as an\nexpression is true:\n\n   while_stmt ::= \"while\" assignment_expression \":\" suite\n                  [\"else\" \":\" suite]\n\nThis repeatedly tests the expression and, if it is true, executes the\nfirst suite; if the expression is false (which may be the first time\nit is tested) the suite of the \"else\" clause, if present, is executed\nand the loop terminates.\n\nA \"break\" statement executed in the first suite terminates the loop\nwithout executing the \"else\" clause’s suite.  A \"continue\" statement\nexecuted in the first suite skips the rest of the suite and goes back\nto testing the expression."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/compound#3:c000",
+    "B:py3.13/compound#3:c000",
+    "B:py3.11/while#1:c000"
+   ],
+   "context_chars": 2566,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": null,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.13/assert#1"
+   ]
+  },
+  {
+   "query_id": "d6-q07",
+   "split": "dev",
+   "answerable": true,
+   "question": "If a loop is terminated with break, is its else clause executed?",
+   "query_used": "If a loop is terminated with break, is its else clause executed?",
+   "filter_applied": null,
+   "latency_ms": 5.3,
+   "top3": [
+    {
+     "id": "B:py3.11/break#1:c000",
+     "rank": 1,
+     "score": 0.647064,
+     "source_id": "py3.11/break",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "The \"break\" statement\n*********************\n\n   break_stmt ::= \"break\"\n\n\"break\" may only occur syntactically nested in a \"for\" or \"while\"\nloop, but not nested in a function or class definition within that\nloop.\n\nIt terminates the nearest enclosing loop, skipping the optional \"else\"\nclause if the loop has one.\n\nIf a \"for\" loop is terminated by \"break\", the loop control target\nkeeps its current value.\n\nWhen \"break\" passes control out of a \"try\" statement with a \"finally\"\nclause, that \"finally\" clause is executed before really leaving the\nloop."
+    },
+    {
+     "id": "B:py3.13/break#1:c000",
+     "rank": 2,
+     "score": 0.647064,
+     "source_id": "py3.13/break",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "The \"break\" statement\n*********************\n\n   break_stmt ::= \"break\"\n\n\"break\" may only occur syntactically nested in a \"for\" or \"while\"\nloop, but not nested in a function or class definition within that\nloop.\n\nIt terminates the nearest enclosing loop, skipping the optional \"else\"\nclause if the loop has one.\n\nIf a \"for\" loop is terminated by \"break\", the loop control target\nkeeps its current value.\n\nWhen \"break\" passes control out of a \"try\" statement with a \"finally\"\nclause, that \"finally\" clause is executed before really leaving the\nloop."
+    },
+    {
+     "id": "B:py3.11/compound#8:c000",
+     "rank": 3,
+     "score": 0.608147,
+     "source_id": "py3.11/compound",
+     "page": 8,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "\"else\" clause\n-------------\n\nThe optional \"else\" clause is executed if the control flow leaves the\n\"try\" suite, no exception was raised, and no \"return\", \"continue\", or\n\"break\" statement was executed.  Exceptions in the \"else\" clause are\nnot handled by the preceding \"except\" clauses."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/break#1:c000",
+    "B:py3.13/break#1:c000",
+    "B:py3.11/compound#8:c000"
+   ],
+   "context_chars": 1839,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": 9,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.11/compound#3",
+    "py3.11/compound#4",
+    "py3.11/for#1",
+    "py3.11/while#1",
+    "py3.13/compound#3",
+    "py3.13/compound#4",
+    "py3.13/for#1",
+    "py3.13/while#1"
+   ]
+  },
+  {
+   "query_id": "d6-q08",
+   "split": "dev",
+   "answerable": true,
+   "question": "Do the and/or operators always return True or False?",
+   "query_used": "Do the and/or operators always return True or False?",
+   "filter_applied": null,
+   "latency_ms": 4.41,
+   "top3": [
+    {
+     "id": "B:py3.11/truth#1:c000",
+     "rank": 1,
+     "score": 0.565919,
+     "source_id": "py3.11/truth",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Truth Value Testing\n*******************\n\nAny object can be tested for truth value, for use in an \"if\" or\n\"while\" condition or as operand of the Boolean operations below.\n\nBy default, an object is considered true unless its class defines\neither a \"__bool__()\" method that returns \"False\" or a \"__len__()\"\nmethod that returns zero, when called with the object. [1]  Here are\nmost of the built-in objects considered false:\n\n* constants defined to be false: \"None\" and \"False\"\n\n* zero of any numeric type: \"0\", \"0.0\", \"0j\", \"Decimal(0)\",\n  \"Fraction(0, 1)\"\n\n* empty sequences and collections: \"''\", \"()\", \"[]\", \"{}\", \"set()\",\n  \"range(0)\"\n\nOperations and built-in functions that have a Boolean result always\nreturn \"0\" or \"False\" for false and \"1\" or \"True\" for true, unless\notherwise stated. (Important exception: the Boolean operations \"or\"\nand \"and\" always return one of their operands.)"
+    },
+    {
+     "id": "B:py3.13/truth#1:c000",
+     "rank": 2,
+     "score": 0.565919,
+     "source_id": "py3.13/truth",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Truth Value Testing\n*******************\n\nAny object can be tested for truth value, for use in an \"if\" or\n\"while\" condition or as operand of the Boolean operations below.\n\nBy default, an object is considered true unless its class defines\neither a \"__bool__()\" method that returns \"False\" or a \"__len__()\"\nmethod that returns zero, when called with the object. [1]  Here are\nmost of the built-in objects considered false:\n\n* constants defined to be false: \"None\" and \"False\"\n\n* zero of any numeric type: \"0\", \"0.0\", \"0j\", \"Decimal(0)\",\n  \"Fraction(0, 1)\"\n\n* empty sequences and collections: \"''\", \"()\", \"[]\", \"{}\", \"set()\",\n  \"range(0)\"\n\nOperations and built-in functions that have a Boolean result always\nreturn \"0\" or \"False\" for false and \"1\" or \"True\" for true, unless\notherwise stated. (Important exception: the Boolean operations \"or\"\nand \"and\" always return one of their operands.)"
+    },
+    {
+     "id": "B:py3.13/customization#1:c010",
+     "rank": 3,
+     "score": 0.549033,
+     "source_id": "py3.13/customization",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Basic customization]\nA rich comparison method may return the singleton \"NotImplemented\"\n   if it does not implement the operation for a given pair of\n   arguments. By convention, \"False\" and \"True\" are returned for a\n   successful comparison. However, these methods can return any value,\n   so if the comparison operator is used in a Boolean context (e.g.,\n   in the condition of an \"if\" statement), Python will call \"bool()\"\n   on the value to determine if the result is true or false."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/truth#1:c000",
+    "B:py3.13/truth#1:c000",
+    "B:py3.13/customization#1:c010"
+   ],
+   "context_chars": 2732,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": 5,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.11/booleans#1",
+    "py3.13/booleans#1"
+   ]
+  },
+  {
+   "query_id": "d6-q09",
+   "split": "dev",
+   "answerable": true,
+   "question": "What error occurs if a variable is used in a function before its global declaration?",
+   "query_used": "What error occurs if a variable is used in a function before its global declaration?",
+   "filter_applied": null,
+   "latency_ms": 3.81,
+   "top3": [
+    {
+     "id": "B:py3.13/global#1:c000",
+     "rank": 1,
+     "score": 0.679904,
+     "source_id": "py3.13/global",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "The \"global\" statement\n**********************\n\n   global_stmt ::= \"global\" identifier (\",\" identifier)*\n\nThe \"global\" statement causes the listed identifiers to be interpreted\nas globals. It would be impossible to assign to a global variable\nwithout \"global\", although free variables may refer to globals without\nbeing declared global.\n\nThe \"global\" statement applies to the entire current scope (module,\nfunction body or class definition). A \"SyntaxError\" is raised if a\nvariable is used or assigned to prior to its global declaration in the\nscope.\n\nAt the module level, all variables are global, so a \"global\" statement\nhas no effect. However, variables must still not be used or assigned\nto prior to their \"global\" declaration. This requirement is relaxed in\nthe interactive prompt (*REPL*)."
+    },
+    {
+     "id": "B:py3.11/compound#26:c002",
+     "rank": 2,
+     "score": 0.622911,
+     "source_id": "py3.11/compound",
+     "page": 26,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Compound statements > Function definitions]\nA function definition is an executable statement.  Its execution binds\nthe function name in the current local namespace to a function object\n(a wrapper around the executable code for the function).  This\nfunction object contains a reference to the current global namespace\nas the global namespace to be used when the function is called.\n\nThe function definition does not execute the function body; this gets\nexecuted only when the function is called. [4]\n\nA function definition may be wrapped by one or more *decorator*\nexpressions. Decorator expressions are evaluated when the function is\ndefined, in the scope that contains the function definition.  The\nresult must be a callable, which is invoked with the function object\nas the only argument. The returned value is bound to the function name\ninstead of the function object.  Multiple decorators are applied in\nnested fashion. For example, the following code\n\n   @f1(arg)\n   @f2\n   def func(): pass\n\nis roughly equivalent to"
+    },
+    {
+     "id": "B:py3.11/function#1:c002",
+     "rank": 3,
+     "score": 0.619729,
+     "source_id": "py3.11/function",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Function definitions]\nA function definition is an executable statement.  Its execution binds\nthe function name in the current local namespace to a function object\n(a wrapper around the executable code for the function).  This\nfunction object contains a reference to the current global namespace\nas the global namespace to be used when the function is called.\n\nThe function definition does not execute the function body; this gets\nexecuted only when the function is called. [4]\n\nA function definition may be wrapped by one or more *decorator*\nexpressions. Decorator expressions are evaluated when the function is\ndefined, in the scope that contains the function definition.  The\nresult must be a callable, which is invoked with the function object\nas the only argument. The returned value is bound to the function name\ninstead of the function object.  Multiple decorators are applied in\nnested fashion. For example, the following code\n\n   @f1(arg)\n   @f2\n   def func(): pass\n\nis roughly equivalent to"
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/global#1:c000",
+    "B:py3.11/compound#26:c002",
+    "B:py3.11/function#1:c002"
+   ],
+   "context_chars": 3294,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.13/global#1"
+   ]
+  },
+  {
+   "query_id": "d6-q10",
+   "split": "dev",
+   "answerable": true,
+   "question": "In an augmented assignment such as a[i] += f(x), which side is evaluated first?",
+   "query_used": "In an augmented assignment such as a[i] += f(x), which side is evaluated first?",
+   "filter_applied": null,
+   "latency_ms": 3.79,
+   "top3": [
+    {
+     "id": "B:py3.11/assignment#2:c001",
+     "rank": 1,
+     "score": 0.709932,
+     "source_id": "py3.11/assignment",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Assignment statements > Augmented assignment statements]\nAn augmented assignment expression like \"x += 1\" can be rewritten as\n\"x = x + 1\" to achieve a similar, but not exactly equal effect. In the\naugmented version, \"x\" is only evaluated once. Also, when possible,\nthe actual operation is performed *in-place*, meaning that rather than\ncreating a new object and assigning that to the target, the old object\nis modified instead.\n\nUnlike normal assignments, augmented assignments evaluate the left-\nhand side *before* evaluating the right-hand side.  For example, \"a[i]\n+= f(x)\" first looks-up \"a[i]\", then it evaluates \"f(x)\" and performs\nthe addition, and lastly, it writes the result back to \"a[i]\".\n\nWith the exception of assigning to tuples and multiple targets in a\nsingle statement, the assignment done by augmented assignment\nstatements is handled the same way as normal assignments. Similarly,\nwith the exception of the possible *in-place* behavior, the binary\noperation performed by augmented assignment is the same as the normal\nbinary operations."
+    },
+    {
+     "id": "B:py3.11/augassign#1:c001",
+     "rank": 2,
+     "score": 0.705782,
+     "source_id": "py3.11/augassign",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Augmented assignment statements]\nAn augmented assignment expression like \"x += 1\" can be rewritten as\n\"x = x + 1\" to achieve a similar, but not exactly equal effect. In the\naugmented version, \"x\" is only evaluated once. Also, when possible,\nthe actual operation is performed *in-place*, meaning that rather than\ncreating a new object and assigning that to the target, the old object\nis modified instead.\n\nUnlike normal assignments, augmented assignments evaluate the left-\nhand side *before* evaluating the right-hand side.  For example, \"a[i]\n+= f(x)\" first looks-up \"a[i]\", then it evaluates \"f(x)\" and performs\nthe addition, and lastly, it writes the result back to \"a[i]\".\n\nWith the exception of assigning to tuples and multiple targets in a\nsingle statement, the assignment done by augmented assignment\nstatements is handled the same way as normal assignments. Similarly,\nwith the exception of the possible *in-place* behavior, the binary\noperation performed by augmented assignment is the same as the normal\nbinary operations."
+    },
+    {
+     "id": "B:py3.13/assignment#2:c001",
+     "rank": 3,
+     "score": 0.701194,
+     "source_id": "py3.13/assignment",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Assignment statements > Augmented assignment statements]\nAn augmented assignment statement like \"x += 1\" can be rewritten as \"x\n= x + 1\" to achieve a similar, but not exactly equal effect. In the\naugmented version, \"x\" is only evaluated once. Also, when possible,\nthe actual operation is performed *in-place*, meaning that rather than\ncreating a new object and assigning that to the target, the old object\nis modified instead.\n\nUnlike normal assignments, augmented assignments evaluate the left-\nhand side *before* evaluating the right-hand side.  For example, \"a[i]\n+= f(x)\" first looks-up \"a[i]\", then it evaluates \"f(x)\" and performs\nthe addition, and lastly, it writes the result back to \"a[i]\".\n\nWith the exception of assigning to tuples and multiple targets in a\nsingle statement, the assignment done by augmented assignment\nstatements is handled the same way as normal assignments. Similarly,\nwith the exception of the possible *in-place* behavior, the binary\noperation performed by augmented assignment is the same as the normal\nbinary operations."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/assignment#2:c001",
+    "B:py3.11/augassign#1:c001",
+    "B:py3.13/assignment#2:c001"
+   ],
+   "context_chars": 3667,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.11/assignment#2",
+    "py3.11/augassign#1",
+    "py3.13/assignment#2",
+    "py3.13/augassign#1"
+   ]
+  },
+  {
+   "query_id": "d6-q11",
+   "split": "dev",
+   "answerable": true,
+   "question": "When must a walrus := expression be wrapped in parentheses?",
+   "query_used": "When must a walrus := expression be wrapped in parentheses?",
+   "filter_applied": null,
+   "latency_ms": 6.14,
+   "top3": [
+    {
+     "id": "B:py3.13/assignment-expressions#1:c000",
+     "rank": 1,
+     "score": 0.547881,
+     "source_id": "py3.13/assignment-expressions",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Assignment expressions\n**********************\n\n   assignment_expression ::= [identifier \":=\"] expression\n\nAn assignment expression (sometimes also called a “named expression”\nor “walrus”) assigns an \"expression\" to an \"identifier\", while also\nreturning the value of the \"expression\".\n\nOne common use case is when handling matched regular expressions:\n\n   if matching := pattern.search(data):\n       do_something(matching)\n\nOr, when processing a file stream in chunks:\n\n   while chunk := file.read(9000):\n       process(chunk)\n\nAssignment expressions must be surrounded by parentheses when used as\nexpression statements and when used as sub-expressions in slicing,\nconditional, lambda, keyword-argument, and comprehension-if\nexpressions and in \"assert\", \"with\", and \"assignment\" statements. In\nall other places where they can be used, parentheses are not required,\nincluding in \"if\" and \"while\" statements.\n\nAdded in version 3.8: See **PEP 572** for more details about\nassignment expressions."
+    },
+    {
+     "id": "B:py3.13/exprlists#1:c000",
+     "rank": 2,
+     "score": 0.49088,
+     "source_id": "py3.13/exprlists",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Expression lists\n****************\n\n   starred_expression       ::= [\"*\"] or_expr\n   flexible_expression      ::= assignment_expression | starred_expression\n   flexible_expression_list ::= flexible_expression (\",\" flexible_expression)* [\",\"]\n   starred_expression_list  ::= starred_expression (\",\" starred_expression)* [\",\"]\n   expression_list          ::= expression (\",\" expression)* [\",\"]\n   yield_list               ::= expression_list | starred_expression \",\" [starred_expression_list]\n\nExcept when part of a list or set display, an expression list\ncontaining at least one comma yields a tuple.  The length of the tuple\nis the number of expressions in the list.  The expressions are\nevaluated from left to right.\n\nAn asterisk \"*\" denotes *iterable unpacking*.  Its operand must be an\n*iterable*.  The iterable is expanded into a sequence of items, which\nare included in the new tuple, list, or set, at the site of the\nunpacking."
+    },
+    {
+     "id": "B:py3.11/lambda#1:c000",
+     "rank": 3,
+     "score": 0.453597,
+     "source_id": "py3.11/lambda",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Lambdas\n*******\n\n   lambda_expr ::= \"lambda\" [parameter_list] \":\" expression\n\nLambda expressions (sometimes called lambda forms) are used to create\nanonymous functions. The expression \"lambda parameters: expression\"\nyields a function object.  The unnamed object behaves like a function\nobject defined with:\n\n   def <lambda>(parameters):\n       return expression\n\nSee section Function definitions for the syntax of parameter lists.\nNote that functions created with lambda expressions cannot contain\nstatements or annotations."
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/assignment-expressions#1:c000",
+    "B:py3.13/exprlists#1:c000",
+    "B:py3.11/lambda#1:c000"
+   ],
+   "context_chars": 2936,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.13/assignment-expressions#1"
+   ]
+  },
+  {
+   "query_id": "d6-q12",
+   "split": "dev",
+   "answerable": true,
+   "question": "Can a lambda function contain statements or annotations?",
+   "query_used": "Can a lambda function contain statements or annotations?",
+   "filter_applied": null,
+   "latency_ms": 3.65,
+   "top3": [
+    {
+     "id": "B:py3.11/lambda#1:c000",
+     "rank": 1,
+     "score": 0.701955,
+     "source_id": "py3.11/lambda",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Lambdas\n*******\n\n   lambda_expr ::= \"lambda\" [parameter_list] \":\" expression\n\nLambda expressions (sometimes called lambda forms) are used to create\nanonymous functions. The expression \"lambda parameters: expression\"\nyields a function object.  The unnamed object behaves like a function\nobject defined with:\n\n   def <lambda>(parameters):\n       return expression\n\nSee section Function definitions for the syntax of parameter lists.\nNote that functions created with lambda expressions cannot contain\nstatements or annotations."
+    },
+    {
+     "id": "B:py3.13/lambda#1:c000",
+     "rank": 2,
+     "score": 0.701955,
+     "source_id": "py3.13/lambda",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Lambdas\n*******\n\n   lambda_expr ::= \"lambda\" [parameter_list] \":\" expression\n\nLambda expressions (sometimes called lambda forms) are used to create\nanonymous functions. The expression \"lambda parameters: expression\"\nyields a function object.  The unnamed object behaves like a function\nobject defined with:\n\n   def <lambda>(parameters):\n       return expression\n\nSee section Function definitions for the syntax of parameter lists.\nNote that functions created with lambda expressions cannot contain\nstatements or annotations."
+    },
+    {
+     "id": "B:py3.11/compound#26:c007",
+     "rank": 3,
+     "score": 0.691742,
+     "source_id": "py3.11/compound",
+     "page": 26,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Compound statements > Function definitions]\nIt is also possible to create anonymous functions (functions not bound\nto a name), for immediate use in expressions.  This uses lambda\nexpressions, described in section Lambdas.  Note that the lambda\nexpression is merely a shorthand for a simplified function definition;\na function defined in a “\"def\"” statement can be passed around or\nassigned to another name just like a function defined by a lambda\nexpression.  The “\"def\"” form is actually more powerful since it\nallows the execution of multiple statements and annotations.\n\n**Programmer’s note:** Functions are first-class objects.  A “\"def\"”\nstatement executed inside a function definition defines a local\nfunction that can be returned or passed around.  Free variables used\nin the nested function can access the local variables of the function\ncontaining the def.  See section Naming and binding for details.\n\nSee also:\n\n  **PEP 3107** - Function Annotations\n     The original specification for function annotations."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/lambda#1:c000",
+    "B:py3.13/lambda#1:c000",
+    "B:py3.11/compound#26:c007"
+   ],
+   "context_chars": 2513,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.11/lambda#1",
+    "py3.13/lambda#1"
+   ]
+  },
+  {
+   "query_id": "d6-q13",
+   "split": "dev",
+   "answerable": true,
+   "question": "I am on Python 3.11. What warning does an unrecognized escape sequence in a string literal produce?",
+   "query_used": "I am on Python 3.11. What warning does an unrecognized escape sequence in a string literal produce?",
+   "filter_applied": null,
+   "latency_ms": 5.4,
+   "top3": [
+    {
+     "id": "B:py3.11/strings#2:c006",
+     "rank": 1,
+     "score": 0.666678,
+     "source_id": "py3.11/strings",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[String and Bytes literals > Escape sequences]\nUnlike Standard C, all unrecognized escape sequences are left in the\nstring unchanged, i.e., *the backslash is left in the result*.  (This\nbehavior is useful when debugging: if an escape sequence is mistyped,\nthe resulting output is more easily recognized as broken.)  It is also\nimportant to note that the escape sequences only recognized in string\nliterals fall into the category of unrecognized escapes for bytes\nliterals.\n\nChanged in version 3.6: Unrecognized escape sequences produce a\n\"DeprecationWarning\".  In a future Python version they will be a\n\"SyntaxWarning\" and eventually a \"SyntaxError\"."
+    },
+    {
+     "id": "B:py3.13/strings#2:c006",
+     "rank": 2,
+     "score": 0.653714,
+     "source_id": "py3.13/strings",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[String and Bytes literals > Escape sequences]\n7. Any Unicode character can be encoded this way.  Exactly eight hex\n   digits are required.\n\nUnlike Standard C, all unrecognized escape sequences are left in the\nstring unchanged, i.e., *the backslash is left in the result*.  (This\nbehavior is useful when debugging: if an escape sequence is mistyped,\nthe resulting output is more easily recognized as broken.)  It is also\nimportant to note that the escape sequences only recognized in string\nliterals fall into the category of unrecognized escapes for bytes\nliterals.\n\nChanged in version 3.6: Unrecognized escape sequences produce a\n\"DeprecationWarning\".\n\nChanged in version 3.12: Unrecognized escape sequences produce a\n\"SyntaxWarning\". In a future Python version they will be eventually a\n\"SyntaxError\"."
+    },
+    {
+     "id": "B:py3.13/strings#2:c005",
+     "rank": 3,
+     "score": 0.550343,
+     "source_id": "py3.13/strings",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[String and Bytes literals > Escape sequences]\n>>> 'This string will not include \\\n      ... backslashes or newline characters.'\n      'This string will not include backslashes or newline characters.'\n\n   The same result can be achieved using triple-quoted strings, or\n   parentheses and string literal concatenation.\n\n2. As in Standard C, up to three octal digits are accepted.\n\n   Changed in version 3.11: Octal escapes with value larger than\n   \"0o377\" produce a \"DeprecationWarning\".\n\n   Changed in version 3.12: Octal escapes with value larger than\n   \"0o377\" produce a \"SyntaxWarning\". In a future Python version they\n   will be eventually a \"SyntaxError\".\n\n3. Unlike in Standard C, exactly two hex digits are required.\n\n4. In a bytes literal, hexadecimal and octal escapes denote the byte\n   with the given value. In a string literal, these escapes denote a\n   Unicode character with the given value.\n\n5. Changed in version 3.3: Support for name aliases [1] has been\n   added.\n\n6. Exactly four hex digits are required."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/strings#2:c006",
+    "B:py3.13/strings#2:c006",
+    "B:py3.13/strings#2:c005"
+   ],
+   "context_chars": 2939,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.11/strings#2"
+   ]
+  },
+  {
+   "query_id": "d6-q14",
+   "split": "dev",
+   "answerable": true,
+   "question": "Using Python 3.13, can pdb.post_mortem() be given an exception object rather than a traceback?",
+   "query_used": "Using Python 3.13, can pdb.post_mortem() be given an exception object rather than a traceback?",
+   "filter_applied": null,
+   "latency_ms": 5.66,
+   "top3": [
+    {
+     "id": "B:py3.11/types#39:c000",
+     "rank": 1,
+     "score": 0.601268,
+     "source_id": "py3.11/types",
+     "page": 39,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Traceback objects\n-----------------\n\nTraceback objects represent the stack trace of an exception. A\ntraceback object is implicitly created when an exception occurs, and\nmay also be explicitly created by calling \"types.TracebackType\".\n\nChanged in version 3.7: Traceback objects can now be explicitly\ninstantiated from Python code.\n\nFor implicitly created tracebacks, when the search for an exception\nhandler unwinds the execution stack, at each unwound level a traceback\nobject is inserted in front of the current traceback.  When an\nexception handler is entered, the stack trace is made available to the\nprogram. (See section The try statement.) It is accessible as the\nthird item of the tuple returned by \"sys.exc_info()\", and as the\n\"__traceback__\" attribute of the caught exception."
+    },
+    {
+     "id": "B:py3.13/types#45:c000",
+     "rank": 2,
+     "score": 0.601268,
+     "source_id": "py3.13/types",
+     "page": 45,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Traceback objects\n-----------------\n\nTraceback objects represent the stack trace of an exception. A\ntraceback object is implicitly created when an exception occurs, and\nmay also be explicitly created by calling \"types.TracebackType\".\n\nChanged in version 3.7: Traceback objects can now be explicitly\ninstantiated from Python code.\n\nFor implicitly created tracebacks, when the search for an exception\nhandler unwinds the execution stack, at each unwound level a traceback\nobject is inserted in front of the current traceback.  When an\nexception handler is entered, the stack trace is made available to the\nprogram. (See section The try statement.) It is accessible as the\nthird item of the tuple returned by \"sys.exc_info()\", and as the\n\"__traceback__\" attribute of the caught exception."
+    },
+    {
+     "id": "B:py3.11/debugger#1:c005",
+     "rank": 3,
+     "score": 0.555803,
+     "source_id": "py3.11/debugger",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[\"pdb\" — The Python Debugger]\nCall the *function* (a function or method object, not a string)\n   with the given arguments.  When \"runcall()\" returns, it returns\n   whatever the function call returned.  The debugger prompt appears\n   as soon as the function is entered.\n\npdb.set_trace(*, header=None)\n\n   Enter the debugger at the calling stack frame.  This is useful to\n   hard-code a breakpoint at a given point in a program, even if the\n   code is not otherwise being debugged (e.g. when an assertion\n   fails).  If given, *header* is printed to the console just before\n   debugging begins.\n\n   Changed in version 3.7: The keyword-only argument *header*.\n\npdb.post_mortem(traceback=None)\n\n   Enter post-mortem debugging of the given *traceback* object.  If no\n   *traceback* is given, it uses the one of the exception that is\n   currently being handled (an exception must be being handled if the\n   default is to be used).\n\npdb.pm()\n\n   Enter post-mortem debugging of the traceback found in\n   \"sys.last_traceback\"."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/types#39:c000",
+    "B:py3.13/types#45:c000",
+    "B:py3.11/debugger#1:c005"
+   ],
+   "context_chars": 3058,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": 9,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.13/debugger#2"
+   ]
+  },
+  {
+   "query_id": "d6-q15",
+   "split": "dev",
+   "answerable": true,
+   "question": "For Python 3.13, what normalization form must non-ASCII names listed in __all__ use?",
+   "query_used": "For Python 3.13, what normalization form must non-ASCII names listed in __all__ use?",
+   "filter_applied": null,
+   "latency_ms": 5.48,
+   "top3": [
+    {
+     "id": "B:py3.13/import#1:c004",
+     "rank": 1,
+     "score": 0.624166,
+     "source_id": "py3.13/import",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"import\" statement]\nThe *public names* defined by a module are determined by checking the\nmodule’s namespace for a variable named \"__all__\"; if defined, it must\nbe a sequence of strings which are names defined or imported by that\nmodule. Names containing non-ASCII characters must be in the\nnormalization form NFKC.  The names given in \"__all__\" are all\nconsidered public and are required to exist.  If \"__all__\" is not\ndefined, the set of public names includes all names found in the\nmodule’s namespace which do not begin with an underscore character\n(\"'_'\").  \"__all__\" should contain the entire public API. It is\nintended to avoid accidentally exporting items that are not part of\nthe API (such as library modules which were imported and used within\nthe module).\n\nThe wild card form of import — \"from module import *\" — is only\nallowed at the module level.  Attempting to use it in class or\nfunction definitions will raise a \"SyntaxError\"."
+    },
+    {
+     "id": "B:py3.11/import#1:c004",
+     "rank": 2,
+     "score": 0.564077,
+     "source_id": "py3.11/import",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"import\" statement]\nThe *public names* defined by a module are determined by checking the\nmodule’s namespace for a variable named \"__all__\"; if defined, it must\nbe a sequence of strings which are names defined or imported by that\nmodule.  The names given in \"__all__\" are all considered public and\nare required to exist.  If \"__all__\" is not defined, the set of public\nnames includes all names found in the module’s namespace which do not\nbegin with an underscore character (\"'_'\").  \"__all__\" should contain\nthe entire public API. It is intended to avoid accidentally exporting\nitems that are not part of the API (such as library modules which were\nimported and used within the module).\n\nThe wild card form of import — \"from module import *\" — is only\nallowed at the module level.  Attempting to use it in class or\nfunction definitions will raise a \"SyntaxError\"."
+    },
+    {
+     "id": "B:py3.11/specialnames#7:c000",
+     "rank": 3,
+     "score": 0.552216,
+     "source_id": "py3.11/specialnames",
+     "page": 7,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "__slots__\n---------\n\n*__slots__* allow us to explicitly declare data members (like\nproperties) and deny the creation of \"__dict__\" and *__weakref__*\n(unless explicitly declared in *__slots__* or available in a parent.)\n\nThe space saved over using \"__dict__\" can be significant. Attribute\nlookup speed can be significantly improved as well.\n\nobject.__slots__\n\n   This class variable can be assigned a string, iterable, or sequence\n   of strings with variable names used by instances.  *__slots__*\n   reserves space for the declared variables and prevents the\n   automatic creation of \"__dict__\" and *__weakref__* for each\n   instance.\n\nNotes on using *__slots__*:\n\n* When inheriting from a class without *__slots__*, the \"__dict__\" and\n  *__weakref__* attribute of the instances will always be accessible."
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/import#1:c004",
+    "B:py3.11/import#1:c004",
+    "B:py3.11/specialnames#7:c000"
+   ],
+   "context_chars": 3091,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.13/import#1"
+   ]
+  },
+  {
+   "query_id": "d6-q16",
+   "split": "dev",
+   "answerable": true,
+   "question": "Can I still use a variable captured by a successful case pattern after the match statement finishes?",
+   "query_used": "Can I still use a variable captured by a successful case pattern after the match statement finishes?",
+   "filter_applied": null,
+   "latency_ms": 5.28,
+   "top3": [
+    {
+     "id": "B:py3.13/match#2:c001",
+     "rank": 1,
+     "score": 0.460945,
+     "source_id": "py3.13/match",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"match\" statement > Overview]\nDuring failed pattern matches, some subpatterns may succeed.  Do\n     not rely on bindings being made for a failed match.  Conversely,\n     do not rely on variables remaining unchanged after a failed\n     match.  The exact behavior is dependent on implementation and may\n     vary.  This is an intentional decision made to allow different\n     implementations to add optimizations.\n\n3. If the pattern succeeds, the corresponding guard (if present) is\n   evaluated. In this case all name bindings are guaranteed to have\n   happened.\n\n   * If the guard evaluates as true or is missing, the \"block\" inside\n     \"case_block\" is executed.\n\n   * Otherwise, the next \"case_block\" is attempted as described above.\n\n   * If there are no further case blocks, the match statement is\n     completed.\n\nNote:\n\n  Users should generally never rely on a pattern being evaluated.\n  Depending on implementation, the interpreter may cache values or use\n  other optimizations which skip repeated evaluations."
+    },
+    {
+     "id": "B:py3.13/match#2:c000",
+     "rank": 2,
+     "score": 0.457647,
+     "source_id": "py3.13/match",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Overview\n========\n\nHere’s an overview of the logical flow of a match statement:\n\n1. The subject expression \"subject_expr\" is evaluated and a resulting\n   subject value obtained. If the subject expression contains a comma,\n   a tuple is constructed using the standard rules.\n\n2. Each pattern in a \"case_block\" is attempted to match with the\n   subject value. The specific rules for success or failure are\n   described below. The match attempt can also bind some or all of the\n   standalone names within the pattern. The precise pattern binding\n   rules vary per pattern type and are specified below.  **Name\n   bindings made during a successful pattern match outlive the\n   executed block and can be used after the match statement**.\n\n   Note:"
+    },
+    {
+     "id": "B:py3.11/compound#12:c000",
+     "rank": 3,
+     "score": 0.456003,
+     "source_id": "py3.11/compound",
+     "page": 12,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Overview\n--------\n\nHere’s an overview of the logical flow of a match statement:\n\n1. The subject expression \"subject_expr\" is evaluated and a resulting\n   subject value obtained. If the subject expression contains a comma,\n   a tuple is constructed using the standard rules.\n\n2. Each pattern in a \"case_block\" is attempted to match with the\n   subject value. The specific rules for success or failure are\n   described below. The match attempt can also bind some or all of the\n   standalone names within the pattern. The precise pattern binding\n   rules vary per pattern type and are specified below.  **Name\n   bindings made during a successful pattern match outlive the\n   executed block and can be used after the match statement**.\n\n   Note:"
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/match#2:c001",
+    "B:py3.13/match#2:c000",
+    "B:py3.11/compound#12:c000"
+   ],
+   "context_chars": 2938,
+   "hit_at_1": false,
+   "hit_at_3": true,
+   "first_hit_rank": 2,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.11/compound#12",
+    "py3.13/compound#12",
+    "py3.13/match#2"
+   ]
+  },
+  {
+   "query_id": "d6-q17",
+   "split": "dev",
+   "answerable": true,
+   "question": "What happens if a mapping pattern contains duplicate keys?",
+   "query_used": "What happens if a mapping pattern contains duplicate keys?",
+   "filter_applied": null,
+   "latency_ms": 3.91,
+   "top3": [
+    {
+     "id": "B:py3.11/compound#24:c001",
+     "rank": 1,
+     "score": 0.654185,
+     "source_id": "py3.11/compound",
+     "page": 24,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Compound statements > Mapping Patterns]\n2. If every key given in the mapping pattern is present in the subject\n   mapping, and the pattern for each key matches the corresponding\n   item of the subject mapping, the mapping pattern succeeds.\n\n3. If duplicate keys are detected in the mapping pattern, the pattern\n   is considered invalid. A \"SyntaxError\" is raised for duplicate\n   literal values; or a \"ValueError\" for named keys of the same value.\n\nNote:\n\n  Key-value pairs are matched using the two-argument form of the\n  mapping subject’s \"get()\" method.  Matched key-value pairs must\n  already be present in the mapping, and not created on-the-fly via\n  \"__missing__()\" or \"__getitem__()\".\n\nIn simple terms \"{KEY1: P1, KEY2: P2, ... }\" matches only if all the\nfollowing happens:\n\n* check \"<subject>\" is a mapping\n\n* \"KEY1 in <subject>\"\n\n* \"P1\" matches \"<subject>[KEY1]\"\n\n* … and so on for the corresponding KEY/pattern pair."
+    },
+    {
+     "id": "B:py3.13/compound#24:c001",
+     "rank": 2,
+     "score": 0.654185,
+     "source_id": "py3.13/compound",
+     "page": 24,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Compound statements > Mapping Patterns]\n2. If every key given in the mapping pattern is present in the subject\n   mapping, and the pattern for each key matches the corresponding\n   item of the subject mapping, the mapping pattern succeeds.\n\n3. If duplicate keys are detected in the mapping pattern, the pattern\n   is considered invalid. A \"SyntaxError\" is raised for duplicate\n   literal values; or a \"ValueError\" for named keys of the same value.\n\nNote:\n\n  Key-value pairs are matched using the two-argument form of the\n  mapping subject’s \"get()\" method.  Matched key-value pairs must\n  already be present in the mapping, and not created on-the-fly via\n  \"__missing__()\" or \"__getitem__()\".\n\nIn simple terms \"{KEY1: P1, KEY2: P2, ... }\" matches only if all the\nfollowing happens:\n\n* check \"<subject>\" is a mapping\n\n* \"KEY1 in <subject>\"\n\n* \"P1\" matches \"<subject>[KEY1]\"\n\n* … and so on for the corresponding KEY/pattern pair."
+    },
+    {
+     "id": "B:py3.13/match#14:c001",
+     "rank": 3,
+     "score": 0.65327,
+     "source_id": "py3.13/match",
+     "page": 14,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"match\" statement > Mapping Patterns]\n2. If every key given in the mapping pattern is present in the subject\n   mapping, and the pattern for each key matches the corresponding\n   item of the subject mapping, the mapping pattern succeeds.\n\n3. If duplicate keys are detected in the mapping pattern, the pattern\n   is considered invalid. A \"SyntaxError\" is raised for duplicate\n   literal values; or a \"ValueError\" for named keys of the same value.\n\nNote:\n\n  Key-value pairs are matched using the two-argument form of the\n  mapping subject’s \"get()\" method.  Matched key-value pairs must\n  already be present in the mapping, and not created on-the-fly via\n  \"__missing__()\" or \"__getitem__()\".\n\nIn simple terms \"{KEY1: P1, KEY2: P2, ... }\" matches only if all the\nfollowing happens:\n\n* check \"<subject>\" is a mapping\n\n* \"KEY1 in <subject>\"\n\n* \"P1\" matches \"<subject>[KEY1]\"\n\n* … and so on for the corresponding KEY/pattern pair."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/compound#24:c001",
+    "B:py3.13/compound#24:c001",
+    "B:py3.13/match#14:c001"
+   ],
+   "context_chars": 3252,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.11/compound#24",
+    "py3.13/compound#24",
+    "py3.13/match#14"
+   ]
+  },
+  {
+   "query_id": "d6-q18",
+   "split": "dev",
+   "answerable": true,
+   "question": "Does assigning a new value to an existing dictionary key change the iteration order?",
+   "query_used": "Does assigning a new value to an existing dictionary key change the iteration order?",
+   "filter_applied": null,
+   "latency_ms": 3.94,
+   "top3": [
+    {
+     "id": "B:py3.11/types#14:c000",
+     "rank": 1,
+     "score": 0.622115,
+     "source_id": "py3.11/types",
+     "page": 14,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Dictionaries\n------------\n\nThese represent finite sets of objects indexed by nearly arbitrary\nvalues.  The only types of values not acceptable as keys are values\ncontaining lists or dictionaries or other mutable types that are\ncompared by value rather than by object identity, the reason being\nthat the efficient implementation of dictionaries requires a key’s\nhash value to remain constant. Numeric types used for keys obey the\nnormal rules for numeric comparison: if two numbers compare equal\n(e.g., \"1\" and \"1.0\") then they can be used interchangeably to index\nthe same dictionary entry.\n\nDictionaries preserve insertion order, meaning that keys will be\nproduced in the same order they were added sequentially over the\ndictionary. Replacing an existing key does not change the order,\nhowever removing a key and re-inserting it will add it to the end\ninstead of keeping its old place.\n\nDictionaries are mutable; they can be created by the \"{...}\" notation\n(see section Dictionary displays)."
+    },
+    {
+     "id": "B:py3.13/types#14:c000",
+     "rank": 2,
+     "score": 0.619961,
+     "source_id": "py3.13/types",
+     "page": 14,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Dictionaries\n------------\n\nThese represent finite sets of objects indexed by nearly arbitrary\nvalues.  The only types of values not acceptable as keys are values\ncontaining lists or dictionaries or other mutable types that are\ncompared by value rather than by object identity, the reason being\nthat the efficient implementation of dictionaries requires a key’s\nhash value to remain constant. Numeric types used for keys obey the\nnormal rules for numeric comparison: if two numbers compare equal\n(e.g., \"1\" and \"1.0\") then they can be used interchangeably to index\nthe same dictionary entry.\n\nDictionaries preserve insertion order, meaning that keys will be\nproduced in the same order they were added sequentially over the\ndictionary. Replacing an existing key does not change the order,\nhowever removing a key and re-inserting it will add it to the end\ninstead of keeping its old place.\n\nDictionaries are mutable; they can be created by the \"{}\" notation\n(see section Dictionary displays)."
+    },
+    {
+     "id": "B:py3.11/typesmapping#2:c001",
+     "rank": 3,
+     "score": 0.5592,
+     "source_id": "py3.11/typesmapping",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Mapping Types — \"dict\" > Dictionary view objects]\nChanged in version 3.7: Dictionary order is guaranteed to be\n   insertion order.\n\nx in dictview\n\n   Return \"True\" if *x* is in the underlying dictionary’s keys, values\n   or items (in the latter case, *x* should be a \"(key, value)\"\n   tuple).\n\nreversed(dictview)\n\n   Return a reverse iterator over the keys, values or items of the\n   dictionary. The view will be iterated in reverse order of the\n   insertion.\n\n   Changed in version 3.8: Dictionary views are now reversible.\n\ndictview.mapping\n\n   Return a \"types.MappingProxyType\" that wraps the original\n   dictionary to which the view refers.\n\n   New in version 3.10."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/types#14:c000",
+    "B:py3.13/types#14:c000",
+    "B:py3.11/typesmapping#2:c001"
+   ],
+   "context_chars": 3116,
+   "hit_at_1": true,
+   "hit_at_3": true,
+   "first_hit_rank": 1,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.11/types#14",
+    "py3.11/typesmapping#1",
+    "py3.13/types#14",
+    "py3.13/typesmapping#1"
+   ]
+  },
+  {
+   "query_id": "d6-q19",
+   "split": "dev",
+   "answerable": true,
+   "question": "On Python 3.11, how does the documented equivalent code of a with statement look up and call __enter__?",
+   "query_used": "On Python 3.11, how does the documented equivalent code of a with statement look up and call __enter__?",
+   "filter_applied": null,
+   "latency_ms": 3.84,
+   "top3": [
+    {
+     "id": "B:py3.11/types#27:c000",
+     "rank": 1,
+     "score": 0.62283,
+     "source_id": "py3.11/types",
+     "page": 27,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Modules\n=======\n\nModules are a basic organizational unit of Python code, and are\ncreated by the import system as invoked either by the \"import\"\nstatement, or by calling functions such as \"importlib.import_module()\"\nand built-in \"__import__()\".  A module object has a namespace\nimplemented by a \"dictionary\" object (this is the dictionary\nreferenced by the \"__globals__\" attribute of functions defined in the\nmodule).  Attribute references are translated to lookups in this\ndictionary, e.g., \"m.x\" is equivalent to \"m.__dict__[\"x\"]\". A module\nobject does not contain the code object used to initialize the module\n(since it isn’t needed once the initialization is done).\n\nAttribute assignment updates the module’s namespace dictionary, e.g.,\n\"m.x = 1\" is equivalent to \"m.__dict__[\"x\"] = 1\".\n\nPredefined (writable) attributes:\n\n   \"__name__\"\n      The module’s name.\n\n   \"__doc__\"\n      The module’s documentation string, or \"None\" if unavailable."
+    },
+    {
+     "id": "B:py3.11/assert#1:c001",
+     "rank": 2,
+     "score": 0.621356,
+     "source_id": "py3.11/assert",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The \"assert\" statement]\nThese equivalences assume that \"__debug__\" and \"AssertionError\" refer\nto the built-in variables with those names.  In the current\nimplementation, the built-in variable \"__debug__\" is \"True\" under\nnormal circumstances, \"False\" when optimization is requested (command\nline option \"-O\").  The current code generator emits no code for an\nassert statement when optimization is requested at compile time.  Note\nthat it is unnecessary to include the source code for the expression\nthat failed in the error message; it will be displayed as part of the\nstack trace.\n\nAssignments to \"__debug__\" are illegal.  The value for the built-in\nvariable is determined when the interpreter starts."
+    },
+    {
+     "id": "B:py3.13/attribute-access#2:c000",
+     "rank": 3,
+     "score": 0.617367,
+     "source_id": "py3.13/attribute-access",
+     "page": 2,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Customizing module attribute access\n===================================\n\nmodule.__getattr__()\nmodule.__dir__()\n\nSpecial names \"__getattr__\" and \"__dir__\" can be also used to\ncustomize access to module attributes. The \"__getattr__\" function at\nthe module level should accept one argument which is the name of an\nattribute and return the computed value or raise an \"AttributeError\".\nIf an attribute is not found on a module object through the normal\nlookup, i.e. \"object.__getattribute__()\", then \"__getattr__\" is\nsearched in the module \"__dict__\" before raising an \"AttributeError\".\nIf found, it is called with the attribute name and the result is\nreturned.\n\nThe \"__dir__\" function should accept no arguments, and return an\niterable of strings that represents the names accessible on module. If\npresent, this function overrides the standard \"dir()\" search on a\nmodule.\n\nmodule.__class__"
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/types#27:c000",
+    "B:py3.11/assert#1:c001",
+    "B:py3.13/attribute-access#2:c000"
+   ],
+   "context_chars": 3022,
+   "hit_at_1": false,
+   "hit_at_3": false,
+   "first_hit_rank": null,
+   "context_has_evidence": false,
+   "gold_pages": [
+    "py3.11/compound#10",
+    "py3.11/with#1"
+   ]
+  },
+  {
+   "query_id": "d6-q20",
+   "split": "dev",
+   "answerable": true,
+   "question": "In Python 3.13, how can the type parameters of a generic class be retrieved at runtime?",
+   "query_used": "In Python 3.13, how can the type parameters of a generic class be retrieved at runtime?",
+   "filter_applied": null,
+   "latency_ms": 5.4,
+   "top3": [
+    {
+     "id": "B:py3.11/specialnames#17:c000",
+     "rank": 1,
+     "score": 0.652214,
+     "source_id": "py3.11/specialnames",
+     "page": 17,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Emulating generic types\n=======================\n\nWhen using *type annotations*, it is often useful to *parameterize* a\n*generic type* using Python’s square-brackets notation. For example,\nthe annotation \"list[int]\" might be used to signify a \"list\" in which\nall the elements are of type \"int\".\n\nSee also:\n\n  **PEP 484** - Type Hints\n     Introducing Python’s framework for type annotations\n\n  Generic Alias Types\n     Documentation for objects representing parameterized generic\n     classes\n\n  Generics, user-defined generics and \"typing.Generic\"\n     Documentation on how to implement generic classes that can be\n     parameterized at runtime and understood by static type-checkers.\n\nA class can *generally* only be parameterized if it defines the\nspecial class method \"__class_getitem__()\".\n\nclassmethod object.__class_getitem__(cls, key)\n\n   Return an object representing the specialization of a generic class\n   by type arguments found in *key*."
+    },
+    {
+     "id": "B:py3.13/specialnames#17:c000",
+     "rank": 2,
+     "score": 0.652214,
+     "source_id": "py3.13/specialnames",
+     "page": 17,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Emulating generic types\n=======================\n\nWhen using *type annotations*, it is often useful to *parameterize* a\n*generic type* using Python’s square-brackets notation. For example,\nthe annotation \"list[int]\" might be used to signify a \"list\" in which\nall the elements are of type \"int\".\n\nSee also:\n\n  **PEP 484** - Type Hints\n     Introducing Python’s framework for type annotations\n\n  Generic Alias Types\n     Documentation for objects representing parameterized generic\n     classes\n\n  Generics, user-defined generics and \"typing.Generic\"\n     Documentation on how to implement generic classes that can be\n     parameterized at runtime and understood by static type-checkers.\n\nA class can *generally* only be parameterized if it defines the\nspecial class method \"__class_getitem__()\".\n\nclassmethod object.__class_getitem__(cls, key)\n\n   Return an object representing the specialization of a generic class\n   by type arguments found in *key*."
+    },
+    {
+     "id": "B:py3.13/compound#32:c001",
+     "rank": 3,
+     "score": 0.631921,
+     "source_id": "py3.13/compound",
+     "page": 32,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Compound statements > Type parameter lists]\nSemantically, this indicates that the function, class, or type alias\nis generic over a type variable. This information is primarily used by\nstatic type checkers, and at runtime, generic objects behave much like\ntheir non-generic counterparts.\n\nType parameters are declared in square brackets (\"[]\") immediately\nafter the name of the function, class, or type alias. The type\nparameters are accessible within the scope of the generic object, but\nnot elsewhere. Thus, after a declaration \"def func[T](): pass\", the\nname \"T\" is not available in the module scope. Below, the semantics of\ngeneric objects are described with more precision. The scope of type\nparameters is modeled with a special function (technically, an\nannotation scope) that wraps the creation of the generic object.\n\nGeneric functions, classes, and type aliases have a \"__type_params__\"\nattribute listing their type parameters.\n\nType parameters come in three kinds:"
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/specialnames#17:c000",
+    "B:py3.13/specialnames#17:c000",
+    "B:py3.13/compound#32:c001"
+   ],
+   "context_chars": 3380,
+   "hit_at_1": false,
+   "hit_at_3": true,
+   "first_hit_rank": 3,
+   "context_has_evidence": true,
+   "gold_pages": [
+    "py3.13/class#1",
+    "py3.13/compound#27",
+    "py3.13/compound#32"
+   ]
+  },
+  {
+   "query_id": "du1",
+   "split": "dev",
+   "answerable": false,
+   "question": "Does Python 3.13 remove the Global Interpreter Lock (GIL) by default?",
+   "query_used": "Does Python 3.13 remove the Global Interpreter Lock (GIL) by default?",
+   "filter_applied": null,
+   "latency_ms": 5.0,
+   "top3": [
+    {
+     "id": "B:py3.13/execmodel#13:c003",
+     "rank": 1,
+     "score": 0.374214,
+     "source_id": "py3.13/execmodel",
+     "page": 13,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Execution model > Python Runtime Model]\nThe term “interpreter” here is not the same as the “bytecode\n  interpreter”, which is what regularly runs in threads, executing\n  compiled Python code.In an ideal world, “Python runtime” would refer\n  to what we currently call “interpreter”.  However, it’s been called\n  “interpreter” at least since introduced in 1997 (CPython:a027efa5b).\n\nEach interpreter completely encapsulates all of the non-process-\nglobal, non-thread-specific state needed for the Python runtime to\nwork. Notably, the interpreter’s state persists between uses.  It\nincludes fundamental data like \"sys.modules\".  The runtime ensures\nmultiple threads using the same interpreter will safely share it\nbetween them.\n\nA Python implementation may support using multiple interpreters at the\nsame time in the same process.  They are independent and isolated from\none another.  For example, each interpreter has its own \"sys.modules\"."
+    },
+    {
+     "id": "B:py3.13/global#1:c000",
+     "rank": 2,
+     "score": 0.348328,
+     "source_id": "py3.13/global",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "The \"global\" statement\n**********************\n\n   global_stmt ::= \"global\" identifier (\",\" identifier)*\n\nThe \"global\" statement causes the listed identifiers to be interpreted\nas globals. It would be impossible to assign to a global variable\nwithout \"global\", although free variables may refer to globals without\nbeing declared global.\n\nThe \"global\" statement applies to the entire current scope (module,\nfunction body or class definition). A \"SyntaxError\" is raised if a\nvariable is used or assigned to prior to its global declaration in the\nscope.\n\nAt the module level, all variables are global, so a \"global\" statement\nhas no effect. However, variables must still not be used or assigned\nto prior to their \"global\" declaration. This requirement is relaxed in\nthe interactive prompt (*REPL*)."
+    },
+    {
+     "id": "B:py3.11/customization#1:c005",
+     "rank": 3,
+     "score": 0.337341,
+     "source_id": "py3.11/customization",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Basic customization]\n* \"__del__()\" can be invoked when arbitrary code is being\n       executed, including from any arbitrary thread.  If \"__del__()\"\n       needs to take a lock or invoke any other blocking resource, it\n       may deadlock as the resource may already be taken by the code\n       that gets interrupted to execute \"__del__()\".\n\n     * \"__del__()\" can be executed during interpreter shutdown.  As a\n       consequence, the global variables it needs to access (including\n       other modules) may already have been deleted or set to \"None\".\n       Python guarantees that globals whose name begins with a single\n       underscore are deleted from their module before other globals\n       are deleted; if no other references to such globals exist, this\n       may help in assuring that imported modules are still available\n       at the time when the \"__del__()\" method is called.\n\nobject.__repr__(self)"
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/execmodel#13:c003",
+    "B:py3.13/global#1:c000",
+    "B:py3.11/customization#1:c005"
+   ],
+   "context_chars": 3136
+  },
+  {
+   "query_id": "du2",
+   "split": "dev",
+   "answerable": false,
+   "question": "How many bytes does sys.getsizeof() report for an empty list?",
+   "query_used": "How many bytes does sys.getsizeof() report for an empty list?",
+   "filter_applied": null,
+   "latency_ms": 4.19,
+   "top3": [
+    {
+     "id": "B:py3.13/specialnames#25:c000",
+     "rank": 1,
+     "score": 0.460129,
+     "source_id": "py3.13/specialnames",
+     "page": 25,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Emulating buffer types\n======================\n\nThe buffer protocol provides a way for Python objects to expose\nefficient access to a low-level memory array. This protocol is\nimplemented by builtin types such as \"bytes\" and \"memoryview\", and\nthird-party libraries may define additional buffer types.\n\nWhile buffer types are usually implemented in C, it is also possible\nto implement the protocol in Python.\n\nobject.__buffer__(self, flags)\n\n   Called when a buffer is requested from *self* (for example, by the\n   \"memoryview\" constructor). The *flags* argument is an integer\n   representing the kind of buffer requested, affecting for example\n   whether the returned buffer is read-only or writable.\n   \"inspect.BufferFlags\" provides a convenient way to interpret the\n   flags. The method must return a \"memoryview\" object.\n\nobject.__release_buffer__(self, buffer)"
+    },
+    {
+     "id": "B:py3.11/types#34:c001",
+     "rank": 2,
+     "score": 0.428722,
+     "source_id": "py3.11/types",
+     "page": 34,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The standard type hierarchy > Methods on code objects]\nThis feature requires storing column positions in code objects\n     which may result in a small increase of disk usage of compiled\n     Python files or interpreter memory usage. To avoid storing the\n     extra information and/or deactivate printing the extra traceback\n     information, the \"-X\" \"no_debug_ranges\" command line flag or the\n     \"PYTHONNODEBUGRANGES\" environment variable can be used.\n\ncodeobject.co_lines()\n\n   Returns an iterator that yields information about successive ranges\n   of *bytecode*s. Each item yielded is a \"(start, end, lineno)\"\n   \"tuple\":\n\n   * \"start\" (an \"int\") represents the offset (inclusive) of the start\n     of the *bytecode* range\n\n   * \"end\" (an \"int\") represents the offset (exclusive) of the end of\n     the *bytecode* range\n\n   * \"lineno\" is an \"int\" representing the line number of the\n     *bytecode* range, or \"None\" if the bytecodes in the given range\n     have no line number\n\n   The items yielded will have the following properties:"
+    },
+    {
+     "id": "B:py3.13/types#40:c001",
+     "rank": 3,
+     "score": 0.428722,
+     "source_id": "py3.13/types",
+     "page": 40,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[The standard type hierarchy > Methods on code objects]\nThis feature requires storing column positions in code objects\n     which may result in a small increase of disk usage of compiled\n     Python files or interpreter memory usage. To avoid storing the\n     extra information and/or deactivate printing the extra traceback\n     information, the \"-X\" \"no_debug_ranges\" command line flag or the\n     \"PYTHONNODEBUGRANGES\" environment variable can be used.\n\ncodeobject.co_lines()\n\n   Returns an iterator that yields information about successive ranges\n   of *bytecode*s. Each item yielded is a \"(start, end, lineno)\"\n   \"tuple\":\n\n   * \"start\" (an \"int\") represents the offset (inclusive) of the start\n     of the *bytecode* range\n\n   * \"end\" (an \"int\") represents the offset (exclusive) of the end of\n     the *bytecode* range\n\n   * \"lineno\" is an \"int\" representing the line number of the\n     *bytecode* range, or \"None\" if the bytecodes in the given range\n     have no line number\n\n   The items yielded will have the following properties:"
+    }
+   ],
+   "context_ids": [
+    "B:py3.13/specialnames#25:c000",
+    "B:py3.11/types#34:c001",
+    "B:py3.13/types#40:c001"
+   ],
+   "context_chars": 3431
+  },
+  {
+   "query_id": "du3",
+   "split": "dev",
+   "answerable": false,
+   "question": "What are CPython's default thresholds for the three garbage collector generations?",
+   "query_used": "What are CPython's default thresholds for the three garbage collector generations?",
+   "filter_applied": null,
+   "latency_ms": 3.99,
+   "top3": [
+    {
+     "id": "B:py3.11/objects#1:c002",
+     "rank": 1,
+     "score": 0.456392,
+     "source_id": "py3.11/objects",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Objects, values and types]\nObjects are never explicitly destroyed; however, when they become\nunreachable they may be garbage-collected.  An implementation is\nallowed to postpone garbage collection or omit it altogether — it is a\nmatter of implementation quality how garbage collection is\nimplemented, as long as no objects are collected that are still\nreachable.\n\n**CPython implementation detail:** CPython currently uses a reference-\ncounting scheme with (optional) delayed detection of cyclically linked\ngarbage, which collects most objects as soon as they become\nunreachable, but is not guaranteed to collect garbage containing\ncircular references.  See the documentation of the \"gc\" module for\ninformation on controlling the collection of cyclic garbage. Other\nimplementations act differently and CPython may change. Do not depend\non immediate finalization of objects when they become unreachable (so\nyou should always close files explicitly)."
+    },
+    {
+     "id": "B:py3.13/objects#1:c002",
+     "rank": 2,
+     "score": 0.456392,
+     "source_id": "py3.13/objects",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.13",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "[Objects, values and types]\nObjects are never explicitly destroyed; however, when they become\nunreachable they may be garbage-collected.  An implementation is\nallowed to postpone garbage collection or omit it altogether — it is a\nmatter of implementation quality how garbage collection is\nimplemented, as long as no objects are collected that are still\nreachable.\n\n**CPython implementation detail:** CPython currently uses a reference-\ncounting scheme with (optional) delayed detection of cyclically linked\ngarbage, which collects most objects as soon as they become\nunreachable, but is not guaranteed to collect garbage containing\ncircular references.  See the documentation of the \"gc\" module for\ninformation on controlling the collection of cyclic garbage. Other\nimplementations act differently and CPython may change. Do not depend\non immediate finalization of objects when they become unreachable (so\nyou should always close files explicitly)."
+    },
+    {
+     "id": "B:py3.11/objects#1:c000",
+     "rank": 3,
+     "score": 0.274488,
+     "source_id": "py3.11/objects",
+     "page": 1,
+     "method": "dense",
+     "python_version": "3.11",
+     "component_ranks": null,
+     "duplicates": null,
+     "text": "Objects, values and types\n*************************\n\n*Objects* are Python’s abstraction for data.  All data in a Python\nprogram is represented by objects or by relations between objects. (In\na sense, and in conformance to Von Neumann’s model of a “stored\nprogram computer”, code is also represented by objects.)\n\nEvery object has an identity, a type and a value.  An object’s\n*identity* never changes once it has been created; you may think of it\nas the object’s address in memory.  The \"is\" operator compares the\nidentity of two objects; the \"id()\" function returns an integer\nrepresenting its identity.\n\n**CPython implementation detail:** For CPython, \"id(x)\" is the memory\naddress where \"x\" is stored."
+    }
+   ],
+   "context_ids": [
+    "B:py3.11/objects#1:c002",
+    "B:py3.13/objects#1:c002",
+    "B:py3.11/objects#1:c000"
+   ],
+   "context_chars": 3087
+  }
+ ]
+}

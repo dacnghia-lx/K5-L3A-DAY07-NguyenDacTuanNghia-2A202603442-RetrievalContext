@@ -1,0 +1,1451 @@
+[
+ {
+  "query_id": "t01",
+  "status": "answered",
+  "answer": "In a generator function, a return statement raises a `StopIteration` exception to indicate that the generator is done producing values. If the return statement is empty, it signifies the end of the generator's output, while a non-empty return statement is a syntax error in a generator function [B:py3.11/return#1:c001].",
+  "citations": [
+   "B:py3.11/return#1:c001"
+  ],
+  "events": [
+   {
+    "event": "llm_call",
+    "latency_ms": 1501.4,
+    "usage": {
+     "prompt_tokens": 393,
+     "completion_tokens": 17
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_qCQaYwmJeeYtKZKEcumM8IXt",
+      "name": "search",
+      "arguments": "{\"query\":\"return statement in generator function\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "return statement in generator function",
+    "filter": null,
+    "method": "dense",
+    "latency_ms": 2.53,
+    "results": [
+     {
+      "id": "B:py3.11/return#1:c001",
+      "rank": 1,
+      "score": 0.732716,
+      "source_id": "py3.11/return",
+      "page": 1,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.13/return#1:c001",
+      "rank": 2,
+      "score": 0.732716,
+      "source_id": "py3.13/return",
+      "page": 1,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.11/types#22:c000",
+      "rank": 3,
+      "score": 0.583834,
+      "source_id": "py3.11/types",
+      "page": 22,
+      "python_version": "3.11"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.11/return#1:c001",
+     "B:py3.13/return#1:c001",
+     "B:py3.11/types#22:c000"
+    ],
+    "context_ids": [
+     "B:py3.11/return#1:c001",
+     "B:py3.13/return#1:c001",
+     "B:py3.11/types#22:c000"
+    ],
+    "context_chars": 1799
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 1083.7,
+    "usage": {
+     "prompt_tokens": 871,
+     "completion_tokens": 17
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_Y2idCiHCnXj8ZpGy7qLH6rQ5",
+      "name": "search",
+      "arguments": "{\"query\":\"return statement in generator function\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "return statement in generator function",
+    "filter": null,
+    "method": "dense",
+    "latency_ms": 2.15,
+    "results": [
+     {
+      "id": "B:py3.11/return#1:c001",
+      "rank": 1,
+      "score": 0.732716,
+      "source_id": "py3.11/return",
+      "page": 1,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.13/return#1:c001",
+      "rank": 2,
+      "score": 0.732716,
+      "source_id": "py3.13/return",
+      "page": 1,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.11/types#22:c000",
+      "rank": 3,
+      "score": 0.583834,
+      "source_id": "py3.11/types",
+      "page": 22,
+      "python_version": "3.11"
+     }
+    ],
+    "context_added_ids": [],
+    "context_ids": [
+     "B:py3.11/return#1:c001",
+     "B:py3.13/return#1:c001",
+     "B:py3.11/types#22:c000"
+    ],
+    "context_chars": 1799
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 2699.6,
+    "usage": {
+     "prompt_tokens": 907,
+     "completion_tokens": 106
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_gzAMP2zcY2ThDNuHxO5vIeJd",
+      "name": "final_answer",
+      "arguments": "{\"answer\":\"In a generator function, a return statement raises a `StopIteration` exception to indicate that the generator is done producing values. If the return statement is empty, it signifies the end of the generator's output, while a non-empty return statement is a syntax error in a generator function [B:py3.11/return#1:c001].\",\"citations\":[\"B:py3.11/return#1:c001\"],\"abstain\":false}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "final_context_ids": [
+   "B:py3.11/return#1:c001",
+   "B:py3.13/return#1:c001",
+   "B:py3.11/types#22:c000"
+  ],
+  "final_context_chars": 1799,
+  "n_searches": 2,
+  "n_llm_calls": 3,
+  "usage": {
+   "prompt_tokens": 2171,
+   "completion_tokens": 140
+  },
+  "cost_usd": 0.00041,
+  "latency_s": 5.29,
+  "config": "A1",
+  "model": "gpt-4o-mini",
+  "question": "In a generator function, what does a return statement cause?",
+  "context_has_evidence": false
+ },
+ {
+  "query_id": "t02",
+  "status": "abstain",
+  "answer": "Không đủ bằng chứng trong tài liệu để trả lời.",
+  "citations": [],
+  "events": [
+   {
+    "event": "llm_call",
+    "latency_ms": 1414.6,
+    "usage": {
+     "prompt_tokens": 401,
+     "completion_tokens": 23
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_cF59NnOjyJBZFp93b9QmWA4I",
+      "name": "search",
+      "arguments": "{\"query\":\"nonlocal statement name not bound\",\"python_version\":\"\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "nonlocal statement name not bound",
+    "filter": null,
+    "method": "dense",
+    "latency_ms": 2.21,
+    "results": [
+     {
+      "id": "B:py3.13/nonlocal#1:c000",
+      "rank": 1,
+      "score": 0.6715,
+      "source_id": "py3.13/nonlocal",
+      "page": 1,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.11/nonlocal#1:c000",
+      "rank": 2,
+      "score": 0.616437,
+      "source_id": "py3.11/nonlocal",
+      "page": 1,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/assignment#1:c003",
+      "rank": 3,
+      "score": 0.52629,
+      "source_id": "py3.11/assignment",
+      "page": 1,
+      "python_version": "3.11"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.13/nonlocal#1:c000",
+     "B:py3.11/nonlocal#1:c000",
+     "B:py3.11/assignment#1:c003"
+    ],
+    "context_ids": [
+     "B:py3.13/nonlocal#1:c000",
+     "B:py3.11/nonlocal#1:c000",
+     "B:py3.11/assignment#1:c003"
+    ],
+    "context_chars": 3345
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 3876.4,
+    "usage": {
+     "prompt_tokens": 1251,
+     "completion_tokens": 156
+    },
+    "content": "If a name listed in a `nonlocal` statement is not bound in any enclosing function scope, a `SyntaxError` is raised. This occurs because the `nonlocal` statement requires the identifiers to refer to names that are already bound in nonlocal scopes [B:py3.13/nonlocal#1:c000]. \n\nI will now finalize the answer.",
+    "tool_calls": [
+     {
+      "id": "call_uPjts3wjrNI6joZErnb6KuBB",
+      "name": "final_answer",
+      "arguments": "{\"answer\":\"If a name listed in a `nonlocal` statement is not bound in any enclosing function scope, a `SyntaxError` is raised because the statement requires the identifiers to refer to names that are already bound in nonlocal scopes.\",\"citations\":[\"B:py3.13/nonlocal#1:c000\"],\"abstain\":false}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "invalid_or_missing_citations",
+    "model_answer": "If a name listed in a `nonlocal` statement is not bound in any enclosing function scope, a `SyntaxError` is raised because the statement requires the identifiers to refer to names that are already bound in nonlocal scopes.",
+    "model_citations": [
+     "B:py3.13/nonlocal#1:c000"
+    ]
+   }
+  ],
+  "final_context_ids": [
+   "B:py3.13/nonlocal#1:c000",
+   "B:py3.11/nonlocal#1:c000",
+   "B:py3.11/assignment#1:c003"
+  ],
+  "final_context_chars": 3345,
+  "n_searches": 1,
+  "n_llm_calls": 2,
+  "usage": {
+   "prompt_tokens": 1652,
+   "completion_tokens": 179
+  },
+  "cost_usd": 0.000355,
+  "latency_s": 5.29,
+  "config": "A1",
+  "model": "gpt-4o-mini",
+  "question": "What happens if a name listed in a nonlocal statement is not bound in any enclosing function scope?",
+  "context_has_evidence": true
+ },
+ {
+  "query_id": "t03",
+  "status": "abstain",
+  "answer": "Không đủ bằng chứng trong tài liệu để trả lời.",
+  "citations": [],
+  "events": [
+   {
+    "event": "llm_call",
+    "latency_ms": 1057.0,
+    "usage": {
+     "prompt_tokens": 397,
+     "completion_tokens": 25
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_8fiQ8HhtEUVtnPxUFcbcHX34",
+      "name": "search",
+      "arguments": "{\"query\":\"__exit__ method re-raise exception\",\"python_version\":\"\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "__exit__ method re-raise exception",
+    "filter": null,
+    "method": "dense",
+    "latency_ms": 1.97,
+    "results": [
+     {
+      "id": "B:py3.11/with#1:c001",
+      "rank": 1,
+      "score": 0.625942,
+      "source_id": "py3.11/with",
+      "page": 1,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.13/with#1:c001",
+      "rank": 2,
+      "score": 0.625942,
+      "source_id": "py3.13/with",
+      "page": 1,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.11/compound#10:c001",
+      "rank": 3,
+      "score": 0.614362,
+      "source_id": "py3.11/compound",
+      "page": 10,
+      "python_version": "3.11"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.11/with#1:c001",
+     "B:py3.13/with#1:c001",
+     "B:py3.11/compound#10:c001"
+    ],
+    "context_ids": [
+     "B:py3.11/with#1:c001",
+     "B:py3.13/with#1:c001",
+     "B:py3.11/compound#10:c001"
+    ],
+    "context_chars": 3131
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 2533.6,
+    "usage": {
+     "prompt_tokens": 1227,
+     "completion_tokens": 97
+    },
+    "content": "Yes, your `__exit__` method should re-raise the exception if it returns `False`. If the method returns `True`, the exception is suppressed, and execution continues after the `with` statement. This behavior is consistent in both Python 3.11 and 3.13 [B:py3.11/with#1:c001][B:py3.13/with#1:c001]. \n\nFinally, I will call `final_answer`.",
+    "tool_calls": [],
+    "retries": 0
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 3251.0,
+    "usage": {
+     "prompt_tokens": 1346,
+     "completion_tokens": 108
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_tbAR5rFrGEygN2FTg6l05bn9",
+      "name": "final_answer",
+      "arguments": "{\"answer\":\"Yes, your `__exit__` method should re-raise the exception if it returns `False`. If the method returns `True`, the exception is suppressed, and execution continues after the `with` statement. This behavior is consistent in both Python 3.11 and 3.13.\",\"citations\":[\"B:py3.11/with#1:c001\",\"B:py3.13/with#1:c001\"],\"abstain\":false}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "invalid_or_missing_citations",
+    "model_answer": "Yes, your `__exit__` method should re-raise the exception if it returns `False`. If the method returns `True`, the exception is suppressed, and execution continues after the `with` statement. This behavior is consistent in both Python 3.11 and 3.13.",
+    "model_citations": [
+     "B:py3.11/with#1:c001",
+     "B:py3.13/with#1:c001"
+    ]
+   }
+  ],
+  "final_context_ids": [
+   "B:py3.11/with#1:c001",
+   "B:py3.13/with#1:c001",
+   "B:py3.11/compound#10:c001"
+  ],
+  "final_context_chars": 3131,
+  "n_searches": 1,
+  "n_llm_calls": 3,
+  "usage": {
+   "prompt_tokens": 2970,
+   "completion_tokens": 230
+  },
+  "cost_usd": 0.000584,
+  "latency_s": 6.84,
+  "config": "A1",
+  "model": "gpt-4o-mini",
+  "question": "Is my __exit__ method supposed to re-raise the exception it receives?",
+  "context_has_evidence": false
+ },
+ {
+  "query_id": "t04",
+  "status": "answered",
+  "answer": "When `s *= n` is executed on a mutable sequence and `n` is zero or negative, it clears the sequence. This means that all items in the sequence are removed, and the sequence becomes empty [B:py3.11/typesseq-mutable#1:c006].",
+  "citations": [
+   "B:py3.11/typesseq-mutable#1:c006"
+  ],
+  "events": [
+   {
+    "event": "llm_call",
+    "latency_ms": 1785.4,
+    "usage": {
+     "prompt_tokens": 406,
+     "completion_tokens": 68
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_NaITbvVLIMVWgAqEECWhVJfp",
+      "name": "search",
+      "arguments": "{\"query\": \"s *= n mutable sequence\", \"python_version\": \"3.11\"}"
+     },
+     {
+      "id": "call_cRoWA1FedWM3ElsJbqZiBYIS",
+      "name": "search",
+      "arguments": "{\"query\": \"mutable sequence behavior when multiplied by zero or negative\", \"python_version\": \"3.11\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "s *= n mutable sequence",
+    "filter": {
+     "python_version": "3.11"
+    },
+    "method": "dense",
+    "latency_ms": 4.56,
+    "results": [
+     {
+      "id": "B:py3.11/types#11:c000",
+      "rank": 1,
+      "score": 0.588833,
+      "source_id": "py3.11/types",
+      "page": 11,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/assignment#1:c007",
+      "rank": 2,
+      "score": 0.5805,
+      "source_id": "py3.11/assignment",
+      "page": 1,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/typesseq#4:c006",
+      "rank": 3,
+      "score": 0.564446,
+      "source_id": "py3.11/typesseq",
+      "page": 4,
+      "python_version": "3.11"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.11/types#11:c000",
+     "B:py3.11/assignment#1:c007",
+     "B:py3.11/typesseq#4:c006"
+    ],
+    "context_ids": [
+     "B:py3.11/types#11:c000",
+     "B:py3.11/assignment#1:c007",
+     "B:py3.11/typesseq#4:c006"
+    ],
+    "context_chars": 3110
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "mutable sequence behavior when multiplied by zero or negative",
+    "filter": {
+     "python_version": "3.11"
+    },
+    "method": "dense",
+    "latency_ms": 4.32,
+    "results": [
+     {
+      "id": "B:py3.11/typesseq-mutable#1:c006",
+      "rank": 1,
+      "score": 0.507575,
+      "source_id": "py3.11/typesseq-mutable",
+      "page": 1,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/typesseq#4:c006",
+      "rank": 2,
+      "score": 0.502468,
+      "source_id": "py3.11/typesseq",
+      "page": 4,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/formatstrings#2:c005",
+      "rank": 3,
+      "score": 0.498259,
+      "source_id": "py3.11/formatstrings",
+      "page": 2,
+      "python_version": "3.11"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.11/typesseq-mutable#1:c006",
+     "B:py3.11/formatstrings#2:c005"
+    ],
+    "context_ids": [
+     "B:py3.11/types#11:c000",
+     "B:py3.11/assignment#1:c007",
+     "B:py3.11/typesseq#4:c006",
+     "B:py3.11/typesseq-mutable#1:c006",
+     "B:py3.11/formatstrings#2:c005"
+    ],
+    "context_chars": 5363
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 2259.4,
+    "usage": {
+     "prompt_tokens": 1902,
+     "completion_tokens": 100
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_AkDYbOeYDNOpIPtaXtoMB7Nx",
+      "name": "final_answer",
+      "arguments": "{\"answer\":\"When `s *= n` is executed on a mutable sequence and `n` is zero or negative, it clears the sequence. This means that all items in the sequence are removed, and the sequence becomes empty [B:py3.11/typesseq-mutable#1:c006].\",\"citations\":[\"B:py3.11/typesseq-mutable#1:c006\"],\"abstain\":false}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "final_context_ids": [
+   "B:py3.11/types#11:c000",
+   "B:py3.11/assignment#1:c007",
+   "B:py3.11/typesseq#4:c006",
+   "B:py3.11/typesseq-mutable#1:c006",
+   "B:py3.11/formatstrings#2:c005"
+  ],
+  "final_context_chars": 5363,
+  "n_searches": 2,
+  "n_llm_calls": 2,
+  "usage": {
+   "prompt_tokens": 2308,
+   "completion_tokens": 168
+  },
+  "cost_usd": 0.000447,
+  "latency_s": 4.05,
+  "config": "A1",
+  "model": "gpt-4o-mini",
+  "question": "I'm using Python 3.11. What does s *= n do to a mutable sequence when n is zero or negative?",
+  "context_has_evidence": true
+ },
+ {
+  "query_id": "t05",
+  "status": "abstain",
+  "answer": "Không đủ bằng chứng trong tài liệu để trả lời.",
+  "citations": [],
+  "events": [
+   {
+    "event": "llm_call",
+    "latency_ms": 1009.2,
+    "usage": {
+     "prompt_tokens": 407,
+     "completion_tokens": 23
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_E9FAmfnnBNMnSxmFizGrqS4W",
+      "name": "search",
+      "arguments": "{\"query\":\"__type_params__\",\"python_version\":\"3.13\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "__type_params__",
+    "filter": {
+     "python_version": "3.13"
+    },
+    "method": "dense",
+    "latency_ms": 4.41,
+    "results": [
+     {
+      "id": "B:py3.13/specialnames#4:c002",
+      "rank": 1,
+      "score": 0.714766,
+      "source_id": "py3.13/specialnames",
+      "page": 4,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.13/specialnames#4:c001",
+      "rank": 2,
+      "score": 0.70728,
+      "source_id": "py3.13/specialnames",
+      "page": 4,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.13/attribute-access#2:c001",
+      "rank": 3,
+      "score": 0.701671,
+      "source_id": "py3.13/attribute-access",
+      "page": 2,
+      "python_version": "3.13"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.13/specialnames#4:c002",
+     "B:py3.13/specialnames#4:c001",
+     "B:py3.13/attribute-access#2:c001"
+    ],
+    "context_ids": [
+     "B:py3.13/specialnames#4:c002",
+     "B:py3.13/specialnames#4:c001",
+     "B:py3.13/attribute-access#2:c001"
+    ],
+    "context_chars": 2813
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 1129.2,
+    "usage": {
+     "prompt_tokens": 1159,
+     "completion_tokens": 28
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_BmtgnGZlsDiiLPs98wjFu6pT",
+      "name": "search",
+      "arguments": "{\"query\":\"__type_params__ for non-generic class\",\"python_version\":\"3.13\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "__type_params__ for non-generic class",
+    "filter": {
+     "python_version": "3.13"
+    },
+    "method": "dense",
+    "latency_ms": 3.82,
+    "results": [
+     {
+      "id": "B:py3.13/specialnames#18:c000",
+      "rank": 1,
+      "score": 0.698866,
+      "source_id": "py3.13/specialnames",
+      "page": 18,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.13/specialnames#14:c001",
+      "rank": 2,
+      "score": 0.658134,
+      "source_id": "py3.13/specialnames",
+      "page": 14,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.13/compound#32:c001",
+      "rank": 3,
+      "score": 0.631814,
+      "source_id": "py3.13/compound",
+      "page": 32,
+      "python_version": "3.13"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.13/specialnames#18:c000",
+     "B:py3.13/specialnames#14:c001",
+     "B:py3.13/compound#32:c001"
+    ],
+    "context_ids": [
+     "B:py3.13/specialnames#4:c002",
+     "B:py3.13/specialnames#4:c001",
+     "B:py3.13/attribute-access#2:c001",
+     "B:py3.13/specialnames#18:c000",
+     "B:py3.13/specialnames#14:c001",
+     "B:py3.13/compound#32:c001"
+    ],
+    "context_chars": 6074
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 1371.3,
+    "usage": {
+     "prompt_tokens": 1967,
+     "completion_tokens": 26
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_3vlqECM0qEVgBXbwd7YKltVv",
+      "name": "search",
+      "arguments": "{\"query\":\"__type_params__ non-generic\",\"python_version\":\"3.13\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "__type_params__ non-generic",
+    "filter": {
+     "python_version": "3.13"
+    },
+    "method": "dense",
+    "latency_ms": 3.87,
+    "results": [
+     {
+      "id": "B:py3.13/compound#32:c001",
+      "rank": 1,
+      "score": 0.622992,
+      "source_id": "py3.13/compound",
+      "page": 32,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.13/specialnames#18:c000",
+      "rank": 2,
+      "score": 0.582357,
+      "source_id": "py3.13/specialnames",
+      "page": 18,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.13/specialnames#4:c001",
+      "rank": 3,
+      "score": 0.581245,
+      "source_id": "py3.13/specialnames",
+      "page": 4,
+      "python_version": "3.13"
+     }
+    ],
+    "context_added_ids": [],
+    "context_ids": [
+     "B:py3.13/specialnames#4:c002",
+     "B:py3.13/specialnames#4:c001",
+     "B:py3.13/attribute-access#2:c001",
+     "B:py3.13/specialnames#18:c000",
+     "B:py3.13/specialnames#14:c001",
+     "B:py3.13/compound#32:c001"
+    ],
+    "context_chars": 6074
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 2620.5,
+    "usage": {
+     "prompt_tokens": 2012,
+     "completion_tokens": 74
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_oeA9jXkLfGwDKTdQUmvVCF8Z",
+      "name": "final_answer",
+      "arguments": "{\"answer\":\"For a class or function that is not generic, the value of `__type_params__` is an empty tuple. This indicates that there are no type parameters defined for that class or function.\",\"citations\":[\"B:py3.13/compound#32:c001\"],\"abstain\":false}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "invalid_or_missing_citations",
+    "model_answer": "For a class or function that is not generic, the value of `__type_params__` is an empty tuple. This indicates that there are no type parameters defined for that class or function.",
+    "model_citations": [
+     "B:py3.13/compound#32:c001"
+    ]
+   }
+  ],
+  "final_context_ids": [
+   "B:py3.13/specialnames#4:c002",
+   "B:py3.13/specialnames#4:c001",
+   "B:py3.13/attribute-access#2:c001",
+   "B:py3.13/specialnames#18:c000",
+   "B:py3.13/specialnames#14:c001",
+   "B:py3.13/compound#32:c001"
+  ],
+  "final_context_chars": 6074,
+  "n_searches": 3,
+  "n_llm_calls": 4,
+  "usage": {
+   "prompt_tokens": 5545,
+   "completion_tokens": 151
+  },
+  "cost_usd": 0.000922,
+  "latency_s": 6.14,
+  "config": "A1",
+  "model": "gpt-4o-mini",
+  "question": "On Python 3.13, what is the value of __type_params__ for a class or function that is not generic?",
+  "context_has_evidence": false
+ },
+ {
+  "query_id": "t06",
+  "status": "answered",
+  "answer": "No, you cannot rely on the exact text of exception messages across Python versions, as they are not part of the Python API and may change without warning. This applies to code that runs under multiple versions of the interpreter [B:py3.11/execmodel#8:c002][B:py3.13/exceptions#1:c002].",
+  "citations": [
+   "B:py3.11/execmodel#8:c002",
+   "B:py3.13/exceptions#1:c002"
+  ],
+  "events": [
+   {
+    "event": "llm_call",
+    "latency_ms": 1449.5,
+    "usage": {
+     "prompt_tokens": 396,
+     "completion_tokens": 18
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_bSuS6c9pgbzXaKGed28S9BNU",
+      "name": "search",
+      "arguments": "{\"query\":\"exception messages consistency across Python versions\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "exception messages consistency across Python versions",
+    "filter": null,
+    "method": "dense",
+    "latency_ms": 2.07,
+    "results": [
+     {
+      "id": "B:py3.13/execmodel#10:c002",
+      "rank": 1,
+      "score": 0.58759,
+      "source_id": "py3.13/execmodel",
+      "page": 10,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.13/exceptions#1:c002",
+      "rank": 2,
+      "score": 0.562857,
+      "source_id": "py3.13/exceptions",
+      "page": 1,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.11/execmodel#8:c002",
+      "rank": 3,
+      "score": 0.535709,
+      "source_id": "py3.11/execmodel",
+      "page": 8,
+      "python_version": "3.11"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.13/execmodel#10:c002",
+     "B:py3.13/exceptions#1:c002",
+     "B:py3.11/execmodel#8:c002"
+    ],
+    "context_ids": [
+     "B:py3.13/execmodel#10:c002",
+     "B:py3.13/exceptions#1:c002",
+     "B:py3.11/execmodel#8:c002"
+    ],
+    "context_chars": 1786
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 3820.6,
+    "usage": {
+     "prompt_tokens": 863,
+     "completion_tokens": 121
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_nOVIEjkqb687gWkRpFp3Qb5f",
+      "name": "final_answer",
+      "arguments": "{\"answer\":\"No, you cannot rely on the exact text of exception messages across Python versions, as they are not part of the Python API and may change without warning. This applies to code that runs under multiple versions of the interpreter [B:py3.11/execmodel#8:c002][B:py3.13/exceptions#1:c002].\",\"citations\":[\"B:py3.11/execmodel#8:c002\",\"B:py3.13/exceptions#1:c002\"],\"abstain\":false}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "final_context_ids": [
+   "B:py3.13/execmodel#10:c002",
+   "B:py3.13/exceptions#1:c002",
+   "B:py3.11/execmodel#8:c002"
+  ],
+  "final_context_chars": 1786,
+  "n_searches": 1,
+  "n_llm_calls": 2,
+  "usage": {
+   "prompt_tokens": 1259,
+   "completion_tokens": 139
+  },
+  "cost_usd": 0.000272,
+  "latency_s": 5.27,
+  "config": "A1",
+  "model": "gpt-4o-mini",
+  "question": "Can my code rely on the exact text of exception messages across Python versions?",
+  "context_has_evidence": true
+ },
+ {
+  "query_id": "tu1",
+  "status": "answered",
+  "answer": "The default recursion limit returned by `sys.getrecursionlimit()` is typically set to 1000 in Python [B:py3.11/execmodel#8:c001].",
+  "citations": [
+   "B:py3.11/execmodel#8:c001"
+  ],
+  "events": [
+   {
+    "event": "llm_call",
+    "latency_ms": 1041.9,
+    "usage": {
+     "prompt_tokens": 395,
+     "completion_tokens": 18
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_LoVsSLFueQ7chnLPUZXSp56o",
+      "name": "search",
+      "arguments": "{\"query\":\"sys.getrecursionlimit()\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "sys.getrecursionlimit()",
+    "filter": null,
+    "method": "dense",
+    "latency_ms": 1.97,
+    "results": [
+     {
+      "id": "B:py3.11/specialnames#21:c003",
+      "rank": 1,
+      "score": 0.31728,
+      "source_id": "py3.11/specialnames",
+      "page": 21,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/sequence-types#1:c003",
+      "rank": 2,
+      "score": 0.313074,
+      "source_id": "py3.11/sequence-types",
+      "page": 1,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.13/specialnames#21:c003",
+      "rank": 3,
+      "score": 0.302738,
+      "source_id": "py3.13/specialnames",
+      "page": 21,
+      "python_version": "3.13"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.11/specialnames#21:c003",
+     "B:py3.11/sequence-types#1:c003",
+     "B:py3.13/specialnames#21:c003"
+    ],
+    "context_ids": [
+     "B:py3.11/specialnames#21:c003",
+     "B:py3.11/sequence-types#1:c003",
+     "B:py3.13/specialnames#21:c003"
+    ],
+    "context_chars": 2542
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 1166.4,
+    "usage": {
+     "prompt_tokens": 1098,
+     "completion_tokens": 21
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_uanMPoyaGzuORjRs2M4nmYVg",
+      "name": "search",
+      "arguments": "{\"query\":\"default recursion limit sys.getrecursionlimit()\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "default recursion limit sys.getrecursionlimit()",
+    "filter": null,
+    "method": "dense",
+    "latency_ms": 2.23,
+    "results": [
+     {
+      "id": "B:py3.11/sequence-types#1:c003",
+      "rank": 1,
+      "score": 0.296687,
+      "source_id": "py3.11/sequence-types",
+      "page": 1,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/specialnames#21:c003",
+      "rank": 2,
+      "score": 0.294574,
+      "source_id": "py3.11/specialnames",
+      "page": 21,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/execmodel#8:c001",
+      "rank": 3,
+      "score": 0.279829,
+      "source_id": "py3.11/execmodel",
+      "page": 8,
+      "python_version": "3.11"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.11/execmodel#8:c001"
+    ],
+    "context_ids": [
+     "B:py3.11/specialnames#21:c003",
+     "B:py3.11/sequence-types#1:c003",
+     "B:py3.13/specialnames#21:c003",
+     "B:py3.11/execmodel#8:c001"
+    ],
+    "context_chars": 3560
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 882.9,
+    "usage": {
+     "prompt_tokens": 1364,
+     "completion_tokens": 19
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_LD4DXWDZrMeP8NDvgztTR8LN",
+      "name": "search",
+      "arguments": "{\"query\":\"sys.getrecursionlimit default value\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "sys.getrecursionlimit default value",
+    "filter": null,
+    "method": "dense",
+    "latency_ms": 2.01,
+    "results": [
+     {
+      "id": "B:py3.13/function#1:c004",
+      "rank": 1,
+      "score": 0.272999,
+      "source_id": "py3.13/function",
+      "page": 1,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.13/compound#26:c004",
+      "rank": 2,
+      "score": 0.268781,
+      "source_id": "py3.13/compound",
+      "page": 26,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.13/types#7:c000",
+      "rank": 3,
+      "score": 0.263888,
+      "source_id": "py3.13/types",
+      "page": 7,
+      "python_version": "3.13"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.13/function#1:c004",
+     "B:py3.13/compound#26:c004",
+     "B:py3.13/types#7:c000"
+    ],
+    "context_ids": [
+     "B:py3.11/specialnames#21:c003",
+     "B:py3.11/sequence-types#1:c003",
+     "B:py3.13/specialnames#21:c003",
+     "B:py3.11/execmodel#8:c001",
+     "B:py3.13/function#1:c004",
+     "B:py3.13/compound#26:c004",
+     "B:py3.13/types#7:c000"
+    ],
+    "context_chars": 6423
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 920.4,
+    "usage": {
+     "prompt_tokens": 2061,
+     "completion_tokens": 17
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_gT1RKimlLZebcP1KtSkrHuB4",
+      "name": "search",
+      "arguments": "{\"query\":\"sys.getrecursionlimit\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search_limit",
+    "query": "sys.getrecursionlimit"
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 1880.3,
+    "usage": {
+     "prompt_tokens": 2104,
+     "completion_tokens": 74
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_0F5C87OPtbaPYCsrwZ3XYMZa",
+      "name": "final_answer",
+      "arguments": "{\"answer\":\"The default recursion limit returned by `sys.getrecursionlimit()` is typically set to 1000 in Python [B:py3.11/execmodel#8:c001].\",\"citations\":[\"B:py3.11/execmodel#8:c001\"],\"abstain\":false}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "final_context_ids": [
+   "B:py3.11/specialnames#21:c003",
+   "B:py3.11/sequence-types#1:c003",
+   "B:py3.13/specialnames#21:c003",
+   "B:py3.11/execmodel#8:c001",
+   "B:py3.13/function#1:c004",
+   "B:py3.13/compound#26:c004",
+   "B:py3.13/types#7:c000"
+  ],
+  "final_context_chars": 6423,
+  "n_searches": 3,
+  "n_llm_calls": 5,
+  "usage": {
+   "prompt_tokens": 7022,
+   "completion_tokens": 149
+  },
+  "cost_usd": 0.001143,
+  "latency_s": 5.9,
+  "config": "A1",
+  "model": "gpt-4o-mini",
+  "question": "What is the default recursion limit returned by sys.getrecursionlimit()?"
+ },
+ {
+  "query_id": "tu2",
+  "status": "abstain",
+  "answer": "The documentation does not specify the default limit on the number of digits when converting a string to an integer (int_max_str_digits) introduced in Python 3.11.",
+  "citations": [],
+  "events": [
+   {
+    "event": "llm_call",
+    "latency_ms": 1029.6,
+    "usage": {
+     "prompt_tokens": 411,
+     "completion_tokens": 23
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_a0azb7ciKfCdKU5CmNRS0sOO",
+      "name": "search",
+      "arguments": "{\"query\":\"int_max_str_digits\",\"python_version\":\"3.11\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "int_max_str_digits",
+    "filter": {
+     "python_version": "3.11"
+    },
+    "method": "dense",
+    "latency_ms": 6.09,
+    "results": [
+     {
+      "id": "B:py3.11/string-methods#1:c019",
+      "rank": 1,
+      "score": 0.287832,
+      "source_id": "py3.11/string-methods",
+      "page": 1,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/formatstrings#2:c002",
+      "rank": 2,
+      "score": 0.249163,
+      "source_id": "py3.11/formatstrings",
+      "page": 2,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/typesseq#2:c003",
+      "rank": 3,
+      "score": 0.238479,
+      "source_id": "py3.11/typesseq",
+      "page": 2,
+      "python_version": "3.11"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.11/string-methods#1:c019",
+     "B:py3.11/formatstrings#2:c002",
+     "B:py3.11/typesseq#2:c003"
+    ],
+    "context_ids": [
+     "B:py3.11/string-methods#1:c019",
+     "B:py3.11/formatstrings#2:c002",
+     "B:py3.11/typesseq#2:c003"
+    ],
+    "context_chars": 3139
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 1030.3,
+    "usage": {
+     "prompt_tokens": 1148,
+     "completion_tokens": 23
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_d67S1nXC2iTWUSzNnG2wQ9ee",
+      "name": "search",
+      "arguments": "{\"query\":\"int_max_str_digits\",\"python_version\":\"3.11\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "int_max_str_digits",
+    "filter": {
+     "python_version": "3.11"
+    },
+    "method": "dense",
+    "latency_ms": 3.7,
+    "results": [
+     {
+      "id": "B:py3.11/string-methods#1:c019",
+      "rank": 1,
+      "score": 0.287832,
+      "source_id": "py3.11/string-methods",
+      "page": 1,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/formatstrings#2:c002",
+      "rank": 2,
+      "score": 0.249163,
+      "source_id": "py3.11/formatstrings",
+      "page": 2,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.11/typesseq#2:c003",
+      "rank": 3,
+      "score": 0.238479,
+      "source_id": "py3.11/typesseq",
+      "page": 2,
+      "python_version": "3.11"
+     }
+    ],
+    "context_added_ids": [],
+    "context_ids": [
+     "B:py3.11/string-methods#1:c019",
+     "B:py3.11/formatstrings#2:c002",
+     "B:py3.11/typesseq#2:c003"
+    ],
+    "context_chars": 3139
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 1126.1,
+    "usage": {
+     "prompt_tokens": 1190,
+     "completion_tokens": 22
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_iAg9y0whPgvgZMqiefjdGAnM",
+      "name": "search",
+      "arguments": "{\"query\":\"maximum digits str to int Python 3.11\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "maximum digits str to int Python 3.11",
+    "filter": null,
+    "method": "dense",
+    "latency_ms": 1.97,
+    "results": [
+     {
+      "id": "B:py3.13/string-methods#1:c012",
+      "rank": 1,
+      "score": 0.500857,
+      "source_id": "py3.13/string-methods",
+      "page": 1,
+      "python_version": "3.13"
+     },
+     {
+      "id": "B:py3.11/types#10:c001",
+      "rank": 2,
+      "score": 0.494996,
+      "source_id": "py3.11/types",
+      "page": 10,
+      "python_version": "3.11"
+     },
+     {
+      "id": "B:py3.13/types#10:c001",
+      "rank": 3,
+      "score": 0.494996,
+      "source_id": "py3.13/types",
+      "page": 10,
+      "python_version": "3.13"
+     }
+    ],
+    "context_added_ids": [
+     "B:py3.13/string-methods#1:c012",
+     "B:py3.11/types#10:c001",
+     "B:py3.13/types#10:c001"
+    ],
+    "context_ids": [
+     "B:py3.11/string-methods#1:c019",
+     "B:py3.11/formatstrings#2:c002",
+     "B:py3.11/typesseq#2:c003",
+     "B:py3.13/string-methods#1:c012",
+     "B:py3.11/types#10:c001",
+     "B:py3.13/types#10:c001"
+    ],
+    "context_chars": 6030
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 1120.4,
+    "usage": {
+     "prompt_tokens": 1995,
+     "completion_tokens": 25
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_2qhQmsnGI0PVuIDN7c6OWLan",
+      "name": "search",
+      "arguments": "{\"query\":\"int_max_str_digits default limit\",\"python_version\":\"3.11\"}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "search_limit",
+    "query": "int_max_str_digits default limit"
+   },
+   {
+    "event": "llm_call",
+    "latency_ms": 1927.7,
+    "usage": {
+     "prompt_tokens": 2046,
+     "completion_tokens": 56
+    },
+    "content": "",
+    "tool_calls": [
+     {
+      "id": "call_sYBCOjnu2wlFHQsWEbsG0hL8",
+      "name": "final_answer",
+      "arguments": "{\"answer\":\"The documentation does not specify the default limit on the number of digits when converting a string to an integer (int_max_str_digits) introduced in Python 3.11.\",\"citations\":[],\"abstain\":true}"
+     }
+    ],
+    "retries": 0
+   },
+   {
+    "event": "abstain",
+    "model_answer": "The documentation does not specify the default limit on the number of digits when converting a string to an integer (int_max_str_digits) introduced in Python 3.11."
+   }
+  ],
+  "final_context_ids": [
+   "B:py3.11/string-methods#1:c019",
+   "B:py3.11/formatstrings#2:c002",
+   "B:py3.11/typesseq#2:c003",
+   "B:py3.13/string-methods#1:c012",
+   "B:py3.11/types#10:c001",
+   "B:py3.13/types#10:c001"
+  ],
+  "final_context_chars": 6030,
+  "n_searches": 3,
+  "n_llm_calls": 5,
+  "usage": {
+   "prompt_tokens": 6790,
+   "completion_tokens": 149
+  },
+  "cost_usd": 0.001108,
+  "latency_s": 6.25,
+  "config": "A1",
+  "model": "gpt-4o-mini",
+  "question": "What is the default limit on the number of digits when converting a str to int (int_max_str_digits) introduced in Python 3.11?"
+ }
+]

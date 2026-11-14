@@ -1,0 +1,210 @@
+[
+ {
+  "query_id": "d6-q01",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct 'discarded'; both finally chunks support."
+ },
+ {
+  "query_id": "d6-q02",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; c002 shows del N and need to rebind to another name."
+ },
+ {
+  "query_id": "d6-q03",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   false
+  ],
+  "abstention_correct": null,
+  "note": "Correct via c000; c001 does not support the restated sentence."
+ },
+ {
+  "query_id": "d6-q04",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; supported."
+ },
+ {
+  "query_id": "d6-q05",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct 'from None'; supported."
+ },
+ {
+  "query_id": "d6-q06",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; supported."
+ },
+ {
+  "query_id": "d6-q07",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; break and for chunks both say else is skipped."
+ },
+ {
+  "query_id": "d6-q08",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; truth chunk says and/or return one of their operands."
+ },
+ {
+  "query_id": "d6-q09",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct SyntaxError; supported by global chunk."
+ },
+ {
+  "query_id": "d6-q10",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; supported."
+ },
+ {
+  "query_id": "d6-q11",
+  "answer_grade": 0,
+  "citation_support": [],
+  "abstention_correct": null,
+  "note": "Abstained although answerable; evidence chunk not retrieved."
+ },
+ {
+  "query_id": "d6-q12",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; lambda and def chunks support both sentences."
+ },
+ {
+  "query_id": "d6-q13",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; supported."
+ },
+ {
+  "query_id": "d6-q14",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true,
+   false
+  ],
+  "abstention_correct": null,
+  "note": "Correct; c005 does not support the default-argument sentence."
+ },
+ {
+  "query_id": "d6-q15",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct NFKC; supported."
+ },
+ {
+  "query_id": "d6-q16",
+  "answer_grade": 1,
+  "citation_support": [
+   false
+  ],
+  "abstention_correct": null,
+  "note": "Correct 'yes' but cited sample-match chunk does not state bindings outlive block."
+ },
+ {
+  "query_id": "d6-q17",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; supported by both mapping-pattern chunks."
+ },
+ {
+  "query_id": "d6-q18",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; supported including remove/re-insert detail."
+ },
+ {
+  "query_id": "d6-q19",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct equivalent code; supported."
+ },
+ {
+  "query_id": "d6-q20",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct __type_params__; supported."
+ },
+ {
+  "query_id": "du1",
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "Correctly abstained; corpus has no answer."
+ },
+ {
+  "query_id": "du2",
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "Correctly abstained; corpus has no answer."
+ },
+ {
+  "query_id": "du3",
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "Correctly abstained; corpus has no answer."
+ }
+]

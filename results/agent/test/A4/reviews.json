@@ -1,0 +1,73 @@
+[
+ {
+  "query_id": "t01",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct StopIteration and StopIteration.value; supported by return#1:c000."
+ },
+ {
+  "query_id": "t02",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct SyntaxError; nonlocal and naming chunks both support."
+ },
+ {
+  "query_id": "t03",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct: should not reraise, return true to suppress; supported."
+ },
+ {
+  "query_id": "t04",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct 'clears the sequence'; supported."
+ },
+ {
+  "query_id": "t05",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct empty tuple; supported by specialattrs chunk."
+ },
+ {
+  "query_id": "t06",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "abstention_correct": null,
+  "note": "Correct; both exceptions chunks support."
+ },
+ {
+  "query_id": "tu1",
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "Correctly abstained; corpus has no answer."
+ },
+ {
+  "query_id": "tu2",
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "Correctly abstained; corpus has no answer."
+ }
+]

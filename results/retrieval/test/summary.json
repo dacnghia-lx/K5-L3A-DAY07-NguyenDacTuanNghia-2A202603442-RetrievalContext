@@ -1,0 +1,40 @@
+[
+ {
+  "config": "R1",
+  "description": "Dense Day 6 + filter phi\u00ean b\u1ea3n (= Day 6 C) \u2014 baseline",
+  "split": "test",
+  "N": 6,
+  "hit1": 3,
+  "hit3": 3,
+  "context_evidence": 3,
+  "mrr10": 0.582,
+  "avg_context_chars": 2665,
+  "latency_ms_mean": 6.24,
+  "cost_usd": 0.0,
+  "misses_at_3": [
+   "t01",
+   "t03",
+   "t05"
+  ],
+  "context_misses": [
+   "t01",
+   "t03",
+   "t05"
+  ]
+ },
+ {
+  "config": "R5",
+  "description": "R4 + context top-5 + chunk l\u00e2n c\u1eadn, budget 6000 k\u00fd t\u1ef1",
+  "split": "test",
+  "N": 6,
+  "hit1": 4,
+  "hit3": 6,
+  "context_evidence": 6,
+  "mrr10": 0.806,
+  "avg_context_chars": 5309,
+  "latency_ms_mean": 17.69,
+  "cost_usd": 0.0,
+  "misses_at_3": [],
+  "context_misses": []
+ }
+]

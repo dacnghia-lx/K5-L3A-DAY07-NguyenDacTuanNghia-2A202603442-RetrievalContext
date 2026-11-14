@@ -1,0 +1,174 @@
+[
+ {
+  "config": "R0",
+  "description": "Dense Day 6 (B), kh\u00f4ng filter",
+  "split": "dev",
+  "N": 20,
+  "hit1": 9,
+  "hit3": 12,
+  "context_evidence": 12,
+  "mrr10": 0.547,
+  "avg_context_chars": 2966,
+  "latency_ms_mean": 4.94,
+  "cost_usd": 0.0,
+  "misses_at_3": [
+   "d6-q01",
+   "d6-q03",
+   "d6-q05",
+   "d6-q06",
+   "d6-q07",
+   "d6-q08",
+   "d6-q14",
+   "d6-q19"
+  ],
+  "context_misses": [
+   "d6-q01",
+   "d6-q03",
+   "d6-q05",
+   "d6-q06",
+   "d6-q07",
+   "d6-q08",
+   "d6-q14",
+   "d6-q19"
+  ]
+ },
+ {
+  "config": "R1",
+  "description": "Dense Day 6 + filter phi\u00ean b\u1ea3n (= Day 6 C) \u2014 baseline",
+  "split": "dev",
+  "N": 20,
+  "hit1": 9,
+  "hit3": 12,
+  "context_evidence": 12,
+  "mrr10": 0.559,
+  "avg_context_chars": 2928,
+  "latency_ms_mean": 5.02,
+  "cost_usd": 0.0,
+  "misses_at_3": [
+   "d6-q01",
+   "d6-q03",
+   "d6-q05",
+   "d6-q06",
+   "d6-q07",
+   "d6-q08",
+   "d6-q14",
+   "d6-q19"
+  ],
+  "context_misses": [
+   "d6-q01",
+   "d6-q03",
+   "d6-q05",
+   "d6-q06",
+   "d6-q07",
+   "d6-q08",
+   "d6-q14",
+   "d6-q19"
+  ]
+ },
+ {
+  "config": "R2",
+  "description": "BM25 (tokenizer gi\u1eef \u0111\u1ecbnh danh) + filter",
+  "split": "dev",
+  "N": 20,
+  "hit1": 15,
+  "hit3": 17,
+  "context_evidence": 17,
+  "mrr10": 0.802,
+  "avg_context_chars": 2887,
+  "latency_ms_mean": 1.79,
+  "cost_usd": 0.0,
+  "misses_at_3": [
+   "d6-q05",
+   "d6-q08",
+   "d6-q16"
+  ],
+  "context_misses": [
+   "d6-q05",
+   "d6-q08",
+   "d6-q16"
+  ]
+ },
+ {
+  "config": "R3",
+  "description": "Hybrid RRF dense+BM25 (pool 30, k=60) + filter",
+  "split": "dev",
+  "N": 20,
+  "hit1": 14,
+  "hit3": 18,
+  "context_evidence": 18,
+  "mrr10": 0.783,
+  "avg_context_chars": 2914,
+  "latency_ms_mean": 12.82,
+  "cost_usd": 0.0,
+  "misses_at_3": [
+   "d6-q05",
+   "d6-q08"
+  ],
+  "context_misses": [
+   "d6-q05",
+   "d6-q08"
+  ]
+ },
+ {
+  "config": "R4",
+  "description": "R3 + g\u1ed9p chunk tr\u00f9ng n\u1ed9i dung (3.11/3.13, compound)",
+  "split": "dev",
+  "N": 20,
+  "hit1": 14,
+  "hit3": 18,
+  "context_evidence": 18,
+  "mrr10": 0.797,
+  "avg_context_chars": 2934,
+  "latency_ms_mean": 16.72,
+  "cost_usd": 0.0,
+  "misses_at_3": [
+   "d6-q05",
+   "d6-q08"
+  ],
+  "context_misses": [
+   "d6-q05",
+   "d6-q08"
+  ]
+ },
+ {
+  "config": "R5",
+  "description": "R4 + context top-5 + chunk l\u00e2n c\u1eadn, budget 6000 k\u00fd t\u1ef1",
+  "split": "dev",
+  "N": 20,
+  "hit1": 14,
+  "hit3": 18,
+  "context_evidence": 19,
+  "mrr10": 0.797,
+  "avg_context_chars": 5454,
+  "latency_ms_mean": 16.04,
+  "cost_usd": 0.0,
+  "misses_at_3": [
+   "d6-q05",
+   "d6-q08"
+  ],
+  "context_misses": [
+   "d6-q08"
+  ]
+ },
+ {
+  "config": "R6",
+  "description": "R2 + g\u1ed9p tr\u00f9ng (ablation)",
+  "split": "dev",
+  "N": 20,
+  "hit1": 15,
+  "hit3": 18,
+  "context_evidence": 18,
+  "mrr10": 0.817,
+  "avg_context_chars": 2908,
+  "latency_ms_mean": 5.84,
+  "cost_usd": 0.0,
+  "misses_at_3": [
+   "d6-q05",
+   "d6-q08"
+  ],
+  "context_misses": [
+   "d6-q05",
+   "d6-q08"
+  ]
+ }
+]

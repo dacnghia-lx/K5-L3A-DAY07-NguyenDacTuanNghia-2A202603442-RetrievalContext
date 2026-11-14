@@ -1,0 +1,30 @@
+{
+ "config": "A1",
+ "retrieval": "R1",
+ "max_searches": 3,
+ "context_k": 3,
+ "budget": 8000,
+ "description": "Agent + dense Day 6 (baseline)",
+ "model": "gpt-4o-mini",
+ "base_url": "https://api.openai.com/v1",
+ "runs": 23,
+ "errors": 0,
+ "status": {
+  "answered": 10,
+  "abstain": 13
+ },
+ "tool_use": "23/23",
+ "searches_distribution": {
+  "1": 11,
+  "2": 4,
+  "3": 8
+ },
+ "context_evidence_rate": "11/20",
+ "answered_on_answerable": 10,
+ "abstain_on_unanswerable": 3,
+ "prompt_tokens": 90548,
+ "completion_tokens": 3719,
+ "cost_usd": 0.015813,
+ "latency_s_mean": 5.71,
+ "avg_final_context_chars": 4143
+}
