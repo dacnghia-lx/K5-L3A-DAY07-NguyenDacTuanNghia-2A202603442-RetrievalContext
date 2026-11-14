@@ -6,6 +6,8 @@
 
 ## Chạy lại
 
+Windows: đặt `$env:PYTHONUTF8="1"` trước khi chạy (một test của starter đọc file không khai báo encoding).
+
 ```bash
 python -m venv .venv
 # Windows: .venv\Scripts\Activate.ps1   |  macOS/Linux: source .venv/bin/activate
@@ -19,6 +21,7 @@ python -m scripts.eval_retrieval --split test --configs R1,R5
 python -m scripts.check_llm
 python -m scripts.run_agent --split dev --configs A1,A2,A3,A4,A5 --sleep 1
 python -m scripts.run_agent --split test --configs A1,A4 --sleep 1
+python starter/agent_metrics.py --cases results/agent/dev/A4/cases.json --traces results/agent/dev/A4/traces.json --reviews results/agent/dev/A4/reviews.json --split dev --output results/agent/dev/A4/metrics.json
 python starter/agent_metrics.py --cases results/agent/test/A4/cases.json --traces results/agent/test/A4/traces.json --reviews results/agent/test/A4/reviews.json --split test --output results/agent/test/A4/metrics.json
 ```
 
@@ -28,26 +31,6 @@ python starter/agent_metrics.py --cases results/agent/test/A4/cases.json --trace
 | Dữ liệu | `data/raw/` (nguồn + PSF license), `data/chunks.json` (chunk Day 6 ở schema Day 7) |
 | Benchmark | `benchmark/questions.json`, `benchmark/selection_criteria.md`, `benchmark/labeling_guide.md` |
 | Thử nghiệm | `artifacts/experiment_log.csv`, `results/retrieval/{dev,test}/`, `results/agent/{dev,test}/<config>/` |
-
-## Kết quả agent
-
-Model `gpt-4o-mini` (temperature 0). Trên Windows đặt `PYTHONUTF8=1` trước mọi lệnh Python (PowerShell: `$env:PYTHONUTF8="1"`); một test của starter cần biến này để đọc file UTF-8 đúng.
-
-```bash
-python -m scripts.run_agent --split dev --configs A1,A2,A3,A4,A5
-python -m scripts.run_agent --split test --configs A1,A4 --sleep 1
-python starter/agent_metrics.py --cases results/agent/dev/A4/cases.json --traces results/agent/dev/A4/traces.json --reviews results/agent/dev/A4/reviews.json --split dev --output results/agent/dev/A4/metrics.json
-python starter/agent_metrics.py --cases results/agent/test/A4/cases.json --traces results/agent/test/A4/traces.json --reviews results/agent/test/A4/reviews.json --split test --output results/agent/test/A4/metrics.json
-```
-
-Nhãn audit (`reviews.json`) gán theo `benchmark/labeling_guide.md` (soạn có AI hỗ trợ; sinh viên đã review 26 mục cần phán đoán: 24 đồng ý, 2 sửa 0 → 1). Chọn **A4** (R5 hybrid + gộp trùng + chunk lân cận, 1 lần sửa citation) trên dev theo `benchmark/selection_criteria.md`.
-
-| Cấu hình / split | Grounded mean (/2) | Citation hợp lệ | Abstention đúng | Từ chối nhầm | Chi phí (USD) |
-|---|---|---|---|---|---|
-| A1 baseline / dev | 0.75 | 8/12 | 3/3 | 10/20 | 0.015813 |
-| A4 đã chọn / dev | 1.85 | 25/28 | 3/3 | 1/20 | 0.024912 |
-| A1 baseline / test | 0.83 | 3/5 | 1/2 | 3/6 | 0.005241 |
-| A4 đã chọn / test | 2.00 | 9/9 | 2/2 | 0/6 | 0.007835 |
 
 ---
 
